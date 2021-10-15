@@ -2,10 +2,21 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+description: Materials about different classes I have contributed to
 nav: true
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+I really really really love teaching. So far, I have TA'ed for the following classes:
 
-Organize your courses by years, topics, or universities, however you like!
+    * Advanced Algorithms (3 times) (University of Chile)
+    * Undergraduate Algorithms (University of Chile)
+    * Discrete Math (3 times) (University of Chile)
+    * Programming Languages (University of Chile)
+    * Computability and Computational Complexity (University of Chile)
+    * Computational Complexity (PUC Chile)
+    * Databases (École Centrale Paris)
+    * Workshop of Competitive Programming (University of Chile)
+    * Introduction to Algebra (University of Chile)
+    * Automata Theory and Formal Languages (University of Chile)
+
+I also had a YouTube channel with math videos, and have collected a fair bit of teaching materials over the years. I plan to upload most of that here. Unfortunately, most of it was originally written in Spanish, so I'll be slowly translating it over time.
