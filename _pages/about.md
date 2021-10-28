@@ -22,7 +22,7 @@ profile:
     </p>
 
      <p> <a href="../assets/pdf/research_resume.pdf">Download my resume</a></p>
-    <p> <a href="https://scholar.google.com/citations?user=0EOonpYAAAAJ&hl=en&authuser=1">google scholar</a>, <a href="https://dblp.org/pid/242/3007.html">dblp</a></p>
+    <p> <a href="https://scholar.google.com/citations?user=0EOonpYAAAAJ&hl=en">google scholar</a>, <a href="https://dblp.org/pid/242/3007.html">dblp</a></p>
     
 
 news: true  # includes a list of news items
