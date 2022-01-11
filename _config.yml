@@ -9,19 +9,12 @@ last_name: Subercaseaux Roa
 email: bsuberca@andrew.cmu.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: >
-<<<<<<< HEAD
-  Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Photos from <a href="https://unsplash.com" target="_blank">Unsplash</a>.
-keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: 🔥 # the emoji used as the favicon
-=======
-  I did this with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>, using the  <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
+
+footer_text: I did this with <a href="http://jekyllrb.com/" target="_blank">Jekyll</a>, using the  <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 
 icon: 🐒 # the emoji used as the favicon
->>>>>>> 0828e3d (first round :))
 url: "https://bsubercaseaux.github.io" # the base hostname & protocol for your site
 baseurl:  "" # the subpath of your site, e.g. /blog/
 last_updated: true # set to true if you want to display last updated in the footer
