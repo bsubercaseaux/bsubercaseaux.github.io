@@ -2,11 +2,7 @@
 layout: about
 title: about
 permalink: /
-<<<<<<< HEAD
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
-=======
 description: I'm a first year CS PhD student at <a href="https://www.cs.cmu.edu/">Carnegie Mellon University</a>, where I am co-advised by <a href="http://www.cs.cmu.edu/~anupamg/">Anupam Gupta</a> and <a href="http://www.cs.cmu.edu/~mheule/">Marijn Heule</a>. Before that, I had the fortune of doing my masters under the greats <a href="https://pbarcelo.ing.uc.cl/">Pablo Barceló</a> and <a href="https://users.dcc.uchile.cl/~jperez/">Jorge Pérez</a>, on theoretical aspects of <i>interpretability in Machine Learning</i>. Even before that, I got engineering degrees from <a href="https://www.centralesupelec.fr/"> CentraleSupélec (École Centrale Paris)</a> , and <a href="http://ingenieria.uchile.cl/">University of Chile</a>.
->>>>>>> 0828e3d (first round :))
 
 profile:
   align: right
