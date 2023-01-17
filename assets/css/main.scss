@@ -17,3 +17,14 @@ $max-content-width: {{ site.max_width }};
 body {
     font: 24px/1.4 $palatino;
 }
+
+ul.starlist {
+    list-style: none;
+    padding: 0px;
+}
+
+ul.starlist li:before
+{
+    content: '★';
+    margin: 0 0.5em;    /* any design */
+}
