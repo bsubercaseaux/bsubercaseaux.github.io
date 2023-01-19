@@ -20,9 +20,6 @@ body {
  font-size: 22px;
  font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
  background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('../img/mondrian.jpg');
-//  background-size: cover;
- // background-repeat: no-repeat;
- // opacity: 0.9;
 }
 
 
@@ -39,10 +36,24 @@ ul.starlist li:before
 
 .center-rectangle {
   background-color: rgba(255, 255, 255, 0.97);
+  width: 350px;
+  height: 100%;
+//  position: absolute;
+  padding: 40px;
+}
+
+@media (min-width: 1200px){
+.center-rectangle {
+  background-color: rgba(255, 255, 255, 0.97);
   width: 1000px;
   height: 100%;
 //  position: absolute;
   padding: 40px;
+}
+
+
+
+
 }
 
 a, table.table a {
