@@ -176,7 +176,7 @@ Before leaving, you can check the next section with miscellaneous data about me.
 9. **Favorite Philosopher:** Immanuel Kant.
 10. **Favorite Mathematician:** probably Alan Turing.
 11. **Favorite colors:** Green and purple.
-12. **Favorite animals:** Monkeys, owls, otters, meerkats, manatees, axolotls, squirrels, raccons, etc.
+12. **Favorite animals:** Monkeys, owls, otters, meerkats, manatees, axolotls, squirrels, raccoons, etc.
 13. **Favorite painter:** Pablo Picasso.
 14. **Favorite composer:** Claude Debussy.
 15. **Favorite poet:** Wisława Szymborzka.
