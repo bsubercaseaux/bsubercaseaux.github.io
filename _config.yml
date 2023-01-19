@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Bernardo Subercaseaux <font size="+2"><i>(he/him/his)</i></font> # the website title (if blank, full name will be used instead)
+title: Bernardo Subercaseaux <i>(he/him/his)</i> # the website title (if blank, full name will be used instead)
 first_name: Bernardo
 middle_name: Anibal
 last_name: Subercaseaux Roa
@@ -26,7 +26,7 @@ impressum_path:  # set to path to include impressum link in the footer, use the 
 # -----------------------------------------------------------------------------
 
 navbar_fixed: false
-footer_fixed: false
+footer_fixed: true
 
 # Dimensions
 max_width: 900px
@@ -198,7 +198,7 @@ scholar:
   last_name: Subercaseaux
   first_name: [Bernardo, B.]
 
-  style: ieee
+  style: apa
   locale: en
 
   source: /_bibliography/

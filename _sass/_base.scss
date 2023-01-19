@@ -8,22 +8,40 @@ p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   color: var(--global-text-color);
 }
 
+b, strong {
+   font-weight: 700;
+}
+
 hr {
   border-top: 1px solid var(--global-divider-color);
 }
 
 body { 
-// background-image: url('../img/mondrian.jpg');
-// background-size: cover;
-// background-repeat: no-repeat;
+ font-size: 22px;
+ font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif;
+ background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('../img/mondrian.jpg');
+//  background-size: cover;
+ // background-repeat: no-repeat;
  // opacity: 0.9;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0px;
+}
+
+ul.starlist li:before
+{
+    content: '★';
+    margin: 0 0.5em;    /* any design */
 }
 
 .center-rectangle {
   background-color: rgba(255, 255, 255, 0.97);
   width: 1000px;
   height: 100%;
-  position: absolute;
+//  position: absolute;
   padding: 40px;
 }
 
