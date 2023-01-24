@@ -9,7 +9,7 @@ categories: Math
 
 Chilean mathematician [Nicolás Sanhueza-Matamala](https://sanhueza.net/nicolas/) gave me the following problem:
 
-**Problem 1.** Prove for any $$ c \leq n/3$$ we have: 
+**Problem 1.** Prove that for any $$ c \leq n/3$$ we have: 
 \begin{equation}
            \sum_{r=1}^c \frac{c^r r^c}{r^{2r}} n^r  = O(n^c).
 \end{equation}
