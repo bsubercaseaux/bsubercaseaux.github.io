@@ -27,6 +27,25 @@
 	year = {2020},
 	bdsk-url-1 = {https://proceedings.neurips.cc/paper/2020/hash/b1adda14824f50ef24ff1c05bb66faf3-Abstract.html}}
 
+
+
+@inproceedings{sh2023,
+  abstract={A packing $k$-coloring is a natural variation on the standard notion of graph $k$-coloring, where vertices are assigned numbers from $\{1, \ldots, k\}$, and any two vertices assigned a common color $c \in \{1, \ldots, k\}$ need to be at a distance greater than $c$ (as opposed to 1, in standard graph colorings). Despite a sequence of incremental work, determining the packing chromatic number of the infinite square grid has remained an open problem since its introduction in 2002. We culminate the search by proving this number to be 15. We achieve this result by improving the best-known method for this problem by roughly two orders of magnitude. The most important technique to boost performance is a novel, surprisingly effective propositional encoding for packing colorings. Additionally, we developed an alternative symmetry-breaking method. Since both new techniques are more complex than existing techniques for this problem, a verified approach is required to trust them. We include both techniques in a proof of unsatisfiability, reducing the trusted core to the correctness of the direct encoding.},
+  title = {The Packing Chromatic Number of the Infinite Square Grid is 15},
+  author = {Bernardo Subercaseaux and Marijn J. H. Heule},
+  arxiv = {2301.09757},
+    bibtex_show = {true},
+    booktitle = {TACAS (proceedings are not out yet)},
+    editor = {},
+    pages = {1--20},
+    pdf = {https://arxiv.org/pdf/2301.09757.pdf},
+    publisher = {arXiv},
+    selected = {true},
+    url = {https://arxiv.org/abs/2301.09757},
+    volume = {1},
+    year = {2023},
+    bdsk-url-1 = {https://arixv.org/abs/2301.09757}}
+
 @article{bps2020,
 	abstract = {Despite the growing interest in interpretability for machine learning models, there
 seems to be a gap between the world of researchers and that of practitioners and
@@ -83,7 +102,7 @@ It has been argued, however, that sufficient reasons constitute a restrictive no
 	arxiv = {https://arxiv.org/abs/2207.12213},
 	author = {Marcelo Arenas and Pablo Barcelo and Miguel Romero Orth and Bernardo Subercaseaux},
 	bibtex_show = {true},
-	booktitle = {Advances in Neural Information Processing Systems},
+	booktitle = {Advances in Neural Information Processing Systems, NeurIPS},
 	editor = {Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
 	pdf = {https://arxiv.org/pdf/2207.12213.pdf},
 	selected = {true},
@@ -96,7 +115,7 @@ It has been argued, however, that sufficient reasons constitute a restrictive no
 	abstract = {The growing body of work in learning-augmented online algorithms studies how online algorithms can be improved when given access to ML predictions about the future. Motivated by ML models that give a confidence parameter for their predictions, we study online algorithms with predictions that are $\epsilon$-accurate: namely, each prediction is correct with probability (at least) $\epsilon$, but can be arbitrarily inaccurate with the remaining probability. We show that even with predictions that are accurate with a small probability and arbitrarily inaccurate otherwise, we can dramatically outperform worst-case bounds for a range of classical online problems including caching, online set cover, and online facility location. Our main results are an $O(\log(1/\varepsilon))$-competitive algorithm for caching, and a simple $O(1/\varepsilon)$-competitive algorithm for a large family of covering problems, including set cover and facility location, with $\epsilon$-accurate predictions.},
 	author = {Anupam Gupta and Debmalya Panigrahi and Bernardo Subercaseaux and Kevin Sun},
 	bibtex_show = {true},
-	booktitle = {Advances in Neural Information Processing Systems},
+	booktitle = {Advances in Neural Information Processing Systems, NeurIPS},
 	editor = {Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
 	pdf = {https://openreview.net/pdf?id=HFkxZ_V0sBQ},
 	selected = {true},
@@ -205,6 +224,8 @@ be used in practice.},
 	url = {https://arxiv.org/abs/2110.02376},
 	year = {2021},
 	bdsk-url-1 = {https://arxiv.org/abs/2110.02376}}
+
+        
 
 @inproceedings{ls2022,
 	abstract = {Wordle is a single-player word-guessing game where the goal is to discover a secret word w that has been chosen from a dictionary D. In order to discover w, the player can make at most 𝓁 guesses, which must also be words from D, all words in D having the same length k. After each guess, the player is notified of the positions in which their guess matches the secret word, as well as letters in the guess that appear in the secret word in a different position. We study the game of Wordle from a complexity perspective, proving NP-hardness of its natural formalization: to decide given a dictionary D and an integer 𝓁 if the player can guarantee to discover the secret word within 𝓁 guesses. Moreover, we prove that hardness holds even over instances where words have length k = 5, and that even in this case it is NP-hard to approximate the minimum number of guesses required to guarantee discovering the secret word. We also present results regarding its parameterized complexity and offer some related open problems.},

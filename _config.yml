@@ -101,6 +101,13 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  literature:
+    defaults:
+      layout: post
+    output: true
+    permalink: /literature/:path/
+   
+  
 
 
 # -----------------------------------------------------------------------------
@@ -122,7 +129,7 @@ kramdown:
       start_line: 1
 
 # Includes & excludes
-include: ['_pages']
+include: ['_pages', '_literature']
 exclude:
   - bin
   - Gemfile

@@ -3,14 +3,14 @@ layout: page
 permalink: /publications/
 title: Publications
 description: 
-years: [2022, 2021, 2020, 2019, 2018, 2017, 2016]
+years: [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
 nav: true
 ---
 
 My most up-to-date list of papers is usually on [Google Scholar](https://scholar.google.com/citations?user=0EOonpYAAAAJ&hl=en), but here you can find some summarized data as well as my best attempt to have an updated and tidy list, with bibtex references, abstracts and links to download.
 
 ## Summarized Data
-1. **Number of papers**: 12. [^1]
+1. **Number of papers**: 13. [^1]
 2. **Number of conference papers**: 8
 3. **Number of workshop papers**: 2
 4. **Number of journal papers**: 2
@@ -33,5 +33,5 @@ My most up-to-date list of papers is usually on [Google Scholar](https://scholar
 
 </div>
 
-[^1]: 11 if we don't count a conference and its related journal version as 2 different papers.
+[^1]: 12 if we don't count a conference and its related journal version as 2 different papers.
 [^2]: I am hoping to work with people from even more countries!

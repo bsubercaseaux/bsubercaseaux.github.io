@@ -35,7 +35,7 @@ I am passionate about several topics in discrete mathematics and theoretical com
 More concretely, I have been mostly working on:
 <ul class="starlist">
 <li> Applying automated reasoning to problems in discrete mathematics. </li>
-<u>Example</u>: <em><a href="https://www.cs.cmu.edu/~mheule/publications/SAT22-gridcolor.pdf">The Packing Chromatic Number of the Infinite Square Grid is At Least 14.</a></em>
+<u>Example</u>: <em><a href="https://arxiv.org/pdf/2301.09757.pdf">The Packing Chromatic Number of the Infinite Square Grid is 15.</a></em>
 <li> Understanding the impact of partially accurate advice for solving algorithmic problems. </li>
 <u>Example</u>: <em><a href="https://openreview.net/pdf?id=HFkxZ_V0sBQ">Augmenting Online Algorithms with 𝛆-accurate predictions.</a></em>
 <li> Understanding Machine Learning interpretability from a formal theoretical standpoint. </li>
