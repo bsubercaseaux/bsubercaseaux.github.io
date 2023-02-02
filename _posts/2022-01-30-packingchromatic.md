@@ -108,9 +108,9 @@ $$
 \sum_{k=1}^\infty \frac{1}{(k+1)^2} = \left( \sum_{k=1}^\infty \frac{1}{k^2} \right) - 1 = \frac{\pi^2}{6} - 1\approx 0.644... < 1.
 $$
 
-This means $$\mathbb{Z}^2_\infty$$ does not admit a packing coloring with a finite number of colors! It even uses the cute _Basel problem_ result for the infinite sum, how cool!
+This means $$\mathbb{Z}^2_\infty$$ does not admit a distance-coloring with a finite number of colors! It even uses the cute _Basel problem_ result for the infinite sum, how cool!
 
-I discovered this that January, and of course the natural next step was to try use the same strategy for the standard $$\mathbb{Z}^2$$ infinite grid as the original Facebook post inquired. The problem is... this doesn't work! In that graph you can color $$5$$ different vertices with color $$k$$ in a $$(k+1) \times (k+1)$$ subgrid, so you end up with a sum that is greater than $$1$$. So I started thinking that maybe for $$\mathbb{Z}^2$$ there was a solution with finite colors. The problem was... I couldn't find one!
+I discovered this that January, and of course the natural next step was to try use the same strategy for the standard $$\mathbb{Z}^2$$ infinite grid as the original Facebook post inquired. The problem is... this doesn't work! In that graph you can distance-color $$5$$ different vertices with color $$k$$ in a $$(k+1) \times (k+1)$$ subgrid (1 in the center and 4 in ther corners), so you end up with a sum that is greater than $$1$$. So I started thinking that maybe for $$\mathbb{Z}^2$$ there was a solution with finite colors. The problem was... I couldn't find one!
 
 Moreover, I wasn’t making any interesting progress, so at some point I basically just let it go. Also, it’s worth mentioning that I tried googling about it, to see whether it had been solved before. At that point I’d have been perfectly happy with finding a full solution online and calling it a day. But satiating my mathematical curiosity on this one turned out to be much harder than that…
 
@@ -278,7 +278,7 @@ After more optimizations, it turned out the _chessboard conjecture_ was false, a
   <img src="/assets/img/chessboard.svg" alt="Description of image" style="max-width: 70%; width: 700px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 17: </b>
-    <span style="font-size: 16px;">The smallest example to the <i>chessboard conjecture</i>. The diamond of radius 14, and a 6 forced in the center, can be packing-colored with 14 colors only if the chessboard pattern is broken. In this case, two occurrences of color 1 in the north-weast edge are out of the chessboard pattern, and this cannot be fixed.</span>
+    <span style="font-size: 16px;">The smallest example to the <i>chessboard conjecture</i>. The diamond of radius 14, and a 6 forced in the center, can be packing-colored with 14 colors only if the chessboard pattern is broken. In this case, two occurrences of color 1 in the north-west edge are out of the chessboard pattern, and this cannot be fixed.</span>
   </figcaption>
 </figure>
 
@@ -307,7 +307,7 @@ Donald Knuth, one of my all-time idols in Computer Science, who is also interest
 > *Best regards, Don*
 >
 
-Also, Knuth wrote us that he believe the chessboard conjecture might still be true for diamonds of odd radius! I couldn’t be happier! This little problem, taken from a Facebook group, has given me a great amount of joy! Some frustration at times, but mostly joy. The paper of Martin et al. from 2017, where they proved the answer to be between 13 and 15, contains the following quote:
+Also, Knuth wrote us that he believes the chessboard conjecture might still be true for diamonds of odd radius! I couldn’t be happier! This little problem, taken from a Facebook group, has given me a great amount of joy! Some frustration at times, but mostly joy. The paper of Martin et al. from 2017, where they proved the answer to be between 13 and 15, contains the following quote:
 
 > *“The first author heard of this problem at a talk by Bernard
 > Lidicky at the 8th Slovenian Conference on Graph Theory (Bled 2011). **While
