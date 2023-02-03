@@ -18,9 +18,11 @@ So at the end of the semester I asked Éric if I could TA for it the following y
   </figcaption>
 </figure>
 
-I learned a lot during that week, and my main takeaway about theorem provers was that they were very cool and yet not quite ready; it felt like writing even simple proofs was such a pain, and also the thought-process of writing verifiable proofs felt totally different from the standard way of thinking when doing math, which operates at a much higher level of abstraction. The school convinced me about the importance of the issue at hand: math proofs are quite complex, and full of little gaps that require the generous reader to fill in. Most of the time this is totally fine... except for when it's not and an entire paper or result needs to be retracted! Who is making sure that mathematical articles don't contain false results, and that other people will not be building new false results on top of the false results they cite? Nobody. Peer review can and will catch some mistakes, but I think it's quite naive to presume it will be a sufficient barrier to protect the infiltration of a few little falsehoods here and there in the long term, which is quite dangerous.
+I learned a lot during that week, and my main takeaway about theorem provers was that they were very cool and yet not quite ready; it felt like writing even simple proofs was such a pain, and also the thought-process of writing verifiable proofs felt totally different from the standard way of thinking when doing math, which operates at a much higher level of abstraction. The school convinced me about the importance of the issue at hand: math proofs are quite complex, and full of little gaps that require the generous reader to fill in. Most of the time this is totally fine... except for when it's not and an entire paper or result needs to be retracted! 
 
-As anecdotal evidence, I've been on both sides of peer review and its current form is quite limited as an error-catching process. On the one hand, in a paper related to my master's thesis I made a mistake that no reviewer caught, and we only fixed it because a coauthor (thanks Marcelo Arenas!) noticed an issue with one of the proofs months after the paper had been accepted. On the other hand, in the 8 papers I've reviewed so far in my career, I always had tight deadlines to review, and I would not vouch for any of those 8 papers to be free of bugs I missed. To be fair, I think I'd have catched any obvious or egregious errors, or things contradicting the literature. But an algebraic mistake in a sequence of 10 equations could definitely have gone unnoticed. 
+Who is making sure that mathematical articles don't contain false results, and that other people will not be building new false results on top of the false results they cite? Nobody. Peer review can and will catch some mistakes, but I think it's quite naive to presume it will be a sufficient barrier to protect the infiltration of a few little falsehoods here and there in the long term, which is quite dangerous.
+
+As anecdotal evidence, I've been on both sides of peer review and its current form is quite limited as an error-catching process. On the one hand, in a paper related to my master's thesis I made a mistake that no reviewer caught, and we only fixed it because a coauthor (thanks Marcelo Arenas!) noticed an issue with one of the proofs months after the paper had been accepted. On the other hand, in the 8 papers I've reviewed so far in my career, I always had tight deadlines to review, and I would not vouch for any of those 8 papers to be free of bugs I missed. In my defense, I think I'd have catched any obvious or egregious errors, or statements contradicting the literature. But an algebraic mistake in a sequence of 10 equations could definitely have gone unnoticed. 
 My point here is that I believe that as mathematicians, and especially as people who care about the long term future of mathematics, we should have some amount of fear about falsehood slipping in.
 
 Automated theorem provers offer a potential solution to this, where proofs can be verified by a computer program. That verification program has itself been checked and verified to be bug-free, by another verified program, and so on. Naturally we cannot verify the verifiers in an infinite recursion, and so at some point of the pipeline we need an unverified piece that starts the verification chain. The idea is that this last unverified piece is quite small, and lots of very smart people have looked at it carefully and nodded in agreement. It's pretty much the closest we can get to full certainty. Once again, using these theorem provers can be quite complicated,and it would be unrealistic to suggest that from now on all math proofs should be accompanied by code in a theorem prover. But the goal of theorem provers is laudable, and the software can always improve (and probably will).
@@ -63,7 +65,7 @@ For example, let’s consider a _distance-coloring_ for the infinite path $$\mat
 
 It only uses 3 colors and can be repeated periodically! Vertices receiving color 1 are at distance at least 2 from each other, vertices receiving color 3 are at distance at least 4 from each other, and so are vertices receiving color 2. The definition is respected. The reader can also check that colors 1 and 2 alone are not enough!
 
-For a more interesting example, we will consider *sub-graphs of the infinite square grid*, that is, a graph where vertices are cells from an infinite grid, and two orthogonally adjacent cells have an edge between them. The following image shows how $$D_3$$ (the _“diamond”_ of radius 3) admits a packing coloring with 7 colors.
+For a more interesting example, we will consider *sub-graphs of the infinite square grid*, that is, a graph where vertices are cells from an infinite grid, and two orthogonally adjacent cells have an edge between them. The following image shows how $$D_3$$ (the _“diamond”_ of radius 3) admits a distance-coloring with 7 colors.
 
 <figure style="text-align:center;">
   <img src="/assets/img/d3-pc.svg" alt="Description of image" style="max-width: 70%; width: 350px;">
@@ -83,7 +85,7 @@ Now, by changing the center color to 6, we can produce a more efficient solution
   </figcaption>
 </figure>
 
-So now let’s go back to the Facebook post. The question is basically whether the infinite square grid can be colored with a finite number of different colors, and if so, how many are required.
+So now let’s go back to the Facebook post. The question is basically whether the infinite square grid can be distance-colored with a finite number of different colors, and if so, how many are required.
 
 I started working on that during that first week of January 2020. I scribbled and doodled over many pages of a squared-grid-paper notebook, futilely trying to color it. I started sharing the problem with different friends, and before I knew it, I was obsessed with it.
 
@@ -91,7 +93,7 @@ The main idea I was playing around with was that of ***"densities"***, where you
 
 First, let me show how densities can be useful to prove things. First, let us prove that 2 colors are not enough to color the infinite path $$\mathbb{Z}^1$$. Indeed, color $$1$$ cannot cover more than half the vertices, and $$2$$ cannot cover more than a third. So their maximum density together is $$\frac{5}{6} < 1$$, and thus they cannot color $$\mathbb{Z}^1$$. This, together with Figure 3, proves that $$\chi_d(\mathbb{Z}^1) = 3$$.
 
-Now let us consider a more interesting example. Let $$\mathbb{Z}^2_\infty$$ be the graph whose vertex set is $$\mathbb{Z}^2$$, and that has edges not only between orthogonally adjacent vertices, but also diagonally adjacents. Formally, for $$u, v \in \mathbb{Z}^2$$, they are connected if $$\vert u - v \vert_\infty = 1$$.
+Now let us consider a more interesting example. Let $$\mathbb{Z}^2_\infty$$ be the graph whose vertex set is $$\mathbb{Z}^2$$, and that has edges not only between orthogonally adjacent vertices, but also diagonally adjacent pairs. Formally, for $$u, v \in \mathbb{Z}^2$$, they are connected if $$\vert u - v \vert_\infty = 1$$.
 
 <figure style="text-align:center;">
   <img src="/assets/img/z2_linfty.png" alt="Description of image" style="max-width: 70%; width: 300px;">
@@ -101,7 +103,7 @@ Now let us consider a more interesting example. Let $$\mathbb{Z}^2_\infty$$ be t
   </figcaption>
 </figure>
 
-Now, if we consider the subgraph induced by any $$(k+1) \times (k+1)$$ subgrid of $$\mathbb{Z}^2_\infty$$, we can only color a single vertex $$v$$ with color $$k$$, as the other vertices of the subgraph are at distance at most $$k$$ from $$v$$. This means that color $$k$$ has density at most $$\frac{1}{(k+1)^2}$$. Therefore, even if we were to use colors $$1, \ldots, \infty$$, the total fraction of the graph we could color would be at most
+Now, if we consider the subgraph induced by any $$(k+1) \times (k+1)$$ subgrid of $$\mathbb{Z}^2_\infty$$, we can only distance-color a single vertex $$v$$ with color $$k$$, as the other vertices of the subgraph are at distance at most $$k$$ from $$v$$. This means that color $$k$$ has density at most $$\frac{1}{(k+1)^2}$$. Therefore, even if we were to use colors $$1, \ldots, \infty$$, the total fraction of the graph we could color would be at most
 
 $$
 \sum_{k=1}^\infty \frac{1}{(k+1)^2} = \left( \sum_{k=1}^\infty \frac{1}{k^2} \right) - 1 = \frac{\pi^2}{6} - 1\approx 0.644... < 1.
@@ -109,7 +111,7 @@ $$
 
 This means $$\mathbb{Z}^2_\infty$$ does not admit a distance-coloring with a finite number of colors. It even uses the cute _Basel problem_ result for the infinite sum, how cool!
 
-I discovered this that January, and of course the natural next step was to try to use the same strategy for the standard $$\mathbb{Z}^2$$ infinite grid as the original Facebook post inquired. The problem is... this doesn't work! In that graph you can distance-color $$5$$ different vertices with color $$k$$ in a $$(k+1) \times (k+1)$$ subgrid (1 in the center and 4 in the corners), so you end up with a sum that is greater than $$1$$. So I started thinking that maybe for $$\mathbb{Z}^2$$ there was a solution with finite colors. The problem was... I couldn't find one!
+I discovered this that January, and of course the natural next step was to try to use the same strategy for the standard infinite grid $$\mathbb{Z}^2$$ as the original Facebook post inquired. The problem is... this doesn't work! If one considers a $$(k+1) \times (k+1)$$ subgrid of $$\mathbb{Z}^2$$, it is possible to distance-color $$5$$ different vertices with color $$k$$ (1 in the center and 4 in the corners), so one ends up with a sum that is greater than $$1$$, meaning it does not discard a finite coloring (note that if an infinite sum converges above 1, that means a finite prefix of it is enough to get past 1). So I started thinking that maybe for $$\mathbb{Z}^2$$ there was a solution with finite colors. The problem was... I couldn't find one!
 
 To make things worse, I wasn’t making any interesting progress, so at some point I basically just let it go. Also, it’s worth mentioning that I tried googling about it, to see whether it had been solved before. At that point I would have been perfectly happy with finding a full solution online and calling it a day. But satisfying my mathematical curiosity on this one turned out to be much harder than that...
 
@@ -124,11 +126,9 @@ Also, some pretty important global events happened soon after the January 2020 s
   </figcaption>
 </figure>
 
+Flash-forward to September 2021. I enroll as a PhD student at Carnegie Mellon University. My main idea was to work on algorithms and discrete math with Anupam Gupta, whom I had met before in the Chilean Summer School of Discrete Mathematics. Now comes a pivotal point in this story. At CMU your first semester as a PhD student starts with an _Introductory Course (IC)_ in which the different faculty present their research, and one is introduced to different aspects of life at CMU and in Pittsburgh.
 
-
-Flash-forward to September 2021. I enroll as a PhD student at Carnegie Mellon University. My main idea was to work on algorithms and discrete math with Anupam Gupta, whom I had met before in the Chilean Summer School of Discrete Mathematics. Now comes a pivotal point in this story. At CMU your first semester starts with an _Introductory Course (IC)_ in which the different faculty present their research, and one is introduced to different aspects of life at CMU and in Pittsburgh.
-
-Marijn Heule gave his IC talk on his automated approach to the _Pythagorean triples problem_, which consists of coloring the integers with red and blue in a way that no Pythagorean triple is monochromatic. For example, if 12 and 16 receive color blue, then 20 must receive color red, as $$12^2 + 16^2 = 20^2$$. It was a great talk, but also a 10-15 minutes one, direct to students with very different backgrounds and interests, so he couldn’t say anything very deep or technical. The main thing I got out of the talk was: *“This CMU professor has been applying automated reasoning techniques to coloring problems, interesting.”*
+Marijn Heule gave his IC talk on his automated approach to the _Pythagorean triples problem_, which consists of coloring the integers with red and blue in a way that no Pythagorean triple is monochromatic. For example, if 12 and 16 receive color blue, then 20 must receive color red, as $$12^2 + 16^2 = 20^2$$. It was a great talk, but also a 10-15 minutes one, directed to students with very different backgrounds and interests, so he couldn’t say anything very deep or technical. The main thing I got out of the talk was: *“This CMU professor has been applying automated reasoning techniques to solve hard coloring problems; interesting.”*
 
 <figure style="text-align:center;">
   <img src="/assets/img/solution-zoom.png" alt="Description of image" style="max-width: 70%; width: 700px;">
