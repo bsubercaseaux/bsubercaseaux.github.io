@@ -277,10 +277,10 @@ blockquote {
 
 // Footer
 footer.fixed-bottom {
-  background-color: var(--global-footer-bg-color);
+  background-color: #495057;
   font-size: 0.75rem;
   .container {
-    color: var(--global-footer-text-color);
+    color: white;
     padding-top: 9px;
     padding-bottom: 8px;
   }
@@ -295,9 +295,13 @@ footer.fixed-bottom {
 
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
-  padding-top: 40px;
-  padding-bottom: 40px;
-  font-size: 0.9rem;
+  background-color: #495057;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1rem;
+  .container {
+    color: white;
+  }
 }
 
 
@@ -426,7 +430,7 @@ footer.sticky-bottom {
   margin-top: 2rem;
   h1 {
     color: var(--global-theme-color);
-    font-size: 2rem;
+    font-size: 5rem;
     text-align: center;
     margin-top: 1em;
     margin-bottom: 1em;

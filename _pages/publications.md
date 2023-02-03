@@ -11,7 +11,7 @@ My most up-to-date list of papers is usually on [Google Scholar](https://scholar
 
 ## Summarized Data
 1. **Number of papers**: 13. [^1]
-2. **Number of conference papers**: 8
+2. **Number of conference papers**: 9
 3. **Number of workshop papers**: 2
 4. **Number of journal papers**: 2
 5. **Citations**: 78
