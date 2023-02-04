@@ -14,8 +14,8 @@ My most up-to-date list of papers is usually on [Google Scholar](https://scholar
 2. **Number of conference papers**: 9
 3. **Number of workshop papers**: 2
 4. **Number of journal papers**: 2
-5. **Citations**: 78
-6. **h-index**: 4
+5. **Citations**: 84
+6. **h-index**: 5
 7. **Erdős number**: 3 (e.g., me → Daniel Lokshtanov → Noga Alon → Paul Erdős).
 8. **Collaborators from**: Chile, France, India, US, the Netherlands, Norway. [^2]
 9. **Most common conference**: NeurIPS (5 papers there).

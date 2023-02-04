@@ -33,11 +33,11 @@ I am passionate about several topics in discrete mathematics and theoretical com
 <!--
     in different parameterizations that attempt to capture what makes a given problem hard. <!--, and in what can be expressed within the limits of simple logical languages. --> 
 <ul class="starlist">
-<li> <i>Can computers prove things?</i> Applying automated reasoning to problems in discrete mathematics. </li>
+<li> Applying automated reasoning to problems in discrete mathematics. </li>
 <u>Example</u>: <em><a href="https://arxiv.org/pdf/2301.09757.pdf">The Packing Chromatic Number of the Infinite Square Grid is 15.</a></em>
-<li> <i>Can computers benefit from faulty advice?</i> Understanding the impact of partially accurate advice for solving algorithmic problems. </li>
+<li> Understanding the impact of partially accurate advice for solving algorithmic problems. </li>
 <u>Example</u>: <em><a href="https://openreview.net/pdf?id=HFkxZ_V0sBQ">Augmenting Online Algorithms with 𝛆-accurate predictions.</a></em>
-<li> <i>Can we understand computer programs?:</i>Machine Learning interpretability from a formal theoretical standpoint. </li>
+<li> Machine Learning interpretability from a formal theoretical standpoint. </li>
 <u>Example</u>: <em><a href="https://arxiv.org/abs/2207.12213">On Computing Probabilistic Explanations for Decision Trees.</a></em>
 </ul>
 <!--
