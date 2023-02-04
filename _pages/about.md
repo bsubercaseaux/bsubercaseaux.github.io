@@ -29,16 +29,15 @@ I am a 2<sup>nd</sup> year Computer Science PhD student at <a href="https://www.
 -->
 
 <strong style="font-weight:800;">  Research statement. </strong>
-I am passionate about several topics in discrete mathematics and theoretical computer science. At the highest level, I want to understand more about the limits of formal systems, or in other words, _what can and cannot be done by a computer_. As a consequence, I am interested both in upper and lower bounds for the complexity of problems, and in the tools that allow us to improve such bounds.
+I am passionate about several topics in discrete mathematics and theoretical computer science. At the highest level, I want to understand more about the limits of formal systems; _what can and cannot be done by a computer_. As a consequence I have been mostly working on: 
 <!--
     in different parameterizations that attempt to capture what makes a given problem hard. <!--, and in what can be expressed within the limits of simple logical languages. --> 
-More concretely, I have been mostly working on:
 <ul class="starlist">
-<li> Applying automated reasoning to problems in discrete mathematics. </li>
+<li> <i>Can computers prove things?</i> Applying automated reasoning to problems in discrete mathematics. </li>
 <u>Example</u>: <em><a href="https://arxiv.org/pdf/2301.09757.pdf">The Packing Chromatic Number of the Infinite Square Grid is 15.</a></em>
-<li> Understanding the impact of partially accurate advice for solving algorithmic problems. </li>
+<li> <i>Can computers benefit from faulty advice?</i> Understanding the impact of partially accurate advice for solving algorithmic problems. </li>
 <u>Example</u>: <em><a href="https://openreview.net/pdf?id=HFkxZ_V0sBQ">Augmenting Online Algorithms with 𝛆-accurate predictions.</a></em>
-<li> Understanding Machine Learning interpretability from a formal theoretical standpoint. </li>
+<li> <i>Can we understand computer programs?:</i>Machine Learning interpretability from a formal theoretical standpoint. </li>
 <u>Example</u>: <em><a href="https://arxiv.org/abs/2207.12213">On Computing Probabilistic Explanations for Decision Trees.</a></em>
 </ul>
 <!--
