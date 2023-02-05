@@ -29,11 +29,11 @@ I am a 2<sup>nd</sup> year Computer Science PhD student at <a href="https://www.
 -->
 
 <strong style="font-weight:800;">  Research statement. </strong>
-I am passionate about several topics in discrete mathematics and theoretical computer science. At the highest level, I want to understand more about the limits of formal systems; _what can and cannot be done by a computer_. As a consequence I have been mostly working on: 
+I am passionate about several topics in discrete mathematics and theoretical computer science. At the highest level, I want to understand more about the limits of formal systems; _what can and cannot be done (efficiently?) by a computer_. Fortunately, computer scientists have come up with a wide variety of angles from which to attack this broad question. So far, my work can be clustered around the following sub-areas: 
 <!--
     in different parameterizations that attempt to capture what makes a given problem hard. <!--, and in what can be expressed within the limits of simple logical languages. --> 
 <ul class="starlist">
-<li> Applying automated reasoning to problems in discrete mathematics. </li>
+<li> Automated reasoning applied to problems in discrete mathematics. </li>
 <u>Example</u>: <em><a href="https://arxiv.org/pdf/2301.09757.pdf">The Packing Chromatic Number of the Infinite Square Grid is 15.</a></em>
 <li> Understanding the impact of partially accurate advice for solving algorithmic problems. </li>
 <u>Example</u>: <em><a href="https://openreview.net/pdf?id=HFkxZ_V0sBQ">Augmenting Online Algorithms with 𝛆-accurate predictions.</a></em>
