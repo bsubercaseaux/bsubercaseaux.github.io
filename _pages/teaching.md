@@ -5,7 +5,7 @@ title: Teaching
 description: In this page you can find materials about different classes I have contributed to, or more in general material about teaching and pedagogy. 
 nav: true
 ---
-I **really really really** love teaching. So far, I have being a Teaching Assistant for the **10** following classes: [^1]
+I **really really really** love teaching. So far, I have being a Teaching Assistant for the following classes: [^1]
 <div>
     <ol>
         <li> 
