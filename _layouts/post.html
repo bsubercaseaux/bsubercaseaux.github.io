@@ -43,9 +43,14 @@ layout: default
     {{ content }}
   </article>
 
-   <hr> 
 
   {%- if site.disqus_shortname and page.comments -%}
+
+
+    <hr style="margin-top: 50px; margin-bottom: 50px;"> 
+    
+    <h1 style="text-align:center;"> Comment Section </h1>
+
     <div id="disqus_thread"></div>
     <script type="text/javascript">
       var disqus_shortname  = '{{ site.disqus_shortname }}';

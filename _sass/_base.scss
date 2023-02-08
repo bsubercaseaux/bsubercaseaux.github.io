@@ -40,7 +40,6 @@ ul.starlist li:before
   height: 100%;
 //  position: absolute;
   padding: 40px;
-  overflow: auto;
 }
 
 @media (min-width: 1200px){
@@ -50,13 +49,10 @@ ul.starlist li:before
   height: 100%;
 //  position: absolute;
   padding: 40px;
-  overflow: auto;
+}
 }
 
 
-
-
-}
 
 a, table.table a {
   color: var(--global-theme-color);
@@ -82,6 +78,18 @@ blockquote {
 .equation {
   margin-bottom: 1rem;
   text-align: center;
+}
+
+mjx-container {
+ overflow-x: auto !important;
+ //overflow-y: hidden !important;
+ //min-width: 0px !important;
+}
+
+mjx-math {
+//    overflow-x: auto !important;
+// overflow-y: hidden !important;
+    min-width: 0px !important;
 }
 
 // Caption
@@ -614,3 +622,5 @@ html.transition *:after {
   font-size: 0.875rem;
   padding-top: 0.25rem;
 }
+
+

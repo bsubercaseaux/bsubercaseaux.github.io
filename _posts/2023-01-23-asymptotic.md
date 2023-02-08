@@ -34,6 +34,7 @@ Funnily enough, it is crucial that $$ c \leq n/3$$, as $$c \leq n/2.5$$ would ma
 
 Start with the following algebra:
 
+<div style="overflox-x: scroll;">
 $$\begin{align}
 		\sum_{r = 1}^c \frac{c^r r^c}{r^{2r}} n^r &= \sum_{k = 0}^{c-1} \frac{c^{(c-k)} (c-k)^c}{(c-k)^{2(c-k)}} n^{(c-k)}\\ 
 		&= \sum_{k = 0}^{c-1} \left(\frac{c}{c-k}\right)^{c-k} \cdot (c-k)^{k} n^{(c-k)}\\
@@ -45,6 +46,7 @@ $$\begin{align}
 		&= \sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r} n^{c}\\
 		&=  n^{c} \cdot\sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}.
 	\end{align}$$
+</div>
 
 The idea of this part is that we have obtained an expression of the form $$n^c \cdot f(c)$$, where $$f(c) = \sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}$$. Our goal now is, naturally, to argue that $$f(c)$$ is bounded above by a constant. As a first step towards this goal, let us prove first that $$f(c)$$ is always increasing. In order to do this consider that
 

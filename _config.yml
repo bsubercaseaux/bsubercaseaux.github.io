@@ -77,7 +77,7 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 # -----------------------------------------------------------------------------
 
 blog_name: B's Blog # your blog must have a name for it to show up in the nav bar
-blog_description: Posts \( \in  \lbrace \text{math}, \text{computer science}, \text{philosophy}, \text{literature}\rbrace\).
+blog_description: Posts \( \in  \lbrace \text{math}, \text{computer science}, \text{philosophy}, \text{literature}\rbrace.\)
 permalink: /blog/:year/:title/
 
 # Pagination

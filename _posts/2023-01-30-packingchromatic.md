@@ -48,13 +48,19 @@ But enough about Coq for now. The thing is, my week at CASS was severely interru
 
 Before continuing, let me explain the problem a bit more precisely, and provide some examples. The first name I made up for this problem was _“distance-coloring”_, simply because it is a coloring problem in which the coloring restrictions are based on the distances between vertices. So we can consider the following definition:
 
-**Definition 1:** Given a graph $$G = (V, E)$$, a distance-coloring with $$k$$ colors is a mapping $$\varphi: V \to \{1, \ldots, k\}$$ such that for all pairs of distinct vertices $$u, v$$ it holds that $$\varphi(u) = \varphi(v) = c \implies \textrm{dist}_G(u, v) > c.$$
+**Definition 1:** Given a graph $$G = (V, E)$$, a distance-coloring with $$k$$ colors is a mapping $$\varphi: V \to \{1, \ldots, k\}$$ such that for all pairs of distinct vertices $$u, v$$ it holds that 
+\\[
+    \varphi(u) = \varphi(v) = c \implies \textrm{dist}_G(u, v) > c.
+\\]
 
 That is, if two different vertices receive the same color, $$c$$, then they need to be further than $$c$$ apart.
 
 Note that the standard notion of graph coloring can be rephrased as
 
-**Definition 2:** Given a graph $$G = (V, E)$$, a coloring with $$k$$ colors is a mapping $$\varphi: V \to \{1, \ldots, k\}$$ such that for all pairs of distinct vertices $$u, v$$ it holds that $$\varphi(u) = \varphi(v) = c \implies \textrm{dist}_G(u, v) > 1.$$
+**Definition 2:** Given a graph $$G = (V, E)$$, a coloring with $$k$$ colors is a mapping $$\varphi: V \to \{1, \ldots, k\}$$ such that for all pairs of distinct vertices $$u, v$$ it holds that 
+\\[
+    \varphi(u) = \varphi(v) = c \implies \textrm{dist}_G(u, v) > 1.
+\\]
 
 So just change a $$1$$ for a $$c$$; *distance-colorings* are a very natural generalization! The concept of chromatic numbers can naturally be extended to distance-colorings: for a graph $$G$$ we define $$\chi_d(G)$$ as the minimum number of colors such that $$G$$ admits a distance-coloring with said colors.
 
