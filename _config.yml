@@ -12,10 +12,9 @@ lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🐒 # the emoji used as the favicon
 url: "https://bsubercaseaux.github.io" # the base hostname & protocol for your site
 baseurl:  "" # the subpath of your site, e.g. /blog/
-last_updated: true # set to true if you want to display last updated in the footer
+last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
-footer_text: Made with 🧡 by Bernardo. If you like something specific about this website, or have any specific questions, e-mail him.
-
+footer_text: '<it>"Man is but a reed, weakest in nature, but a reed which thinks."</it> -- Blaise Pascal (Pensées, 1670)'
 # -----------------------------------------------------------------------------
 # RSS Feed
 # -----------------------------------------------------------------------------
@@ -77,8 +76,8 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Blog # your blog must have a name for it to show up in the nav bar
-blog_description: A blog by Bernardo Subercaeaux.
+blog_name: B's Blog # your blog must have a name for it to show up in the nav bar
+blog_description: Posts \( \in  \lbrace \text{math}, \text{computer science}, \text{philosophy}, \text{literature}\rbrace\).
 permalink: /blog/:year/:title/
 
 # Pagination
@@ -86,7 +85,7 @@ pagination:
   enabled: true
 
 # Comments
-disqus_shortname: al-folio # put your disqus shortname
+disqus_shortname: https-bsubercaseaux-github-io # put your disqus shortname
 # https://help.disqus.com/en/articles/1717111-what-s-a-shortname
 
 # -----------------------------------------------------------------------------

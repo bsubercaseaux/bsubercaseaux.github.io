@@ -40,6 +40,7 @@ ul.starlist li:before
   height: 100%;
 //  position: absolute;
   padding: 40px;
+  overflow: auto;
 }
 
 @media (min-width: 1200px){
@@ -49,6 +50,7 @@ ul.starlist li:before
   height: 100%;
 //  position: absolute;
   padding: 40px;
+  overflow: auto;
 }
 
 
@@ -296,6 +298,7 @@ footer.fixed-bottom {
 footer.sticky-bottom {
   border-top: 1px solid var(--global-divider-color);
   background-color: #495057;
+  opacity: 0.9;
   padding-top: 15px;
   padding-bottom: 15px;
   font-size: 1rem;

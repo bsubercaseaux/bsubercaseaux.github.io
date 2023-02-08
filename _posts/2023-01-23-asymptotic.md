@@ -3,8 +3,9 @@ layout: post
 title: A cute problem about asymptotics of a summation
 date: 2023-01-23 11:12:00-0400
 description: A solution to a nice little problem given to my Nicolás Sanhueza-Matamala.
-tags: math
+tags: math, asymptotics, puzzle
 categories: Math
+comments: true
 ---
 
 Chilean mathematician [Nicolás Sanhueza-Matamala](https://sanhueza.net/nicolas/) gave me the following problem:

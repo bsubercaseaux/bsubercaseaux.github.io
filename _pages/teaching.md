@@ -10,63 +10,71 @@ I **really really really** love teaching. So far, I have being a Teaching Assist
     <ol>
         <li> 
             <div style="margin-bottom:2px;"> <b><em>Design and Analysis of Algorithms</em></b> </div>
-            <p style="padding-left: 20px; align:right; font-size:18px;">
-                3 times at U. of Chile. For professors Gonzalo Navarro, Pablo Barceló, and Jérémy Barbay.</p>
+            <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
+3 times at U. of Chile. For professors [Gonzalo Navarro](https://users.dcc.uchile.cl/~gnavarro/), [Pablo Barceló](https://pbarcelo.ing.uc.cl/), and [Jérémy Barbay](https://users.dcc.uchile.cl/~jbarbay/#orge6b6b6f).</p>
         </li>
 
         <li> 
+            <div style="margin-bottom:2px;"> <b><em>Advanced Analysis of Algorithms</em></b> </div>
+            <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
+                at U. of Chile. For professor [Patricio Poblete](https://users.dcc.uchile.cl/~ppoblete/).</p>
+        </li>
+
+
+
+        <li> 
             <div> <b><em>Algorithms and Data Structures</em></b> </div>
-            <p style="align:right; font-size:18px;">
-                at U. of Chile. For professor Jérémy Barbay.</p>
+            <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
+                at U. of Chile. For professor [Jérémy Barbay](https://users.dcc.uchile.cl/~jbarbay/#orge6b6b6f).</p>
         </li>
 
         <li> 
             <div> <b><em>Discrete Math </em></b> </div>
-            <p style="align:right; font-size:18px;">
-                3 times at U. of Chile. For professors Gonzalo Navarro and Pablo Barceló.</p>
+            <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
+                3 times at U. of Chile. For professors [Gonzalo Navarro](https://users.dcc.uchile.cl/~gnavarro/) and [Pablo Barceló](https://pbarcelo.ing.uc.cl/).</p>
         </li>
 
         <li> 
             <div> <b><em>Programming Languages</em></b> </div>
-            <p style="align:right; font-size:18px;">
-                at U. of Chile. For professor Éric Tanter.</p>
+            <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
+                at U. of Chile. For professor [Éric Tanter](https://pleiad.cl/people/etanter).</p>
         </li>
 
         <li> 
             <div> <b><em>Computability and Computational Complexity </em></b> </div>
-            <p style="align:right; font-size:18px;">
-                at U. of Chile. For professor Marcos Kiwi.</p>
+            <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
+                at U. of Chile. For professor [Marcos Kiwi](http://www.dim.uchile.cl/~mkiwi/).</p>
         </li>
 
         <li> 
             <div> <b><em>Computational Complexity</em></b> </div>
-            <p style="align:right; font-size:18px;">
-                hired as external TA from PUC Chile. For professor Pablo Barceló.</p>
+            <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
+                hired as external TA from PUC Chile. For professor [Pablo Barceló](https://pbarcelo.ing.uc.cl/).</p>
         </li>
         
         <li> 
             <div> <b><em>Databases </em></b> </div>
-            <p style="align:right; font-size:18px;">
-                at École Centrale Paris. For professor Nicolas Travers.</p>
+            <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
+                at École Centrale Paris. For professor [Nicolas Travers](https://scholar.google.com/citations?user=7tVwe24AAAAJ&hl=en).</p>
         </li>
 
         <li> 
             <div> <b><em>Workshop of Competitive Programming </em></b> </div>
-            <p style="align:right; font-size:18px;">
-                2 times at U. of Chile. For professor Jorge Pérez.</p>
+            <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
+                2 times at U. of Chile. For professor [Jorge Pérez](https://scholar.google.com/citations?user=a6lUuiwAAAAJ&hl=en).</p>
         </li>
 
-        <li> 
-            <div> <b><em>Introduction to Algebra</em></b> </div>
-            <p style="align:right; font-size:18px;">
-                at U. of Chile. For professor Ivan Rapaport.</p>
-        </li>
-
-
+       
         <li> 
             <div> <b><em>Automata Theory and Formal Languages </em></b> </div>
-            <p style="align:right; font-size:18px;">
-                at U. of Chile. For professor Jorge Pérez.</p>
+            <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
+                at U. of Chile. For professor [Jorge Pérez](https://scholar.google.com/citations?user=a6lUuiwAAAAJ&hl=en).</p>
+        </li>
+
+         <li> 
+            <div> <b><em>Introduction to Algebra</em></b> </div>
+            <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
+                at U. of Chile. For professor [Ivan Rapaport](http://www.dim.uchile.cl/~rapaport/).</p>
         </li>
     </ol>
 </div>
@@ -75,4 +83,4 @@ I **really really really** love teaching. So far, I have being a Teaching Assist
 
 I also had a YouTube channel with math videos, and have collected a fair bit of teaching materials over the years. I plan to upload most of that here. Unfortunately, most of it was originally written in Spanish, so I'll be slowly translating it over time.
 
-[^1]:  By counting classes multiplied by the number of times I have TA'ed for them, the total is **15** TA'ships.
+[^1]:  By counting classes multiplied by the number of times I have TA'ed for them, the total is **16** TA'ships.

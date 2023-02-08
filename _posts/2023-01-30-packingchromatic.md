@@ -3,11 +3,17 @@ layout: post
 title: The story behind the Packing Chromatic paper.
 date: 2023-01-30
 description: A personal tale about what it's been to determine the packing chromatic number of the infinite square grid.
-tags: math
+tags: math, research, automated reasoning
+comments: true
 categories: Math
 ---
 
-It all started in 2019, when I took Éric Tanter’s class on _Programming Languages_ at University of Chile. It was an amazing class; I didn’t know anything about programming languages beforehand, and just absorbed the content like a sponge.
+<p style="font-weight:500;" markdown="1">This post tells the _story behind the scenes_ of my latest paper, which solves a 20-year-old open problem in combinatorics through the use of SAT-solvers. It's about how good math problems can come from anywhere, including a Facebook group, and how non-linear research can be. Usually when we look at a theorem, a paper, or pretty much any human creation, it's easy to believe, even unconsciously, that the creators had it easy, and that they knew exactly what they were doing. 
+This post shares the messy story behind my latest paper, hopefully showing that even though sometimes you have no idea if things will work out until the very last second, things can still work out.</p>
+
+---
+
+It all started in 2019, when I took [Éric Tanter](https://pleiad.cl/people/etanter)’s class on _Programming Languages_ at University of Chile. It was an amazing class; I didn’t know anything about programming languages beforehand, and just absorbed the content like a sponge.
 So at the end of the semester I asked Éric if I could TA for it the following year, and he said yes. Moreover, he invited me to participate in ***CASS*** (Coq Andes Summer School) 2020, a week-long course on Coq, the theorem prover. I wanted to learn more about theorem provers, so I happily accepted. The course took place not too far from my city during the Chilean summer, from January 6th to Friday 10th.
 
 <figure style="text-align:center;">
@@ -42,17 +48,17 @@ But enough about Coq for now. The thing is, my week at CASS was severely interru
 
 Before continuing, let me explain the problem a bit more precisely, and provide some examples. The first name I made up for this problem was _“distance-coloring”_, simply because it is a coloring problem in which the coloring restrictions are based on the distances between vertices. So we can consider the following definition:
 
-**Definition 1:** Given a graph $$G = (V, E)$$, a distance-coloring with $$k$$ colors is a mapping $$\varphi: V \to \{1, \ldots, k\}$$ such that for all pairs of distinct vertices $$u, v$$ it holds that $$\varphi(u) = \varphi(v) = c \implies \textrm{dist}_G(u, v) > c$$.
+**Definition 1:** Given a graph $$G = (V, E)$$, a distance-coloring with $$k$$ colors is a mapping $$\varphi: V \to \{1, \ldots, k\}$$ such that for all pairs of distinct vertices $$u, v$$ it holds that $$\varphi(u) = \varphi(v) = c \implies \textrm{dist}_G(u, v) > c.$$
 
 That is, if two different vertices receive the same color, $$c$$, then they need to be further than $$c$$ apart.
 
 Note that the standard notion of graph coloring can be rephrased as
 
-**Definition 2:** Given a graph $$G = (V, E)$$, a coloring with $$k$$ colors is a mapping $$\varphi: V \to \{1, \ldots, k\}$$ such that for all pairs of distinct vertices $$u, v$$ it holds that $$\varphi(u) = \varphi(v) = c \implies \textrm{dist}_G(u, v) > 1$$.
+**Definition 2:** Given a graph $$G = (V, E)$$, a coloring with $$k$$ colors is a mapping $$\varphi: V \to \{1, \ldots, k\}$$ such that for all pairs of distinct vertices $$u, v$$ it holds that $$\varphi(u) = \varphi(v) = c \implies \textrm{dist}_G(u, v) > 1.$$
 
 So just change a $$1$$ for a $$c$$; *distance-colorings* are a very natural generalization! The concept of chromatic numbers can naturally be extended to distance-colorings: for a graph $$G$$ we define $$\chi_d(G)$$ as the minimum number of colors such that $$G$$ admits a distance-coloring with said colors.
 
-For example, let’s consider a _distance-coloring_ for the infinite path $$\mathbb{Z}^1$$.
+For example, let’s consider a _distance-coloring_ for the infinite path $$\mathbb{Z}^1.$$
 
 <figure style="text-align:center;">
   <img src="/assets/img/path-pc.svg" alt="Description of image" style="max-width: 70%; width: 500px;">
@@ -126,9 +132,9 @@ Also, some pretty important global events happened soon after the January 2020 s
   </figcaption>
 </figure>
 
-Flash-forward to September 2021. I enroll as a PhD student at Carnegie Mellon University. My main idea was to work on algorithms and discrete math with Anupam Gupta, whom I had met before in the Chilean Summer School of Discrete Mathematics. Now comes a pivotal point in this story. At CMU, one's first semester as a Computer Science PhD student starts with an _Introductory Course (IC)_ in which the different faculty present their research, and one is introduced to different aspects of life at CMU and in Pittsburgh.
+Flash-forward to September 2021. I enroll as a PhD student at Carnegie Mellon University. My main idea was to work on algorithms and discrete math with [Anupam Gupta](http://www.cs.cmu.edu/~anupamg/), whom I had met before in the Chilean Summer School of Discrete Mathematics. Now comes a pivotal point in this story. At CMU, one's first semester as a Computer Science PhD student starts with an _Introductory Course (IC)_ in which the different faculty present their research, and one is introduced to different aspects of life at CMU and in Pittsburgh.
 
-Marijn Heule gave his IC talk on his automated approach to the _Pythagorean triples problem_, which consists of coloring the integers with red and blue in a way that no Pythagorean triple is monochromatic. For example, if 12 and 16 receive color blue, then 20 must receive color red, as $$12^2 + 16^2 = 20^2$$. It was a great talk, but also a 10-15 minutes one, directed to students with very different backgrounds and interests, so he couldn’t say anything very deep or technical. The main thing I got out of the talk was: *“This CMU professor has been applying automated reasoning techniques to solve hard coloring problems; interesting.”*
+[Marijn Heule](https://www.cs.cmu.edu/~mheule/) gave his IC talk on his automated approach to the _Pythagorean triples problem_, which consists of coloring the integers with red and blue in a way that no Pythagorean triple is monochromatic. For example, if 12 and 16 receive color blue, then 20 must receive color red, as $$12^2 + 16^2 = 20^2$$. It was a great talk, but also a 10-15 minutes one, directed to students with very different backgrounds and interests, so he couldn’t say anything very deep or technical. The main thing I got out of the talk was: *“This CMU professor has been applying automated reasoning techniques to solve hard coloring problems; interesting.”*
 
 <figure style="text-align:center;">
   <img src="/assets/img/solution-zoom.png" alt="Description of image" style="max-width: 70%; width: 700px;">
@@ -144,7 +150,7 @@ I didn’t know anything about automated reasoning techniques. So I e-mailed Mar
 
 Marijn agreed to chat, and he liked the problem. Moreover, he was willing to work with me on it!  This is actually quite rare in academia based on my personal experience. Professors love motivated students, but it’s generally risky for them to dive into a problem that occurred to the student; professors are usually pushing lines of research for the medium-long term, and usually have a way better grasp than students about which problems are solvable, and how impactful it would be to solve them. So it’s usually sub-optimal to sink their teeth into any random problem a student proposes. But Marijn was so intrigued by the problem that he was willing to guide me on it; to see if his techniques could be helpful for it, which he intuited to be the case.
 
-Soon after, I was having lunch with Isaac Grosof, a 5th year PhD student at the time. Isaac is a truly brilliant student, one of those that shine blindingly bright even within a context as selective as a CMU CS PhD. I told them about the problem, and they liked it too. So much so that after we finished our lunch we went straight to their office and started to work on it together. We made a couple of simple observations I had already made on my own before, so I wasn’t terribly excited, and then Isaac had to leave for a meeting. If my recollection is right, I received an e-mail from them the next day, or at most 2 days letter, with a partial solution to the problem. Isaac had found a way to color the infinite grid by using 23 colors in a periodic manner. To the best of my knowledge, they found this solution “manually” (i.e., trying things by hand on a computer, inspired by density arguments). I was completely blown away; it had only take Isaac a few hours to do something I had tried several times during the course of more than a year!
+Soon after, I was having lunch with [Isaac Grosof](https://isaacg1.github.io/), a 5th year PhD student at the time. Isaac is a truly brilliant student, one of those that shine blindingly bright even within a context as selective as a CMU CS PhD. I told them about the problem, and they liked it too. So much so that after we finished our lunch we went straight to their office and started to work on it together. We made a couple of simple observations I had already made on my own before, so I wasn’t terribly excited, and then Isaac had to leave for a meeting. If my recollection is right, I received an e-mail from them the next day, or at most 2 days later, with a partial solution to the problem. Isaac had found a way to color the infinite grid by using 23 colors in a periodic manner. To the best of my knowledge, they found this solution “manually” (i.e., trying things by hand on a computer, inspired by density arguments). I was completely blown away; it had only take Isaac a few hours to do something I had tried several times during the course of more than a year!
 
 
 Marijn and I met shortly thereafter, and he explained me how to run a SAT solver on the problem. Armed with that, we were able to obtain a solution with 17 colors pretty quickly, and later that same week another solution with only 15 colors. Before understanding how a computer can be used to prove that 15 colors are enough to distance-color the infinite grid, it's convenient to understand first how a computer can be used to prove that 3 colors are enough to distance-color the infinite path (which we know it's possible from Figure 3). In order to do this, we can consider a subgraph of the infinite path, like $$P_4$$, the path on 4 vertices, and try to distance-color it with $$3$$ colors. Consider the following attempt[^1]:
@@ -179,7 +185,13 @@ The question is therefore: how can find a distance-coloring of a finite path tha
 
 For showing that $$15$$ colors are enough for a distance-coloring of the infinite grid we can proceed in a similar manner, by considering a $$72 \times 72$$ subgrid of $$\mathbb{Z}^2$$ with _toroidal edges_, meaning that the vertices of the left-most column of the subgrid are connected to the right-most column, and similarly top and bottom rows are connected.
 
-The most direct SAT encoding for this problem is quite straightforward: if you have a graph $$G = (V, E)$$, and want to decide whether it admits a distance-coloring with $$k$$ colors, then create variables $$x_{v, c}$$ representing that vertex $$v \in V$$ gets color $$c \in \lbrace 1, \ldots, k \rbrace$$, and add the following constraints:
+The recipe for establishing coloring bounds on an infinite graph is thus as follows:
+
+1. For establishing an _upper bound_ (meaning that $$k$$ colors are enough for the infinite graph), we need a finite subgraph with _toroidal edges_ (i.e., edges that capture periodicity, in a way that guarantees that the coloring for the finite subgraph would allows us to obtain one for the infinite graph).[^2]
+
+2. For establishing a _lower bound_ (meaning that $$k$$ colors are not enough for the infinite graph), we simply need to show a finite subgraph for which $$k$$ colors are not enough; if you can't even color this finite tiny portion of the infinite graph, then no hope for the infinite graph![^3]
+
+Both for finding a coloring of a finite subgraph, or showing that no coloring can exist with the target number of colors, we can use a SAT solver.  The most direct SAT encoding for this problem is quite straightforward: if you have a graph $$G = (V, E)$$, and want to decide whether it admits a distance-coloring with $$k$$ colors, then create variables $$x_{v, c}$$ representing that vertex $$v \in V$$ gets color $$c \in \lbrace 1, \ldots, k \rbrace$$, and add the following constraints:
 
 1. _Each vertex must get a color:_ 
 
@@ -340,3 +352,7 @@ To close this post, I'll circle back all the way to Coq, the theorem prover. Dur
 
 ---
 [^1]: The figures in this post alternate between: (i) a _grid_ representation (as in Figures 3, 4, and 5), in which vertices are represented by squares, and the edges between them are implicit (as they are defined by orthogonal adjacency between the squares), and (ii) a graph representation in which vertices are represented as circles and edges between vertices are drawn explicitly.
+
+[^2]: Many people have asked me the same great question here: what if you want to find a coloring that's _aperiodic_? Then certainly you won't find that with toroidal edges and a SAT solver. In fact, it might be that deciding whether a finite set of colors $$S$$ (not necessarily $$\lbrace 1, \ldots, k \rbrace$$) can distance-color the infinite square grid is undecidable! So far, I only know that if you have a grid that is infinite in one direction, but finite in the other one, then any set of colors that can distance-color it can do so periodically, and thus the problem is decidable. If you have any mathematical ideas to prove decidability or indecidability for the infinite square grid, please get in touch with me.
+
+[^3]: In a more general sense, this is just the [De Bruijn–Erdős theorem](https://en.wikipedia.org/wiki/De_Bruijn%E2%80%93Erd%C5%91s_theorem_(graph_theory)#:~:text=The%20De%20Bruijn%E2%80%93Erd%C5%91s%20theorem%20then%20shows%20that%20every%20graph,can%20again%20be%20four%2Dcolored.), which holds as well for distance-colorings.
