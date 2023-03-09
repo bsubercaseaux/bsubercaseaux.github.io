@@ -66,7 +66,7 @@ Professor Jorge Pérez invited me to participate in *Competitive Programming* (i
 </figure>
 
 
-After 3 semesters, I was selected to participate in a <em>dual-degree</em> program in Paris, France. Moreover, I was the only Chilean of that year in getting the prestigious  <em><a href="https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence">Eiffel Scholarship </a></em>, which supported elite international students to study in France. A very minor setback was caused by the fact that I didn't know absolutely any French!
+After 3 semesters, I was selected to participate in a <em>dual-degree</em> program in Paris, France. Moreover, I was the only Chilean of that year in getting the prestigious  <em><a href="https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence">Eiffel Scholarship</a></em>, which supported elite international students to study in France. A very minor setback was caused by the fact that I didn't know absolutely any French!
 
 <figure style="text-align:center;">
   <img src="../assets/img/french.jpeg" alt="Description of image" style="max-width: 70%;">
