@@ -14,7 +14,7 @@ profile:
             </script> 
     </p>
 
-     <p> <a href="../assets/pdf/research_resume.pdf"> 📎 my resume/cv </a></p>
+     <p> <a href="../assets/pdf/CV-BernardoSubercaseaux.pdf"> 📎 my resume/cv </a></p>
     <p> <a href="https://scholar.google.com/citations?user=0EOonpYAAAAJ&hl=en"> <img src="../assets/img/Google_Scholar_logo.png" style="width:20px;height:20px;" alt="the standard Google scholar icon"> Google scholar</a> </p>
     </font>
 
