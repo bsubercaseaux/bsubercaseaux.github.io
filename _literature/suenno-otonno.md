@@ -3,7 +3,7 @@ layout: post
 title: Sueño de una noche de Otoño
 ---
 
-![Parque las esculturas](/assets/img/esculturas.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Parque las esculturas](/assets/img/esculturas.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
 Con los años he perdido de a poco la vergüenza de expresar emociones, y este breve texto, colinealmente, espera decir solapadamente una de mis directrices más recurrentes. La poesía, y la belleza, vienen de un lugar que nadie parece entender realmente; no nos culpemos, ni a nosotros ni a otros, cuándo no veamos belleza donde otros han visto, o donde otros han supuesto que debiesemos ver.
 

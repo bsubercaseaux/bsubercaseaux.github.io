@@ -16,12 +16,12 @@ Je vous aime.
 <h1 style="text-align:center;"> Episode I</h1>
 
 
-![Alice](/assets/img/alice.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Alice](/assets/img/alice.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
 I told her to meet me at Venezia's. That week had already been pretty weird, but the best was about to come. She sent me a message before getting there; excuse my clothes, I've been backpacking and this is all I've got. I realized when I found her, disorientated, outside the bar. She was wearing high cut trekking shoes, a long flowered dress and a jean jacket that was everything but tight. Upturned nose; not in a tender way as in a bulldog, but a classy and characteristic nose, looking upwards like a sunflower. A dress like that, with white flowers over green, was a particularly good fit for a British woman. Or at least it would have given me a worse impression on a Chilean woman. Nothing essential, but those dresses tend to be common only amongst a certain social class, that allows itself to wear loose dresses, to live in big loose houses, to drive big loose cars, but that always has an uptight spirit. Anyway, we sat down and asked for two piscolas to the top, nothing less.
 
 
-<i style="white-space:pre; text-align:center;">
+<p style="white-space:pre; text-align:center; font-style:italic;">
 Do you really want an answer?
 I don't know in what tone
 I need to tell you that you're cute
@@ -30,13 +30,40 @@ and yet, damn it, I knew
 when you approached me
 I wasn't going to satisfy
 your desire of fucking me.
-</i>
+</p>
 
 
 If I had to identify what made me realize that that night would be different, I would start by her way of sitting down. In my twenty four years I have not seen anything alike. Her long body leaned in with such decision that her head would be right above the middle of the table (small and squared), and her posture conveyed such attention, such force, that I felt slightly intimidated. In other words, if I had copied her posture, our lips would have prematurely met above a white candle in between our pisco glasses. I dear to say that the talk made us forget that the universe extended beyond the bar, and we forgot about our phones and the rest of the tables, perhaps looking at us with jealousy or some form of fear.
 
+<p style="white-space:pre; text-align:center; font-style:italic;">
+Do you really want an answer?
+I don't know in what tone
+I need to tell you that you're cute
+but not my kind of guy
+and yet, damn it, I knew
+when you approached me
+I wasn't going to satisfy
+your desire of fucking me.
+</p>
 
-<i style="text-align:right; white-space: pre;">
+
+If I had to identify what made me realize that that night would be different, I would start by her way of sitting down. In my twenty four years I have not seen anything alike. Her long body leaned in with such decision that her head would be right above the middle of the table (small and squared), and her posture conveyed such attention, such force, that I felt slightly intimidated. In other words, if I had copied her posture, our lips would have prematurely met above a white candle in between our pisco glasses. I dear to say that the talk made us forget that the universe extended beyond the bar, and we forgot about our phones and the rest of the tables, perhaps looking at us with jealousy or some form of fear.
+
+<p style="white-space:pre; text-align:center; font-style:italic;">
+Do you really want an answer?
+I don't know in what tone
+I need to tell you that you're cute
+but not my kind of guy
+and yet, damn it, I knew
+when you approached me
+I wasn't going to satisfy
+your desire of fucking me.
+</p>
+
+
+If I had to identify what made me realize that that night would be different, I would start by her way of sitting down. In my twenty four years I have not seen anything alike. Her long body leaned in with such decision that her head would be right above the middle of the table (small and squared), and her posture conveyed such attention, such force, that I felt slightly intimidated. In other words, if I had copied her posture, our lips would have prematurely met above a white candle in between our pisco glasses. I dear to say that the talk made us forget that the universe extended beyond the bar, and we forgot about our phones and the rest of the tables, perhaps looking at us with jealousy or some form of fear.
+
+<p style="white-space:pre; text-align:center; font-style:italic;">
 You are cute, but oh boy how ugly are you
 Your readable fake smile
 I can see that you're uncomfortable
@@ -45,12 +72,40 @@ One at a time, you try every possible technique
 Humor, self-deprecation, how cute is that
 You're not convinced yet, but you want my body badly
 I don't know what to tell you, but you're not fantastic
-</i>
+</p>
 
 
 We talked, as it usual these days, about how awful marriage tends to be, and how selfish it is to bring more humans to this sad world, and how these are beautiful ideas nonetheless. Her last name inspired a conversation about one of the most remarkable marriage stories: Henry VIII and Ann Boleyn. I said, if only to stand out and see her reaction, that Henry must have been a hopeless romantic, cursed with a genetic condition that prevented his sons from living further than a few months. Constrained by the catholic church, and a forced marriage, he had truly fallen in love with an another woman, and willing to sacrifice everything (Thomas Moore's head included), he broke a marriage, a family and a religion. My comment, of course, deeply bothered her. I loved how she was willing to fight me about it, to tell me that it was a major piece of bullshit, and that Henry VIII was a motherfucker, and that I could not be any more mistaken. What a breath of fresh air! One has to stay away from honeyed kisses and bitter slaps, but its good to grab onto kisses that slap and slaps who kiss your cheeks. Her passion against me was a slap that kissed my spine from beneath. From that moment less than twenty four hours would suffice for a last kiss, not even a farewell kiss; a slap that took me 19 days and 500 nights to forget.
 
-<i style="text-align:center; white-space: pre;">
+<p style="white-space:pre; text-align:center; font-style:italic;">
+You are cute, but oh boy how ugly are you
+Your readable fake smile
+I can see that you're uncomfortable
+And unsure about your posture, badly seated on that chair
+One at a time, you try every possible technique
+Humor, self-deprecation, how cute is that
+You're not convinced yet, but you want my body badly
+I don't know what to tell you, but you're not fantastic
+</p>
+
+
+We talked, as it usual these days, about how awful marriage tends to be, and how selfish it is to bring more humans to this sad world, and how these are beautiful ideas nonetheless. Her last name inspired a conversation about one of the most remarkable marriage stories: Henry VIII and Ann Boleyn. I said, if only to stand out and see her reaction, that Henry must have been a hopeless romantic, cursed with a genetic condition that prevented his sons from living further than a few months. Constrained by the catholic church, and a forced marriage, he had truly fallen in love with an another woman, and willing to sacrifice everything (Thomas Moore's head included), he broke a marriage, a family and a religion. My comment, of course, deeply bothered her. I loved how she was willing to fight me about it, to tell me that it was a major piece of bullshit, and that Henry VIII was a motherfucker, and that I could not be any more mistaken. What a breath of fresh air! One has to stay away from honeyed kisses and bitter slaps, but its good to grab onto kisses that slap and slaps who kiss your cheeks. Her passion against me was a slap that kissed my spine from beneath. From that moment less than twenty four hours would suffice for a last kiss, not even a farewell kiss; a slap that took me 19 days and 500 nights to forget.
+
+<p style="white-space:pre; text-align:center; font-style:italic;">
+You are cute, but oh boy how ugly are you
+Your readable fake smile
+I can see that you're uncomfortable
+And unsure about your posture, badly seated on that chair
+One at a time, you try every possible technique
+Humor, self-deprecation, how cute is that
+You're not convinced yet, but you want my body badly
+I don't know what to tell you, but you're not fantastic
+</p>
+
+
+We talked, as it usual these days, about how awful marriage tends to be, and how selfish it is to bring more humans to this sad world, and how these are beautiful ideas nonetheless. Her last name inspired a conversation about one of the most remarkable marriage stories: Henry VIII and Ann Boleyn. I said, if only to stand out and see her reaction, that Henry must have been a hopeless romantic, cursed with a genetic condition that prevented his sons from living further than a few months. Constrained by the catholic church, and a forced marriage, he had truly fallen in love with an another woman, and willing to sacrifice everything (Thomas Moore's head included), he broke a marriage, a family and a religion. My comment, of course, deeply bothered her. I loved how she was willing to fight me about it, to tell me that it was a major piece of bullshit, and that Henry VIII was a motherfucker, and that I could not be any more mistaken. What a breath of fresh air! One has to stay away from honeyed kisses and bitter slaps, but its good to grab onto kisses that slap and slaps who kiss your cheeks. Her passion against me was a slap that kissed my spine from beneath. From that moment less than twenty four hours would suffice for a last kiss, not even a farewell kiss; a slap that took me 19 days and 500 nights to forget.
+
+<p style="white-space:pre; text-align:center; font-style:italic;">
 You offer me a drink, I appreciate the gesture
 I start to get comfortable, and I confess, I'll stay
 It's not that I'm bored, but my friends are gone,
@@ -60,20 +115,20 @@ I finally start to see who's there in front of me
 Your face loosens up and your shoulders relax
 I feel like your body is ready to face
 mine.
-</i>
+</p>
+
 
 As it usually happens with these kid of knights, they kitchen was already closed when we asked. They were right, it was already midnight. We tried asking in several places, walking side by side, until we arrived to a narrow wooden three-store bar, that was still serving food on its roof. We sat on a small wooden table, wood over wood, and between Pink Floyd's songs and Pisco Sour, we devoured two portions of fries, or as you'd call them chips.
 
 I couldn't help but notice the stinky stares over you, and had unconscious doubts of jealousy (which has nothing to do with protection) from the guys on the other tables, escaping from their conversations, fantasizing about your flesh for a fraction of a second. Sometimes I escape myself too. I escape and daydream about the white flowers in your dress; I can see them over the table, and I count up to thirty-two, thirty-three, and I want to cut each one of them out with a pair of scissors. I want to cut them with every bit of patience that exists in the world, so I can see your body thirty-three times more. I escape myself with the guitar of Pink. You say you love that song. I correct you, it's not Wish you were here, but Comfortably Numb. I do not say it, but that is how I feel: Comfortably Numb by the sigh of you. As opposed to ourselves, our fries are getting colder, so I maliciously suggest to leave that place.
 
-
-<i style="text-align:center; white-space: pre;">
+<p style="white-space:pre; text-align:center; font-style:italic;">
 You're cute, but I'm not the one you need
 But I still wont say "no" to a show
 in your living room
 I'd know what to do with you
 and that's exactly what I want the most.
-</i>
+</p>
 
 
 Almost 2AM. I thought about that small bar, dancing floor, and asked if you knew about it. Of course you did not. We soon arrived, and you asked for a couple of shots, and then a couple of cocktails. Music was so natural for me, so foreign to you. And if it wasn't because of the alcohol flooding your veins, or if it wasn't because of the hundred-and-eighteen beats per minute of your heart syncing with the movement of your hips, or if it wasn't because of how spring, and especially spring nights alter our temper, what happened that night would never had happened. Alcohol alters me too, and the music gets me moving. I try to seduce you with my movement, without any knowledge of what the fuck does that even mean. Maybe I go too far, maybe I go too far, because you stop me to ask something. Your sweet voice asks for honesty, and something breaks in my chest. You ask for my sexuality.
@@ -139,7 +194,7 @@ I walked down to the metro station, and took a car directed to the university. I
 When I finally got home I couldn't help it. I jumped into bed and starting crying. I felt my wings cut, my infinite solitude, the demons biting my soul. I took a shower and the drops of water would mix with my tears until I couldn't tell if I was crying anymore. I went back to bed. It was only six o' clock, but I couldn't do anything else. Anything else. I begged, I really begged, that just like I didn't forget the way back to our room that night, you would't forget the way back to me either. But begging is nothing. In reality, only sadness, only sorrow. I couldn't cry anymore, only black sadness, deep, deaf. I wouldn't be able to say why would a casual encounter have such an effect on me. Maybe more than some romances that lasted for weeks or months. But anyways, that's how life is, isn't it? There are moments, special moments, that communicate something so pure, so sublime, so deep, that your soul is not able to cry anymore. It now only walks, silently, between the tall black cypresses.
 
 
-![Cypresses](/assets/img/cypresses.png){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Cypresses](/assets/img/cypresses.png){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
 
 <h1 style="text-align:center;"> Epilogue</h1>

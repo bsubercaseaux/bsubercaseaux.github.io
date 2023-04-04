@@ -13,9 +13,9 @@ y diamantes en los parques, de beber a mi lado hasta exterminarnos juntos.
 -Rafael Chaparro
 </i>
 
-![calder](/assets/img/calder.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![calder](/assets/img/calder.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
-<p style="white-space: pre; text-align: center;">
+<p class="poem">
 Desembolsaste tus armas puntiagudas como si fuesen triángulos,
 abriéndose, señalando lugares y destinos.
 De alguna manera me hiciste viajar la piel,

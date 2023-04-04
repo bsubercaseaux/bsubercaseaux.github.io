@@ -7,14 +7,14 @@ first_name: Bernardo
 middle_name: Anibal
 last_name: Subercaseaux Roa
 email: bsuberca@cs.cmu.edu
-description:  My website :) #
+description:  My personal/academic website :) #
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🐒 # the emoji used as the favicon
 url: "https://bsubercaseaux.github.io" # the base hostname & protocol for your site
 baseurl:  "" # the subpath of your site, e.g. /blog/
 last_updated: false # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
-footer_text: '<it>"Man is but a reed, weakest in nature, but a reed which thinks."</it> -- Blaise Pascal (Pensées, 1670)'
+footer_text: '<it>"Man is but a reed, weakest in nature, but a reed which thinks."</it> &mdash; Blaise Pascal (Pensées, 1670)'
 # -----------------------------------------------------------------------------
 # RSS Feed
 # -----------------------------------------------------------------------------
@@ -77,7 +77,7 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 # -----------------------------------------------------------------------------
 
 blog_name: B's Blog # your blog must have a name for it to show up in the nav bar
-blog_description: Posts \( \in  \lbrace \text{math}, \text{computer science}, \text{philosophy}, \text{literature}\rbrace.\)
+blog_description: Posts \( \in  \lbrace \text{math}, \text{CS}, \text{philosophy}, \text{literature}\rbrace.\)
 permalink: /blog/:year/:title/
 
 # Pagination

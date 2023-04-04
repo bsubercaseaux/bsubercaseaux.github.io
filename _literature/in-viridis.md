@@ -18,9 +18,9 @@ and you burn: flame of the Sun.”
 </div>
 
 
-![Maison du Pendu, Cezanne](/assets/img/maisonpendu.jpeg){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Maison du Pendu, Cezanne](/assets/img/maisonpendu.jpeg){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
-<p style="white-space: pre; text-align: center;" markdown="1">
+<p class="poem" markdown="1">
 Our spring-y relationship begun even before I was born.
 I met you for the first time when submerged in the amniotic fluid of my mother’s womb,
  and I’ve been looking for you ever since.
@@ -202,4 +202,4 @@ should take from you, it’s just that
 
 [^1]: Hildegard Von Bingen was a woman born in 1098, current Germany, considered a Saint by the Catholic church. Hildegard was a Benedictine abbess, a mathematician, a writer, a composer, a philosopher, a medical practitioner, and a mystic. Arguably one of the most fascinating persons of history.
 
-[^2]: Regarding the title of the poem, _"In Viridis Veritas"_ is Latin for _"In green, the truth"_. It's also a play on the classic _"In Vino Veritas_", Latin for _"In wine, the truth"_.
+[^2]: Relating to the title of the poem, _"In Viridis Veritas"_ is Latin for _"In green, the truth"_. It's also a play on the classic _"In Vino Veritas_", Latin for _"In wine, the truth"_.

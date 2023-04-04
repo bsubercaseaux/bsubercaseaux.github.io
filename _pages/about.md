@@ -9,9 +9,7 @@ profile:
   image2: Curious_George.png
   address: 
     <font size="+1.5" style="text-align:left">
-    <p> ✉️ <script language="javascript">
-            aIjiFIAAVJvEKKV();
-            </script> 
+    <p> ✉️  <a href="javascript:location='mailto:\u0062\u0073\u0075\u0062\u0065\u0072\u0063\u0061\u0040\u0063\u0073\u002e\u0063\u006d\u0075\u002e\u0065\u0064\u0075';void 0"><script type="text/javascript">document.write('\u0062\u0073\u0075\u0062\u0065\u0072\u0063\u0061\u0040\u0063\u0073\u002e\u0063\u006d\u0075\u002e\u0065\u0064\u0075')</script></a>
     </p>
 
      <p> <a href="../assets/pdf/CV-BernardoSubercaseaux.pdf"> 📎 my resume/cv </a></p>

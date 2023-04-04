@@ -3,9 +3,9 @@ layout: post
 title: Desvelo
 ---
 
-![Oddyseus](/assets/img/odiseo.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Oddyseus](/assets/img/odiseo.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
-<p style="white-space: pre;">
+<p class="poem">
 Para entonces las alfombras se habían vuelto intransitables
 Y las puertas no eran puertas, sino piel de naranja.
 Me sentí como llamado por el doblar de los juncos.

@@ -3,9 +3,9 @@ layout: post
 title: Encuentro cercano del Tercer Tipo
 ---
 
-![Abstract couple](/assets/img/close-encounter.jpeg){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Abstract couple](/assets/img/close-encounter.jpeg){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
-<p style="white-space: pre; text-align: center;">
+<p class="poem">
 Mármol quebrado entre caderas,
 A veces un elefante que desliza lento
 Que eriza ciertas cosas que odio.

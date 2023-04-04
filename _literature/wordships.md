@@ -3,11 +3,10 @@ layout: post
 title: the Essence is out to lunch and the Words have taken over the ship
 ---
 
-![Drawn words](/assets/img/drawn-words.png){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Drawn words](/assets/img/drawn-words.png){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
-<p style="white-space: pre; text-align: center;">
-
-where do words go when they're lost in translation?
+<p class="poem">
+Where do words go when they're lost in translation?
 where is Go going after the tip of your tongue?
 what is that Why is so curious about?
 how comes that Whisper is stronger than Shout?

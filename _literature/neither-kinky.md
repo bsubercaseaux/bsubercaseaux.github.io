@@ -3,7 +3,7 @@ layout: post
 title: Neither kinky nor rhymes
 ---
 
-![Couple by Roberto Ferri](/assets/img/ferri.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Couple by Roberto Ferri](/assets/img/ferri.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
 
 <h1 style="text-align: center;"> Top 10 tips that your high school sex-ed teacher does not want you to know </h1>

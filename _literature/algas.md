@@ -3,9 +3,9 @@ layout: post
 title: Tarde o temprano la erosión y las algas vencen a las piedras
 ---
 
-![Cat catches a bird](/assets/img/cat.jpeg){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Cat catches a bird](/assets/img/cat.jpeg){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
-<p style="white-space: pre; text-align: center;">
+<p class="poem">
 Mira como brotan las algas y los musgos
 Eternamente fulminados en un faro de lagrimas
 Mientras se despiden los pájaros que espanta

@@ -16,11 +16,11 @@ Je vous aime.
 <h1 style="text-align:center;"> Episodio I</h1>
 
 
-![Alice](/assets/img/alice.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Alice](/assets/img/alice.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
 Le dije que nos juntáramos en el Venezia. Esa semana ya había sido muy extraña, pero lo mejor estaba por suceder. Me envió un mensaje antes de llegar; que disculpara su ropa, que llevaba días mochileando y no tenía nada más que ponerse. Al encontrarla desorientada fuera del local me di cuenta. Llevaba zapatillas de montaña y caña alta, un largo vestido floreado, blanco y verde, y una chaqueta de jeans que le quedaba de todo menos ajustada. Su nariz era respingada, sin ser tierna como la de un bulldog, sino grande, respingada y característica, inclinada hacia arriba como un girasol. Un vestido así, con flores blancas sobre verde, le quedaba particularmente bien a una mujer inglesa, o al menos me habría dado una peor impresión en una mujer chilena. Nada esencial, pero suelen ser comunes solo entre las gentes de cierta clase social, que se permite vestidos sueltos, y casas grandes y sueltas, autos grandes y sueltos, a costa de tener apretado el espíritu. En fin, nos sentamos y pedimos dos piscolas hasta arriba, nada menos.
 
-<i style="white-space:pre; text-align:center;">
+<p style="white-space:pre; text-align:center; font-style:italic;">
 Do you really want an answer?
 I don't know in what tone
 I need to tell you that you're cute
@@ -29,12 +29,12 @@ and yet, damn it, I knew
 when you approached me
 I wasn't going to satisfy
 your desire of fucking me.
-</i>
+</p>
 
 Quizás fue aquí el punto de inflexión de esta historia, el inicio de la pendiente que llevaría una inocente bola de nieve a convertirse en un derrumbe. Me refiero, por supuesto, a su forma de sentarse. En mis veinticuatro años de vida no había visto nada que se la pareciese. Su cuerpo alargado, con los codos sobre la mesa, se inclinaba hacia adelante tan decididamente que su cabeza estaba por sobre la mitad de la mesa (pequeña y cuadrada), y su postura era de tal atención, de tal fuerza, que me sentí ligeramente intimidado. En otras palabras, si hubiese imitado yo su postura, se hubiesen encontrado prematuramente nuestras bocas sobre la vela blanca entre vasos de pisco. Así nos olvidamos por unas horas de la existencia de cualquier otro punto del universo, de nuestros celulares y de las otras mesas, que quizás nos miraban con envidia o temor.
 
 
-<i style="text-align:right; white-space: pre;">
+<p style="white-space:pre; text-align:center; font-style:italic;">
 You are cute, but oh boy how ugly are you
 Your readable fake smile
 I can see that you're uncomfortable
@@ -43,11 +43,11 @@ One at a time, you try every possible technique
 Humor, self-deprecation, how cute is that
 You're not convinced yet, but you want my body badly
 I don't know what to tell you, but you're not fantastic
-</i>
+</p>
 
 Conversamos, como es un tema de moda, sobre lo terrible que es el matrimonio y traer más seres humanos al mundo, y como se trata también de un par de ideas hermosas. Su apellido, Toms Moore, nos llevó a hablar por supuesto de una de las mejores historias de matrimonios, la de Enrique VIII y Ana Bolena. Le dije, un poco por salir de la norma y ver su reacción, que me parecía que finalmente Enrique era profundamente romántico, maldecido por una condición genética que le impedía tener un hijo varón que viviese más allá de unos meses, constreñido por la religión católica, y un matrimonio arreglado, se había enamorado de verdad, y dispuesto a sacrificarlo todo, cabeza de Tomás Moro incluida, había roto un matrimonio, una familia y una iglesia. Mi comentario, por supuesto, le disgustó profundamente. Me encantó su disposición a pelear contra mí al respecto, a decirme que era una estupidez mayúscula, que Enrique VIII era un hijo de puta y que no podía estar más equivocado. Qué refrescante. Creo que hay que tomar un poco de distancia de los besos melosos y de las cachetadas amargas, pero aferrarse tanto a los besos que cachetean como a las cachetadas que besan. Su pasión contra mi fue una cachetada que me besó hasta la médula, y desde ese momento harían falta menos de veinticuatro horas para que me besara por última vez; una cachetada cuyo olvido me costó los 19 días de Sabina, y un poco más, y un poco más.
 
-<i style="text-align:center; white-space: pre;">
+<p style="white-space:pre; text-align:center; font-style:italic;">
 You offer me a drink, I appreciate the gesture
 I start to get comfortable, and I confess, I'll stay
 It's not that I'm bored, but my friends are gone,
@@ -57,19 +57,19 @@ I finally start to see who's there in front of me
 Your face loosens up and your shoulders relax
 I feel like your body is ready to face
 mine.
-</i>
+</p>
 
 Como suele ocurrir en este tipo de noches, nos cerraron la cocina en la cara. Tenían razón, ya eran las 12, no son horas de comer. Intentamos en varios lugares, caminando codo a codo, hasta llegar a un pequeño local de madera y tres pisos, que aún servía comida en el tercero. Subimos y nos sentamos en una mesa de madera, y entre canciones de Pink Floyd y unos pisco sour, devoramos dos porciones de papas fritas.
 
 No pude evitar notar las malolientes miradas sobre ti, y sentí la duda inconsciente entre celarte (que nada tiene que ver con proteger) de aquellos que desde otras mesas evaden sus conversaciones fantaseando tu carne por una fracción de segundo. A veces me evado yo también. Me evado contando las flores blancas de tu vestido, las que puedo ver sobre la mesa, y cuento treinta y dos, treinta tres, y quisiera cortar cada una con una tijera, con toda la paciencia del mundo, y ver así treinta y tres veces más tu cuerpo, y me evado también con la guitarra de Pink, me dices que te encanta esa canción, y te corrijo, se trata de Comfortably Numb. Y no lo digo, pero así me siento, comfortably numb by the sight of you. Las papas se van enfriando, al contrario de nosotros, y maliciosamente te propongo que es hora de irnos de ahí.
 
-<i style="text-align:center; white-space: pre;">
+<p style="white-space:pre; text-align:center; font-style:italic;">
 You're cute, but I'm not the one you need
 But I still wont say "no" to a show
 in your living room
 I'd know what to do with you
 and that's exactly what I want the most.
-</i>
+</p>
 
 
 Casi las dos de la mañana y pensé en ese pequeño bar con pista para bailar, y te pregunté si lo conoces. No tardamos en llegar, ni tú en pedir primero un par de shots y después un par de cocktails. Música para mí tan natural y para ti tan extranjera. Y si no fuera porque el alcohol te inundó ya las venas, o por los ciento dieciocho latidos por minuto de tu corazón que entraron en frecuencia con el quiebre de caderas, o quizás por esa alteración de la sangre que produce a veces la primavera, lo que pasó esa noche, no tendría manera. El alcohol también me altera, y la música me trastorna, me muevo de una forma que intenta provocarte, y al parecer me excedo, quizás me excedo, porque me detienes para decirme algo, y tu voz dulce me pide honestidad, pero quiebra algo en mi pecho, al preguntar por mi sexualidad.
@@ -132,7 +132,7 @@ Caminé hasta el metro, y me dirigí a la universidad sin cambiarme de ropa, suc
 
 Al llegar finalmente a mi casa no duré un segundo sin lanzarme sobre la cama y echarme a llorar. Sentí mis alas cortadas, mi soledad infinita, las fieras que me mordían el alma. Me duché y las gotas de agua se confundieron con mis lágrimas hasta desaparecer, y luego volví a la cama. Eran tan solo las seis de la tarde, pero ya no podía hacer nada más. Nada más. Rogué, de verdad rogué, que tal como no había olvidado yo el camino de regreso a nuestra habitación esa noche, no olvidases tú tampoco el camino de regreso a mis brazos. Pero los ruegos son gritos al cielo, no son nada. En la realidad, solo tristeza. Ya no podía llorar, solo una tristeza negra, profunda, sorda. No sabría decir por qué un encuentro tan casual y fugaz me afectó tanto, más que otros romances que duraron semanas o meses. Pero en fin, así es la vida, hay ocasiones, especiales, en que la tristeza se vuelve maloliente, dura, feroz. Algunas tristezas comunican algo tan profundo, tan sublime, que el alma ya no es capaz de llorar, sino tan solo de caminar en silencio, entre los altos cipreses negros.
 
-![Cypresses](/assets/img/cypresses.png){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Cypresses](/assets/img/cypresses.png){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
 
 <h1 style="text-align:center;"> Epílogo</h1>

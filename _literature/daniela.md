@@ -3,12 +3,11 @@ layout: post
 title: Daniela
 ---
 
-![Daniela](/assets/img/daniela.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Daniela](/assets/img/daniela.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
 Daniela era, o es, una mujer ligeramente diferente, o muy diferente, no lo sé. La conocí, o mejor dicho, la vi, en una aplicación de citas.
 
 Ella me habló primero, enérgicamente, cosa extraña en la subcultura. Decía estar a una milla de distancia, y en su foto aparecía con un vestido negro, sin adornos ni flecos, pero cuyo escote era la unión de dos telas, que venían desde cada hombro y se juntaban apenas por sobre el ombligo. Me dijo que estaba en la ciudad esa noche, y que honestamente estaba buscando cuál era su mejor alternativa para hacer. Le respondí. Me respondió. Le respondí y me respondió. Su tono era ligeramente alegre, coqueto y con una honestidad descaradamente dulce. En un momento dijo que se desocuparía en treinta minutos, y le dije que nos viéramos en la esquina de la fábrica de Spaghetti, un restorán de la zona. Nunca había hecho algo así, pero la adrenalina era linda y no vi de qué temer, así que partí. Al llegar no me encontré con nadie, y le escribí diciendo que ya estaba allí. No hubo respuesta. Me sentí ciertamente estúpido, pero a la vez, me dio cierto placer confirmar una malévola e injustificada hipótesis; una invitación así, de una mujer así, no podía ser verdad.
-
 
 Volví derrotado, pero no tan derrotado como para cambiar algo, y por lo tanto la vida siguió martillando como siempre. Fue una semana después, caminando de noche, a dos cuadras de la fábrica de Spaghetti, que me encontré a Daniela, o eso creí. Llevaba jeans apretados y una camisa negra, y su mismo pelo negro, y sin tener una cara particularmente reconocible, supe de inmediato que era ella. Y le hablé.
 

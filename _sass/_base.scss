@@ -22,6 +22,12 @@ body {
  background-image: linear-gradient(rgba(255,255,255,0.4), rgba(255,255,255,0.4)), url('../img/mondrian.jpg');
 }
 
+.poem {
+  text-align: center;
+  white-space: pre-wrap; /* Wraps the text within the container */
+  overflow-wrap: break-word; /* Breaks long words to prevent horizontal scrolling */
+}
+
 
 ul {
     list-style: none;

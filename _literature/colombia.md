@@ -3,9 +3,9 @@ layout: post
 title: Colombia Descafeinada
 ---
 
-![Mujer desnuda, Fernando Botero](/assets/img/botero-woman.jpeg){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Mujer desnuda, Fernando Botero](/assets/img/botero-woman.jpeg){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
-<p style="white-space: pre; text-align: center;">
+<p class="poem">
 Desnuda te vi fuerte y tranquila como un concepto
 De día tu candor y brillo se me hicieron de virgen
 el café desgranado de tu piel es el mismo

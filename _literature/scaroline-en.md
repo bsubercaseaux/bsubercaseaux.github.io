@@ -3,7 +3,7 @@ layout: post
 title: Sweet Caroline
 ---
 
-![Sweet Caroline](/assets/img/scaroline.png){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Sweet Caroline](/assets/img/scaroline.png){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
 Have you ever had sex on a plane? I have not.
 

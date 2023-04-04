@@ -3,9 +3,9 @@ layout: post
 title: Diagrama de Fases
 ---
 
-![Picasso](/assets/img/picasso.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![Picasso](/assets/img/picasso.jpg){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
-<p style="white-space: pre; text-align: center;">
+<p class="poem">
 En el principio era el verbo.
 La acción y reacción de una guerra de almohadas
 El acto y efecto de besar, caminar, fotografiar.

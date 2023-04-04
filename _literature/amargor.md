@@ -3,10 +3,10 @@ layout: post
 title: Pequeña Declaración de Amargor
 ---
 
-![hopper1](/assets/img/hopper1.jpeg){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
-![hopper2](/assets/img/hopper2.png){: style="display:block; margin-left: auto; margin-right: auto; width: 750px;"}
+![hopper1](/assets/img/hopper1.jpeg){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
+![hopper2](/assets/img/hopper2.png){: style="display:block; margin-left: auto; margin-right: auto; width: 80%;"}
 
-<p style="white-space: pre; text-align: center;">
+<p class="poem">
 Siento un ligeramente trágico sabor a rúcula,
 un pequeño espesor en el pecho, un desvarío.
 El sonido de graves tabernas españolas
