@@ -44,7 +44,7 @@ Roughly half of my writing is done in Spanish, the other half in English. This p
 
 ### Poetry $$\vee$$ Poesía
 
-1. [Fragments](../_literature/fragments) <font style="font-size 18px;">(English, 2022)</font> 
+1. [Fragments](../literature/fragments) <font style="font-size 18px;">(English, 2022)</font> 
 2. [In Viridis Veritas](../literature/in-viridis) <font style="font-size: 18px;">(English, 2021)</font>
 3. [Pequeña Declaración de Amargor](../literature/amargor)  <font style="font-size: 18px;">(Spanish, 2021) </font>
 4. [Neither Kinky nor Rhymes](../literature/neither-kinky)  <font style="font-size: 18px;"> (English, 2021, presented at the PUC OpenMic, week theme: <i>kinky rhymes</i>)</font>
