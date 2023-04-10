@@ -6,7 +6,8 @@ description: In this page you can find material related to a different passion o
 nav: true
 ---
 
-## Things I like
+<details>
+	<summary style="font-size: 48px;"> Things I like  </summary>
 
 In no particular order, here is a list of authors I really really like.
 <div style="text-align:center;" markdown="1">
@@ -37,8 +38,10 @@ In no particular order, here is a list of authors I really really like.
 - _Julio Cortázar_
 - _Gabriel García Márquez_
 </div>
+</details>
 
-## Things I've written
+<details markdown="1">
+<summary style="font-size: 48px;">Things I've written</summary>
 
 Roughly half of my writing is done in Spanish, the other half in English. This page does not include any of my translation work yet, and it is still missing several pieces, which I plan to add slowly over time. If you, whoever you are, enjoy any of them, I'll be happy to know. If you find any typos or grammatical errors, please let me know over e-mail.
 
@@ -65,3 +68,22 @@ Roughly half of my writing is done in Spanish, the other half in English. This p
 4. [Sweet Caroline (Spanish version)](../literature/scaroline-sp)
 5. [Daniela](../literature/daniela)
 
+</details>
+
+<details markdown="1">
+<summary style="font-size: 48px;"> <i>POETIC</i> project </summary>
+
+In 2023, I started the POETIC (**P**eople's **O**riginal **E**xpressions **T**acked **I**n **C**loth) project at CMU (Office 6207).
+The idea of this project is simply to display literature in the cloth-board outside of my office, in a way that hopefully sparks emotions and conversations on the passersby.
+
+
+<figure style="text-align:center;">
+  <img src="../assets/img/poetic.jpg" alt="Picture of me in front of the cloth board of the POETIC project" style="max-width: 70%;">
+  <figcaption>
+    <b style="font-size: 18px;"> Picture 1: </b>
+    <span style="font-size: 16px;"> me in front of the cloth-board of the POETIC project.</span>
+  </figcaption>
+</figure>
+
+
+</details>
