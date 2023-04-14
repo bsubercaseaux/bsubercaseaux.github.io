@@ -7,7 +7,7 @@ nav: true
 ---
 
 <details>
-	<summary style="font-size: 48px;"> Things I like  </summary>
+	<summary style="font-size: 48px;"> Authors I like  </summary>
 
 In no particular order, here is a list of authors I really really like.
 <div style="text-align:center;" markdown="1">
@@ -47,7 +47,7 @@ Roughly half of my writing is done in Spanish, the other half in English. This p
 
 ### Poetry $$\vee$$ Poesía
 
-1. [Fragments](../literature/fragments) <font style="font-size 18px;">(English, 2022)</font> 
+1. [Fragments](../literature/fragments) <font style="font-size: 18px;">(English, 2022)</font> 
 2. [In Viridis Veritas](../literature/in-viridis) <font style="font-size: 18px;">(English, 2021)</font>
 3. [Pequeña Declaración de Amargor](../literature/amargor)  <font style="font-size: 18px;">(Spanish, 2021) </font>
 4. [Neither Kinky nor Rhymes](../literature/neither-kinky)  <font style="font-size: 18px;"> (English, 2021, presented at the PUC OpenMic, week theme: <i>kinky rhymes</i>)</font>
@@ -71,17 +71,20 @@ Roughly half of my writing is done in Spanish, the other half in English. This p
 </details>
 
 <details markdown="1">
-<summary style="font-size: 48px;"> <i>POETIC</i> project </summary>
+<summary style="font-size: 48px;"> <i style="color: #A52A2A">POETIC</i> project </summary>
 
 In 2023, I started the POETIC (**P**eople's **O**riginal **E**xpressions **T**acked **I**n **C**loth) project at CMU (Office 6207).
 The idea of this project is simply to display literature in the cloth-board outside of my office, in a way that hopefully sparks emotions and conversations on the passersby.
+
+It's a project about insisting on the value of *Human Generated Text*, in these times of overabundance of computer generated text. 
+A poetic essay describing a bit more of the motivation behind the project is available here: [Human Generated Text](../assets/pdf/human-generated-text.pdf)
 
 
 <figure style="text-align:center;">
   <img src="../assets/img/poetic.jpg" alt="Picture of me in front of the cloth board of the POETIC project" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 1: </b>
-    <span style="font-size: 16px;"> me in front of the cloth-board of the POETIC project.</span>
+    <span style="font-size: 16px;"> me in front of the cloth-board of the POETIC project. Picture taken by my friend <a href="https://edwjchen.github.io/photography/">Edward Chen</a>.</span>
   </figcaption>
 </figure>
 

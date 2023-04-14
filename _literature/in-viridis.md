@@ -4,7 +4,7 @@ title: In Viridis Veritas
 ---
 
 <div style="text-align: right;">
-  <p style="white-space: pre; font-style: italic;">
+  <p style="white-space: pre-wrap; overflow-wrap: break-word; font-style: italic;">
 “O most honored Greening Force,
 You who roots in the Sun;
 You who lights up, in shining serenity, within a wheel
