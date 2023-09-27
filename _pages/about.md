@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: 2nd year Computer Science PhD student at <a href="https://www.cs.cmu.edu/">Carnegie Mellon University</a>, bsuberca@cs.cmu.edu
+subtitle: 3rd year Computer Science PhD student at <a href="https://www.cs.cmu.edu/">Carnegie Mellon University</a>, bsuberca@cs.cmu.edu
 profile:
   align: right
   image1: prof_pic4.jpg
