@@ -3,18 +3,18 @@ layout: page
 permalink: /publications/
 title: Publications
 description: 
-years: [2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
+years: [2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
 nav: true
 ---
 
 My most up-to-date list of papers is usually on [Google Scholar](https://scholar.google.com/citations?user=0EOonpYAAAAJ&hl=en), but here you can find some summarized data as well as my best attempt to have an updated and tidy list, with bibtex references, abstracts and links to download.
 
 ## Summarized Data
-1. **Number of papers**: 14. [^1]
+1. **Number of papers**: 18. [^1]
 2. **Number of conference papers**: 10
 3. **Number of workshop papers**: 2
 4. **Number of journal papers**: 2
-5. **Citations**: 112
+5. **Citations**: 202
 6. **h-index**: 6
 7. **Erdős number**: 3 (e.g., me → Daniel Lokshtanov → Noga Alon → Paul Erdős).
 8. **Collaborators from**: Chile, France, India, US, the Netherlands, Norway. [^2]
