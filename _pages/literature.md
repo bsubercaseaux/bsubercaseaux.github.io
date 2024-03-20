@@ -47,7 +47,7 @@ Roughly half of my writing is done in Spanish, the other half in English. This p
 
 ### Poetry $$\vee$$ Poesía
 
-1. [Proof of Concept](../assets/pdf/proof-of-concept.pdf) (English, 2024)
+1. [Proof of Concept](../assets/pdf/proof-of-concept.pdf) <font style="font-size: 18px;">(English, 2024) </font>
 2. [Fragments](../literature/fragments) <font style="font-size: 18px;">(English, 2022)</font> 
 3. [In Viridis Veritas](../literature/in-viridis) <font style="font-size: 18px;">(English, 2021)</font>
 4. [Pequeña Declaración de Amargor](../literature/amargor)  <font style="font-size: 18px;">(Spanish, 2021) </font>
