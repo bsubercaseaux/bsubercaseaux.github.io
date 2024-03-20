@@ -14,13 +14,13 @@ My most up-to-date list of papers is usually on [Google Scholar](https://scholar
 2. **Number of conference papers**: 10
 3. **Number of workshop papers**: 2
 4. **Number of journal papers**: 2
-5. **Citations**: 202
+5. **Citations**: 204
 6. **h-index**: 6
 7. **Erdős number**: 3 (e.g., me → Daniel Lokshtanov → Noga Alon → Paul Erdős).
 8. **Collaborators from**: Chile, France, India, US, the Netherlands, Norway. [^2]
 9. **Most common conference**: NeurIPS (5 papers there).
 10. **Most fun conference**: <a href="https://sites.google.com/view/fun2022/home?pli=1">FUN with algorithms.</a>
-11. **Distinctions**: 1 best paper award at LPAR'202. 1 best paper award nomination at TACAS'2023. 1 spotlight paper at NeurIPS'2021, 1 spotlight paper at <a href="https://www.afciworkshop.org/afci-2020/home">AFCI@NeurIPS'2020 workshop</a>
+11. **Distinctions**: Best paper award at LPAR'2023. Best paper award nomination at TACAS'2023.  Spotlight paper at NeurIPS'2021, and spotlight paper at <a href="https://www.afciworkshop.org/afci-2020/home">AFCI@NeurIPS'2020 workshop</a>. 1st place in Latin American Contest of Master theses in Artificial Intelligence IEEE LA-CCI.
 
 
 ## Attempt of an Updated List of Papers
