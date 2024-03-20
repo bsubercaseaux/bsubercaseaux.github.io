@@ -10,7 +10,7 @@ nav: true
 My most up-to-date list of papers is usually on [Google Scholar](https://scholar.google.com/citations?user=0EOonpYAAAAJ&hl=en), but here you can find some summarized data as well as my best attempt to have an updated and tidy list, with bibtex references, abstracts and links to download.
 
 ## Summarized Data
-1. **Number of papers**: 18. [^1]
+1. **Number of papers**: 20. [^1]
 2. **Number of conference papers**: 10
 3. **Number of workshop papers**: 2
 4. **Number of journal papers**: 2
