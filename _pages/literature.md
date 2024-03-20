@@ -47,18 +47,19 @@ Roughly half of my writing is done in Spanish, the other half in English. This p
 
 ### Poetry $$\vee$$ Poesía
 
-1. [Fragments](../literature/fragments) <font style="font-size: 18px;">(English, 2022)</font> 
-2. [In Viridis Veritas](../literature/in-viridis) <font style="font-size: 18px;">(English, 2021)</font>
-3. [Pequeña Declaración de Amargor](../literature/amargor)  <font style="font-size: 18px;">(Spanish, 2021) </font>
-4. [Neither Kinky nor Rhymes](../literature/neither-kinky)  <font style="font-size: 18px;"> (English, 2021, presented at the PUC OpenMic, week theme: <i>kinky rhymes</i>)</font>
-5. [The Essence is out to lunch and the Words have taken over the ship](../literature/wordships)  <font style="font-size: 18px;">(English, 2021, presented at the PUC OpenMic, week theme: <i>words</i>)</font>
-6. [Diagrama de Fases](../literature/diagrama)  <font style="font-size: 18px;">(Spanish, 2021, presented at the PUC OpenMic, week theme: <i>screens</i>)</font>
-7. [Topología Corporal II](../literature/topologia)  <font style="font-size: 18px;">(Spanish, 2018)</font>
-8. [Sueño de una noche de Otoño](../literature/suenno-otonno)  <font style="font-size: 18px;">(Spanish, 2017)</font>
-9. [Colombia Descafeinada](../literature/colombia)  <font style="font-size: 18px;">(Spanish, 2015)</font>
-10. [Tarde o temprano la eroción y las algas vencen a las piedras](../literature/algas)  <font style="font-size: 18px;">(Spanish, 2015)</font>
-11. [Encuentro cercano del Tercer Tipo](../literature/encuentros)  <font style="font-size: 18px;">(Spanish, 2015)</font>
-12. [Desvelo](../literature/desvelo)  <font style="font-size: 18px;">(Spanish, 2014, won a high-school award.)</font>
+1. [Proof of Concept](../assets/pdf/proof-of-concept.pdf)
+2. [Fragments](../literature/fragments) <font style="font-size: 18px;">(English, 2022)</font> 
+3. [In Viridis Veritas](../literature/in-viridis) <font style="font-size: 18px;">(English, 2021)</font>
+4. [Pequeña Declaración de Amargor](../literature/amargor)  <font style="font-size: 18px;">(Spanish, 2021) </font>
+5. [Neither Kinky nor Rhymes](../literature/neither-kinky)  <font style="font-size: 18px;"> (English, 2021, presented at the PUC OpenMic, week theme: <i>kinky rhymes</i>)</font>
+6. [The Essence is out to lunch and the Words have taken over the ship](../literature/wordships)  <font style="font-size: 18px;">(English, 2021, presented at the PUC OpenMic, week theme: <i>words</i>)</font>
+7. [Diagrama de Fases](../literature/diagrama)  <font style="font-size: 18px;">(Spanish, 2021, presented at the PUC OpenMic, week theme: <i>screens</i>)</font>
+8. [Topología Corporal II](../literature/topologia)  <font style="font-size: 18px;">(Spanish, 2018)</font>
+9. [Sueño de una noche de Otoño](../literature/suenno-otonno)  <font style="font-size: 18px;">(Spanish, 2017)</font>
+10. [Colombia Descafeinada](../literature/colombia)  <font style="font-size: 18px;">(Spanish, 2015)</font>
+11. [Tarde o temprano la eroción y las algas vencen a las piedras](../literature/algas)  <font style="font-size: 18px;">(Spanish, 2015)</font>
+12. [Encuentro cercano del Tercer Tipo](../literature/encuentros)  <font style="font-size: 18px;">(Spanish, 2015)</font>
+13. [Desvelo](../literature/desvelo)  <font style="font-size: 18px;">(Spanish, 2014, won a high-school award.)</font>
 
 ### Short Stories $$\vee$$ Cuentos 
 
