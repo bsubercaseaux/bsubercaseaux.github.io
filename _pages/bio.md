@@ -166,7 +166,7 @@ Before leaving, you can check the next section with miscellaneous data about me.
 ## Some more objective data about me
 
 1. **Full name**: Bernardo Aníbal Subercaseaux Roa.
-2. **Height**: 1.81cm, or 6 feet if you're into using feet to measure things.
+2. **Height**: 1.82cm, or 6 feet if you're into using feet to measure things.
 3. **Zodiac Sign:** Scorpio.
 4. **Degree of credence in the significance of Zodiac Signs:** 1.5 out of 10.
 5. **Languages I'm fluent in:** Spanish, English, and French.
