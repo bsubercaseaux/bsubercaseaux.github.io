@@ -24,3 +24,4 @@ I have been acknowledged in:
 1. [Silph: A Framework for Scalable and Accurate Generation of
 Hybrid MPC Protocols](https://eprint.iacr.org/2023/060.pdf)
 2. [Sudoku number of graphs](https://www.tandfonline.com/doi/full/10.1080/09728600.2023.2218917)
+3. [Lower bounds for set-blocked clauses proofs](https://arxiv.org/abs/2401.11266v1)
