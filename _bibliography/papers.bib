@@ -42,6 +42,22 @@
   bibtex_show = {true}
 }
 
+@inproceedings{BCA2024LPAR,
+  title = {Sometimes Hoarding is Harder than Cleaning: NP-hardness of Maximum Blocked-Clause Addition},
+  abstract = {Adding blocked clauses to a CNF formula can substantially speed up SAT-solving, both in theory and practice. In theory, the addition of blocked clauses can exponentially reduce the length of the shortest refutation for a formula (Kullman, 1999). In practice, it has been recently shown that the runtime of CDCL solvers decreases significantly for certain instance families when blocked clauses are added as a preprocessing step. This fact is in contrast to, but not in contradiction with, prior results showing that Blocked-Clause Elimination (BCE) is sometimes an effective preprocessing. We suggest that the practical role of blocked clauses in SAT-solving might be richer than expected.
+Concretely, we propose a theoretical study of the complexity of Blocked-Clause Addition (BCA) as a preprocessing step for SAT-solving, and in particular, consider the problem of adding the maximum number of blocked clauses of a given arity k to an input formula F. While BCE is a confluent process, meaning that the order in which blocked clauses are eliminated is irrelevant, this is not the case for BCA: adding a blocked clause to a formula might "unblock" a different clause that was previously blocked. This order sensitivity turns out to be a crucial obstacle for carrying out BCA efficiently as a preprocessing step.
+Our main result is that computing the maximum number of k-ary blocked clauses that can be added to an input formula F is NP-hard for every k >= 2.},
+  author = {Bernardo Subercaseaux},
+  booktitle = {Proocedings of 25th International Conference on Logic
+                for Programming, Artificial Intelligence and Reasoning},
+  pages = {1-18},
+  year = {2024},
+  editor = {},
+  selected = {true},
+  pdf = {../pdf/BCA2024LPAR.pdf},
+  bibtex_show = {true}
+}
+
 @inproceedings{sh2023,
   abstract    = {A packing $k$-coloring is a natural variation on the standard notion of graph $k$-coloring, where vertices are assigned numbers from $\{1, \ldots, k\}$, and any two vertices assigned a common color $c \in \{1, \ldots, k\}$ need to be at a distance greater than $c$ (as opposed to 1, in standard graph colorings). Despite a sequence of incremental work, determining the packing chromatic number of the infinite square grid has remained an open problem since its introduction in 2002. We culminate the search by proving this number to be 15. We achieve this result by improving the best-known method for this problem by roughly two orders of magnitude. The most important technique to boost performance is a novel, surprisingly effective propositional encoding for packing colorings. Additionally, we developed an alternative symmetry-breaking method. Since both new techniques are more complex than existing techniques for this problem, a verified approach is required to trust them. We include both techniques in a proof of unsatisfiability, reducing the trusted core to the correctness of the direct encoding.},
   title       = {The Packing Chromatic Number of the Infinite Square Grid is 15},
