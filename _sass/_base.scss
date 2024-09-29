@@ -41,7 +41,10 @@ ul.starlist li:before
 }
 
 .center-rectangle {
-  background-color: rgba(255, 255, 255, 0.97);
+  background-color: rgba(255, 255, 255, 0.98);
+  -webkit-box-shadow: 0px 0px 10px 8px rgb(107, 107, 107);
+        box-shadow: 0px 0px 10px 8px rgb(107, 107, 107);
+  // border:solid var(--global-theme-color);
   width: 350px;
   height: 100%;
 //  position: absolute;
@@ -154,7 +157,7 @@ mjx-math {
 // Navbar customization
 
 .navbar {
-  box-shadow: none;
+  box-shadow: 0 0 5px 10px rgba(107, 107, 107, 0.7);
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
