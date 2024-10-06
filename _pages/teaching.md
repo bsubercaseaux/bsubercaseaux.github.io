@@ -9,6 +9,11 @@ I **really really really** love teaching. So far, I have being a Teaching Assist
 <div>
     <ol>
         <li> 
+            <div style="margin-bottom:2px;"> <b><em>Undergraduate Quatum Computing</em></b> </div>
+            <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
+at CMU. For professor [Ryan O'Donnell](https://www.cs.cmu.edu/~odonnell/)</p>
+        </li>
+        <li> 
             <div style="margin-bottom:2px;"> <b><em>Design and Analysis of Algorithms</em></b> </div>
             <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
 3 times at U. of Chile. For professors [Gonzalo Navarro](https://users.dcc.uchile.cl/~gnavarro/), [Pablo Barceló](https://pbarcelo.ing.uc.cl/), and [Jérémy Barbay](https://users.dcc.uchile.cl/~jbarbay/#orge6b6b6f).</p>
@@ -83,4 +88,4 @@ I **really really really** love teaching. So far, I have being a Teaching Assist
 
 I also had a YouTube channel with math videos, and have collected a fair bit of teaching materials over the years. I plan to upload most of that here. Unfortunately, most of it was originally written in Spanish, so I'll be slowly translating it over time.
 
-[^1]:  By counting classes multiplied by the number of times I have TA'ed for them, the total is **16** TA'ships.
+[^1]:  By counting classes multiplied by the number of times I have TA'ed for them, the total is **17** TA'ships.

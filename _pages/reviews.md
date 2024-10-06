@@ -25,3 +25,6 @@ I have been acknowledged in:
 Hybrid MPC Protocols](https://eprint.iacr.org/2023/060.pdf)
 2. [Sudoku number of graphs](https://www.tandfonline.com/doi/full/10.1080/09728600.2023.2218917)
 3. [Lower bounds for set-blocked clauses proofs](https://arxiv.org/abs/2401.11266v1)
+4. [Borges and the Aesthetics of Computation](https://go.gale.com/ps/i.do?id=GALE%7CA775893526&sid=sitemap&v=2.1&it=r&p=LitRC&sw=w&userGroupName=cmu_main&aty=shibboleth)
+5. [Effective Auxiliary Variables
+via Structured Reencoding](https://www.cs.cmu.edu/~mheule/publications/SBVA.pdf)
