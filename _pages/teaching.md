@@ -9,6 +9,11 @@ I **really really really** love teaching. So far, I have being a Teaching Assist
 <div>
     <ol>
         <li> 
+            <div style="margin-bottom:2px;"> <b><em>Logic and Mechanized Reasoning</em></b> </div>
+            <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
+at CMU. For professor [Marijn Heule](https://www.cs.cmu.edu/~mheule/)</p>
+        </li>
+        <li> 
             <div style="margin-bottom:2px;"> <b><em>Undergraduate Quatum Computing</em></b> </div>
             <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
 at CMU. For professor [Ryan O'Donnell](https://www.cs.cmu.edu/~odonnell/)</p>
@@ -88,4 +93,4 @@ at CMU. For professor [Ryan O'Donnell](https://www.cs.cmu.edu/~odonnell/)</p>
 
 I also had a YouTube channel with math videos, and have collected a fair bit of teaching materials over the years. I plan to upload most of that here. Unfortunately, most of it was originally written in Spanish, so I'll be slowly translating it over time.
 
-[^1]:  By counting classes multiplied by the number of times I have TA'ed for them, the total is **17** TA'ships.
+[^1]: By counting classes multiplied by the number of times I have TA'ed for them, the total is **18** TA'ships.

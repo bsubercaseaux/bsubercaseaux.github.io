@@ -7,7 +7,7 @@ nav: true
 ---
 ## Reviews 
 
-I have reviewed around 17 papers, for:
+I have reviewed around 20 papers, for:
 
 1. Communications of the ACM 
 2. Transactions on Algorithms
@@ -15,7 +15,8 @@ I have reviewed around 17 papers, for:
 4. ICLR
 5. SAT
 6. Operations Research
-7. TACAS 
+7. TACAS
+8. JAIR
 
 ## Acknowledgments
 
