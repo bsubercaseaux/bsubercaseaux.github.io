@@ -28,6 +28,15 @@ body {
   overflow-wrap: break-word; /* Breaks long words to prevent horizontal scrolling */
 }
 
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.Site-content {
+  flex: 1;
+}
 
 ul {
     list-style: none;
