@@ -30,7 +30,7 @@ After executing it you should be ready to get your hands dirty with the exercise
 <ul class="starlist">
 <li> <a href="https://colab.research.google.com/drive/1JCnoY4arrj8GUoi88AxDgdkslzQovgiN?usp=sharing">Small Ramsey SAT</a>: a first hands-on introduction to SAT solving by computing small Ramsey numbers.
 </li>
-<li> <a href="https://colab.research.google.com/drive/1m8dylrIU24rfCCuAflrfN2LdFm4ZRA-D?usp=sharing">Small Schur SAT</a>: a second step into SAT solving by computing small Schur numbers.
+<li> <a href="https://colab.research.google.com/drive/1I-3ReHuQKc1p8_UQMXvE21k1hx9JTAqb?usp=sharing">Small Schur SAT</a>: a second step into SAT solving by computing small Schur numbers.
 </li>
 </ul>
 
