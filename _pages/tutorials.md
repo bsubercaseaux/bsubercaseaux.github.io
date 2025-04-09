@@ -32,7 +32,8 @@ After executing it you should be ready to get your hands dirty with the exercise
 </li>
 <li> <a href="https://colab.research.google.com/drive/1I-3ReHuQKc1p8_UQMXvE21k1hx9JTAqb?usp=sharing">Small Schur SAT</a>: a second step into SAT solving by computing small Schur numbers.
 </li>
-
+<li> <a href="https://colab.research.google.com/drive/1MFquBJdx-rqLzR-Rij5zBenC5kn28dr6?usp=sharing">Non-monochromatic rectangles SAT</a>: a third step into SAT solving by computing colored grids without monochromatic rectangles.
+</li>
 
 <li> <a href="https://colab.research.google.com/drive/1188nOlXmZ6D3EI44cFDdCFNSkbzeo9KW?usp=sharing">Small Cages SAT</a>: a fourth step into SAT solving by computing small cage graphs.
 </li>
@@ -43,6 +44,8 @@ After executing it you should be ready to get your hands dirty with the exercise
 <ul class="starlist">
     <li> <a href="https://colab.research.google.com/drive/19L7EWPe1SaSb1E88NJSf5qzPhV1oKWmx?usp=sharing">Small Ramsey SAT</a> </li>
     <li> <a href="https://colab.research.google.com/drive/1P8dxruGoT08UpX8u8K0YhUtB3nejP3Hq?usp=sharing">Small Schur SAT</a> </li>
+    <li> <a href="https://colab.research.google.com/drive/14D9MNA0_5LEnbsiJXIlCPDF8aOcTWL2T?usp=sharing">  Non-monochromatic rectangles SAT</a>
+    </li>
     <li> <a href="https://colab.research.google.com/drive/1c1GqgexFVqD_t03TmVhVUlLD9bwo00td?usp=sharing"> Small Cages SAT</a>
     </li>
 </ul>
