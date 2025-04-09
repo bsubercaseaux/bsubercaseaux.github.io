@@ -3,7 +3,7 @@ layout: page
 permalink: /tutorials/
 title: Tutorials
 description:
-nav: false
+nav: true
 ---
 Here's a collection of some brief tutorials about SAT solving, written as _Google Collab notebooks_ (in Python) so that no specific software is necessary.
 
@@ -51,5 +51,7 @@ After executing it you should be ready to get your hands dirty with the exercise
     <li> <a href="https://colab.research.google.com/drive/14D9MNA0_5LEnbsiJXIlCPDF8aOcTWL2T?usp=sharing">  Non-monochromatic rectangles SAT</a>
     </li>
     <li> <a href="https://colab.research.google.com/drive/1c1GqgexFVqD_t03TmVhVUlLD9bwo00td?usp=sharing"> Small Cages SAT</a>
+    </li>
+    <li> <a href="https://colab.research.google.com/drive/1mzhFJf7GYOgY-iZNScB8v8HoYyA4otY1?usp=sharing"> Non-transitive dice SAT</a>
     </li>
 </ul>
