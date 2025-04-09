@@ -5,9 +5,9 @@ title: Tutorials
 description:
 nav: true
 ---
-Here's a collection of some brief tutorials about SAT solving, written as _Google Collab notebooks_ (in Python) so that no specific software is necessary.
+Here's a collection of some brief tutorials about SAT solving, written as _Google Colab notebooks_ (in Python) so that no specific software is necessary.
 
-Each of these links goes to a document that you can view but not edit, so to make your own editable copy you need to click on "File" and then "Save copy to drive" in the Collab menu.
+Each of these links goes to a document that you can view but not edit, so to make your own editable copy you need to click on "File" and then "Save copy to drive" in the Colab menu.
 
 <!-- ![A QR to this very same website for demo purposes!](/assets/img/qr_tutorial.jpeg){: style="display:block; margin-left: auto; margin-right: auto; width: 20%;"} -->
 
