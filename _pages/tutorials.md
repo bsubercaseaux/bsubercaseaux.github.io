@@ -37,6 +37,10 @@ After executing it you should be ready to get your hands dirty with the exercise
 
 <li> <a href="https://colab.research.google.com/drive/1188nOlXmZ6D3EI44cFDdCFNSkbzeo9KW?usp=sharing">Small Cages SAT</a>: a fourth step into SAT solving by computing small cage graphs.
 </li>
+
+<li>
+<a href="https://colab.research.google.com/drive/1DlOMXoMleBFVnMFsr2sl5QKNOCeHmOz5?usp=sharing"> Non-transitive dice SAT</a>: a final boss! Finding small sets of non-transitive dice with SAT.
+</li>
 </ul>
 
 ## Solutions
