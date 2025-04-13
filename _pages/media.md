@@ -3,7 +3,7 @@ layout: page
 permalink: /media/
 title: Media
 description: In this page you can find my appearances in the media.
-nav: true
+nav: false
 ---
 
 # ***Magazines and Online Portals***

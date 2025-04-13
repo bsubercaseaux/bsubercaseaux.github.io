@@ -3,7 +3,7 @@ layout: page
 permalink: /tutorials/
 title: Tutorials
 description:
-nav: true
+nav: false
 ---
 Here's a collection of some brief tutorials about SAT solving, written as _Google Colab notebooks_ (in Python) so that no specific software is necessary.
 

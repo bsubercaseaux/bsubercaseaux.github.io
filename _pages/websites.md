@@ -3,7 +3,7 @@ layout: page
 permalink: /websites/
 title: Websites
 description:
-nav: true
+nav: false
 ---
 Here's a collection of some small websites I've built (some with help of others):
 <ul class="starlist">
