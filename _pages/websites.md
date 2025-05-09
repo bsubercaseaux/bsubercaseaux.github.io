@@ -5,6 +5,9 @@ title: Websites
 description:
 nav: false
 ---
+
+I'm excited to maintain a website collecting papers and other resources related to the use of SAT solvers in mathematics. You can find it at <a href="https://bsubercaseaux.github.io/sat-for-math/">bsubercaseaux.github.io/sat-for-math</a>.
+
 Here's a collection of some small websites I've built (some with help of others):
 <ul class="starlist">
 <li> <a href="https://twentyfour.surge.sh">twentyfour.surge.sh/</a>: A website to play the game of 24.

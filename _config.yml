@@ -168,6 +168,9 @@ github: [metadata]
 # Jekyll optimization
 # -----------------------------------------------------------------------------
 
+# Allow posts with future dates to be published
+future: true
+
 # HTML remove comments (<!-- .... -->)
 remove_HTML_comments: false
 
