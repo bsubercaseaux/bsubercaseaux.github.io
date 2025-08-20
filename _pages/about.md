@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: 4th year Computer Science PhD student at <a href="https://www.cs.cmu.edu/">Carnegie Mellon University</a>, bersub@cmu.edu
+subtitle: 5th year Computer Science PhD student at <a href="https://www.cs.cmu.edu/">Carnegie Mellon University</a>, bersub@cmu.edu
 profile:
   align: right
   image1: prof_pic4.jpg
@@ -20,7 +20,7 @@ news: false  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
-I am a 4<sup>th</sup> year Computer Science PhD student at <a href="https://www.cs.cmu.edu/">CMU</a>, where I'm advised by the amazing <a href="http://www.cs.cmu.edu/~mheule/">Marijn Heule</a>.
+I am a 5<sup>th</sup> year Computer Science PhD student at <a href="https://www.cs.cmu.edu/">CMU</a>, where I'm advised by the amazing <a href="http://www.cs.cmu.edu/~mheule/">Marijn Heule</a>.
  For a more detailed biography of myself you can click <a href="bio/">here</a>.
 <!--
  Before that, I had the fortune of doing my masters under the greats <a href="https://pbarcelo.ing.uc.cl/">Pablo Barceló</a> and <a href="https://users.dcc.uchile.cl/~jperez/">Jorge Pérez</a>, on theoretical aspects of <i>interpretability in Machine Learning</i>. Even before that, I got engineering degrees from <a href="https://www.centralesupelec.fr/"> CentraleSupélec (École Centrale Paris)</a> , and <a href="http://ingenieria.uchile.cl/">University of Chile</a>.
