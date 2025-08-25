@@ -10,23 +10,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><b>Bernardo Subercaseaux</b> | blog</title>
+    <title><b>Bernardo Subercaseaux</b> | Subquadratic encodings for my favorite graph problems</title>
     <meta name="author" content="Bernardo Anibal Subercaseaux Roa" />
-    <meta name="description" content="My personal/academic website :)" />
+    <meta name="description" content="An observation allowing to encode several graph problems in $$o(|E|)$$ clauses." />
 
     <!-- OpenGraph -->
     <meta property="og:site_name" content="<b>Bernardo Subercaseaux</b>" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="<b>Bernardo Subercaseaux</b> | blog" />
-    <meta property="og:url" content="https://bsubercaseaux.github.io/blog/" />
-    <meta property="og:description" content="My personal/academic website :)" />
+    <meta property="og:title" content="<b>Bernardo Subercaseaux</b> | Subquadratic encodings for my favorite graph problems" />
+    <meta property="og:url" content="https://bsubercaseaux.github.io/blog/2025/subquadratic/" />
+    <meta property="og:description" content="An observation allowing to encode several graph problems in $$o(|E|)$$ clauses." />
     
     <meta property="og:locale" content="en" />
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="blog" />
-    <meta name="twitter:description" content="My personal/academic website :)" />
+    <meta name="twitter:title" content="Subquadratic encodings for my favorite graph problems" />
+    <meta name="twitter:description" content="An observation allowing to encode several graph problems in $$o(|E|)$$ clauses." />
     
     <meta name="twitter:site" content="@b_subercaseaux" />
     <meta name="twitter:creator" content="@b_subercaseaux" />
@@ -39,10 +39,10 @@
           "@type": "Person",
           "name": "Bernardo Anibal Subercaseaux Roa"
         },
-        "url": "https://bsubercaseaux.github.io/blog/index.html",
+        "url": "https://bsubercaseaux.github.io/blog/2025/subquadratic/",
         "@type": "WebSite",
-        "description": "My personal/academic website :)",
-        "headline": "blog",
+        "description": "An observation allowing to encode several graph problems in $$o(|E|)$$ clauses.",
+        "headline": "Subquadratic encodings for my favorite graph problems",
         "sameAs": ["https://orcid.org/0000-0003-2295-1299", "https://scholar.google.com/citations?user=0EOonpYAAAAJ", "https://github.com/bsubercaseaux", "https://twitter.com/b_subercaseaux"],
         "name": "Bernardo Anibal Subercaseaux Roa",
         "@context": "https://schema.org"
@@ -67,7 +67,7 @@
     <!-- Styles -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐒</text></svg>">
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://bsubercaseaux.github.io/blog/">
+    <link rel="canonical" href="https://bsubercaseaux.github.io/blog/2025/subquadratic/">
   </head>
 
   <!-- Body -->
@@ -98,7 +98,7 @@
               
               <!-- Blog -->
               <li class="nav-item active">
-                <a class="nav-link" href="/blog/">Blog<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/blog/">Blog</a>
               </li>
 
               <!-- Other pages -->
@@ -131,184 +131,64 @@
 
     <!-- Content -->
     <div class="container mt-5 Site-content">
-      <div class="post center-rectangle">
+      <!-- _layouts/post.html -->
 
-  <div class="header-bar">
-    <h1>B's Blog</h1>
-    <h2>Posts \( \in  \lbrace \text{math}, \text{CS}, \text{philosophy}, \text{literature}\rbrace.\)</h2>
-  </div>
+<div class="post center-rectangle">
 
-
-  <ul class="post-list">
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3><a class="post-title" href="/blog/2025/subquadratic/">Subquadratic encodings for my favorite graph problems</a>
-      </h3>
-      <p>An observation allowing to encode several graph problems in $$o(|E|)$$ clauses.</p>
-      <p class="post-meta"> 3 min read &nbsp; &middot; &nbsp;
-        May 9, 2025
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2025">
-          <i class="fas fa-calendar fa-sm"></i> 2025 </a>
-
+  <header class="post-header">
+    <h1 class="post-title">Subquadratic encodings for my favorite graph problems</h1>
+    <p class="post-meta">May 9, 2025</p>
+    <p class="post-tags">
+      <a href="/blog/2025"> <i class="fas fa-calendar fa-sm"></i> 2025 </a>
+        ·  
+        <a href="/blog/tag/math">
+          <i class="fas fa-hashtag fa-sm"></i> math</a>  
           
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/math">
-              <i class="fas fa-hashtag fa-sm"></i> math</a> &nbsp;
-              
+        ·  
+        <a href="/blog/category/Math">
+          <i class="fas fa-tag fa-sm"></i> Math</a>  
           
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/Math">
-              <i class="fas fa-tag fa-sm"></i> Math</a> &nbsp;
-              
-          
     </p>
-    </li>
+  </header>
 
+  <article class="post-content">
+    <p>When reducing graph problems (e.g., vertex-cover, clique, independent-set, \(k\)-coloring) to SAT, standard encodings use \(\Omega(n^2)\) binary clauses in dense graphs. This brief note shows how a trivial combination of existing ideas yields encodings that use \(\mathcal{O}(n^2 / \lg n)\) many clauses.</p>
+
+<p>Let us first consider the independent set problem, since vertex-cover, clique, and many variants of graph coloring are essentially equivalent in terms of their logical structure. The input is a graph \(G = (V, E)\), together with an integer \(k\), and the goal is to find a set of <em>selected</em> vertices \(S \subseteq V\) such that \(\binom{S}{2} \cap E = \varnothing\) and \(|S| = k\). The standard encoding is thus to create, for each vertex \(v \in V\), a variable \(s_v\) representing whether \(v \in S\). Then, the constraints are simply:
+\begin{equation}
+    (\overline{s_{u}} \lor \overline{s_{v}}),  \forall {u, v} \in E,
+\end{equation}
+stating the independence property, and then the cardinality constraint
+\(\sum_{v \in V} s_v = k.\)
+While cardinality constraints are known to admit compact encodings with \(\mathcal{O}(n \lg ^2 n)\) clauses <a href="https://www.cs.upc.edu/~oliveras/constraints.pdf" target="_blank" rel="noopener noreferrer">[1]</a>, I could not find any references to an encoding of Equation 1 with \(o(n^2)\) many clauses. As I show next, all the required ideas are already present in the literature.</p>
+
+<p><strong>Independent Set in a Biclique.</strong> If \(G\) happens to be a biclique \(K_{a, b}\), then it is trivial to encode the independence property efficiently. Let \(A\) and \(B\) be the parts of \(K_{a, b}\). Then, introduce auxiliary variables \(s_A\) and \(s_B\), which intuitively represent whether some vertex of \(A\) (resp. \(B\)) belongs to \(S\). This is enforced by clauses \((\overline{s_v} \lor s_A)\) for every \(v \in A\), as well as a long clause \((\overline{s_A} \lor \bigvee_{v \in A} s_v)\), and analogous clauses for \(B\) are added as well. Finally, the clause \((\overline{s_A} \lor \overline{s_B})\) enforces the independent set property. We have used
+ \(\mathcal{O}(a + b) = \mathcal{O}(|V(K_{a, b})|)\)
+  many clauses, instead of the \(a \cdot b\) used by Equation 1. Moreover, equivalence can be seen directly by resolving over \(s_A\) and \(s_B\).</p>
+
+<p><strong>Biclique Coverings.</strong> Suppose now \(G\) is an arbitrary graph again, but we have a set of bicliques \(B_1, \ldots, B_r\), with \(V(B_i) \subseteq V(G)\) for each \(1 \leq i \leq r\), and such that \(\bigcup_{i=1}^r E(B_i) = E(G)\). Such a set of bicliques is said to be a <em>``biclique covering’‘</em> of \(G\). Then, for any set \(S \subseteq V(G)\), we trivially have that \(S\) is an independent set of \(G\) if and only if \(S \cap V(B_i)\) is an independent set of \(B_i\) for every \(1 \leq i \leq r\). Now, applying the method of the previous paragraph for each \(B_i\) yields an encoding using \(\mathcal{O}(\sum_{i=1}^r |V(B_i)|)\) many clauses. Fortunately, <a href="https://users.renyi.hu/~p_erdos/1983-20.pdf" target="_blank" rel="noopener noreferrer">a classic result of Chung, Erdős, and Spencer</a> says that for any $G$ there is a biclique covering such that
+ \(\sum_{i=1}^r |V(B_i)| \in \mathcal{O}(|V(G)|^2 / \lg (|V(G)|)).\)
+ Furthermore, Mubayi and Turán proved that such a covering can be computed in polynomial time <a href="https://arxiv.org/pdf/0905.2527" target="_blank" rel="noopener noreferrer">[3]</a>, which allows therefore to construct the succinct encoding from an input graph in polynomial time. Naturally, without this runtime restriction the result of this note would be trivial, since one could first solve the independent set instance and then build a constant-size formula according to the answer.</p>
+
+
+  </article><hr style="margin-top: 50px; margin-bottom: 50px;"> 
     
+    <h1 style="text-align:center;"> Comment Section </h1>
 
-    
-    
-    
-    
-
-    <li>
-      <h3><a class="post-title" href="/blog/2024/surf/">Mathematics, Philosophy, Not-poems, and learning How To Surf from a book</a>
-      </h3>
-      <p>A long and painfully ambitious post about how I engage with the disciplines I love.</p>
-      <p class="post-meta"> 51 min read &nbsp; &middot; &nbsp;
-        April 12, 2024
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2024">
-          <i class="fas fa-calendar fa-sm"></i> 2024 </a>
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/math,">
-              <i class="fas fa-hashtag fa-sm"></i> math,</a> &nbsp;
-              
-            <a href="/blog/tag/poetry,">
-              <i class="fas fa-hashtag fa-sm"></i> poetry,</a> &nbsp;
-              
-            <a href="/blog/tag/learning">
-              <i class="fas fa-hashtag fa-sm"></i> learning</a> &nbsp;
-              
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/Math">
-              <i class="fas fa-tag fa-sm"></i> Math</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3><a class="post-title" href="/blog/2023/packingchromatic/">The story behind the Packing Chromatic paper.</a>
-      </h3>
-      <p>A personal tale about what it's been to determine the packing chromatic number of the infinite square grid.</p>
-      <p class="post-meta"> 34 min read &nbsp; &middot; &nbsp;
-        January 30, 2023
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2023">
-          <i class="fas fa-calendar fa-sm"></i> 2023 </a>
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/math,">
-              <i class="fas fa-hashtag fa-sm"></i> math,</a> &nbsp;
-              
-            <a href="/blog/tag/research,">
-              <i class="fas fa-hashtag fa-sm"></i> research,</a> &nbsp;
-              
-            <a href="/blog/tag/automated">
-              <i class="fas fa-hashtag fa-sm"></i> automated</a> &nbsp;
-              
-            <a href="/blog/tag/reasoning">
-              <i class="fas fa-hashtag fa-sm"></i> reasoning</a> &nbsp;
-              
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/Math">
-              <i class="fas fa-tag fa-sm"></i> Math</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-
-    
-    
-    
-    
-
-    <li>
-      <h3><a class="post-title" href="/blog/2023/asymptotic/">A cute problem about asymptotics of a summation</a>
-      </h3>
-      <p>A solution to a nice little problem given to my Nicolás Sanhueza-Matamala.</p>
-      <p class="post-meta"> 5 min read &nbsp; &middot; &nbsp;
-        January 23, 2023
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2023">
-          <i class="fas fa-calendar fa-sm"></i> 2023 </a>
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/math,">
-              <i class="fas fa-hashtag fa-sm"></i> math,</a> &nbsp;
-              
-            <a href="/blog/tag/asymptotics,">
-              <i class="fas fa-hashtag fa-sm"></i> asymptotics,</a> &nbsp;
-              
-            <a href="/blog/tag/puzzle">
-              <i class="fas fa-hashtag fa-sm"></i> puzzle</a> &nbsp;
-              
-          
-
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/Math">
-              <i class="fas fa-tag fa-sm"></i> Math</a> &nbsp;
-              
-          
-    </p>
-    </li>
-
-    
-  </ul>
-
-  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'https-bsubercaseaux-github-io';
+      var disqus_identifier = '/blog/2025/subquadratic';
+      var disqus_title      = "Subquadratic encodings for my favorite graph problems";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
 
 </div>
 
@@ -317,7 +197,7 @@
     <!-- Footer -->
 <footer class="sticky-bottom mt-5">
   <div class="container" style="font-style:italic;">
-    <it>"Man is but a reed, weakest in nature, but a reed which thinks."</it> &mdash; Blaise Pascal (Pensées, 1670)
+    <it>"Man is but a reed, weakest in nature, but a reed which thinks."</it> — Blaise Pascal (Pensées, 1670)
     
     
     Last updated: August 25, 2025.
