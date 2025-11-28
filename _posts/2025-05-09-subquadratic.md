@@ -24,9 +24,13 @@ While cardinality constraints are known to admit compact encodings with $$\mathc
  $$\mathcal{O}(a + b) = \mathcal{O}(|V(K_{a, b})|)$$
   many clauses, instead of the $$a \cdot b$$ used by Equation 1. Moreover, equivalence can be seen directly by resolving over $$s_A$$ and $$s_B$$.
 
-**Biclique Coverings.** Suppose now $$G$$ is an arbitrary graph again, but we have a set of bicliques $$B_1, \ldots, B_r$$, with $$V(B_i) \subseteq V(G)$$ for each $$1 \leq i \leq r$$, and such that $$\bigcup_{i=1}^r E(B_i) = E(G)$$. Such a set of bicliques is said to be a _``biclique covering''_ of $$G$$. Then, for any set $$S \subseteq V(G)$$, we trivially have that $$S$$ is an independent set of $$G$$ if and only if $$S \cap V(B_i)$$ is an independent set of $$B_i$$ for every $$1 \leq i \leq r$$. Now, applying the method of the previous paragraph for each $$B_i$$ yields an encoding using $$\mathcal{O}(\sum_{i=1}^r |V(B_i)|)$$ many clauses. Fortunately, [a classic result of Chung, Erdős, and Spencer](https://users.renyi.hu/~p_erdos/1983-20.pdf) says that for any $G$ there is a biclique covering such that
+**Biclique Coverings.** Suppose now $$G$$ is an arbitrary graph again, but we have a set of bicliques $$B_1, \ldots, B_r$$, with $$V(B_i) \subseteq V(G)$$ for each $$1 \leq i \leq r$$, and such that $$\bigcup_{i=1}^r E(B_i) = E(G)$$. Such a set of bicliques is said to be a _``biclique covering''_ of $$G$$. Then, for any set $$S \subseteq V(G)$$, we trivially have that $$S$$ is an independent set of $$G$$ if and only if $$S \cap V(B_i)$$ is an independent set of $$B_i$$ for every $$1 \leq i \leq r$$. Now, applying the method of the previous paragraph for each $$B_i$$ yields an encoding using $$\mathcal{O}(\sum_{i=1}^r |V(B_i)|)$$ many clauses. Fortunately, [a classic result of Chung, Erdős, and Spencer](https://users.renyi.hu/~p_erdos/1983-20.pdf) says that for any $$G$$ there is a biclique covering such that
  $$
  \sum_{i=1}^r |V(B_i)| \in \mathcal{O}(|V(G)|^2 / \lg (|V(G)|)).
  $$
  Furthermore, Mubayi and Turán proved that such a covering can be computed in polynomial time [[3]](https://arxiv.org/pdf/0905.2527), which allows therefore to construct the succinct encoding from an input graph in polynomial time. Naturally, without this runtime restriction the result of this note would be trivial, since one could first solve the independent set instance and then build a constant-size formula according to the answer.
  
+
+ ## Edit from a few months later:
+
+ I have written more in depth about this result here: https://arxiv.org/abs/2506.14042. But more importantly, together with Andrew Krapivin, Benjamin Pzybocki, and Nicolás Sanhueza-Matamala, we have improved the best bounds on biclique partitions/coverings for graphs, optimally solved the hypergraph case as well, and significantly improved the algorithmic aspects of the problem since Mubayi and Turán's result. The paper is available here: https://www.arxiv.org/abs/2511.11855. 

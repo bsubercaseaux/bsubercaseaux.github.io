@@ -434,3 +434,85 @@ In this article we prove a more modest lower bound of $\frac{5\sqrt{5}-11}{4} \a
       bibtex_show = {true}
 }
 
+
+@inproceedings{subercaseauxFormalVerificationEmpty2024,
+  title = {Formal {{Verification}} of the {{Empty Hexagon Number}}},
+  booktitle = {15th {{International Conference}} on {{Interactive Theorem Proving}} ({{ITP}} 2024)},
+  author = {Subercaseaux, Bernardo and Nawrocki, Wojciech and Gallicchio, James and Codel, Cayden and Carneiro, Mario and Heule, Marijn J. H.},
+  editor = {Bertot, Yves and Kutsia, Temur and Norrish, Michael},
+  year = 2024,
+  series = {Leibniz {{International Proceedings}} in {{Informatics}} ({{LIPIcs}})},
+  volume = {309},
+  pages = {35:1--35:19},
+  publisher = {Schloss Dagstuhl -- Leibniz-Zentrum f\"ur Informatik},
+  address = {Dagstuhl, Germany},
+  issn = {1868-8969},
+  doi = {10.4230/LIPIcs.ITP.2024.35},
+  urldate = {2025-05-14},
+  isbn = {978-3-95977-337-9},
+  keywords = {Discrete Computational Geometry,Empty Hexagon Number,Erd\Hos-Szekeres},
+  selected = {true},
+  bibtex_show = {true},
+  pdf={https://drops.dagstuhl.de/storage/00lipics/lipics-vol309-itp2024/LIPIcs.ITP.2024.35/LIPIcs.ITP.2024.35.pdf}
+}
+
+
+@inproceedings{subercaseauxAutomatedSymmetricConstructions2026,
+  title = {Automated {{Symmetric Constructions}} in {{Discrete Geometry}}},
+  booktitle = {Intelligent {{Computer Mathematics}}},
+  author = {Subercaseaux, Bernardo and Mackey, Ethan and Qian, Long and Heule, Marijn},
+  editor = {{de Paiva}, Valeria and Koepke, Peter},
+  year = 2026,
+  pages = {29--47},
+  publisher = {Springer Nature Switzerland},
+  address = {Cham},
+  abstract = {We present a computational methodology for obtaining rotationally symmetric sets of points satisfying discrete geometric constraints, and demonstrate its applicability by discovering new solutions to some well-known problems in combinatorial geometry. Our approach takes the usage of SAT solvers in discrete geometry further by directly embedding rotational symmetry into the combinatorial encoding of geometric configurations. Then, to realize concrete point sets corresponding to abstract designs provided by a SAT solver, we introduce a novel local-search realizability solver, which shows excellent practical performance despite the intrinsic \$\$\textbackslash exists \textbackslash mathbb \textbraceleft R\textbraceright\$\${$\exists$}R-completeness of the problem. Leveraging this combined approach, we provide symmetric extremal solutions to the Erd\H os-Szekeres problem, as well as a minimal odd-sized solution with 21 points for the everywhere-unbalanced-points problem, improving on the previously known 23-point configuration. The imposed symmetries yield more aesthetically appealing solutions, enhancing human interpretability, and simultaneously offer computational benefits by significantly reducing the number of variables required to encode discrete geometric problems.},
+  isbn = {978-3-032-07021-0},
+  selected = {true},
+  bibtex_show = {true},
+  pdf={https://arxiv.org/pdf/2506.00224}
+}
+
+
+@inproceedings{subercaseauxUnfoldingBoxesLocalConstraints2025,
+  author = {Qian, Long and Wang, Eric and Subercaseaux, Bernardo and Heule, Marijn J. H.},
+  title = {https://arxiv.org/pdf/2506.01079},
+  year = {2025},
+  isbn = {978-3-031-99983-3},
+  publisher = {Springer-Verlag},
+  address = {Berlin, Heidelberg},
+  url = {https://doi.org/10.1007/978-3-031-99984-0_38},
+  doi = {10.1007/978-3-031-99984-0_38},
+  abstract = {We consider the problem of finding and enumerating polyominos that can be folded into multiple non-isomorphic boxes. While several computational approaches have been proposed, including SAT, randomized algorithms, and decision diagrams, none has been able to perform at scale. We argue that existing SAT encodings are hindered by the presence of global constraints (e.g., graph connectivity or acyclicity), which are generally hard to encode effectively and hard for solvers to reason about. In this work, we propose a new SAT-based approach that replaces these global constraints with simple local constraints that have substantially better propagation properties. Our approach dramatically improves the scalability of both computing and enumerating common box unfoldings: (i) while previous approaches could only find common unfoldings of two boxes up to area 88, ours easily scales beyond 150, and (ii) while previous approaches were only able to enumerate common unfoldings up to area 30, ours scales up to 60. This allows us to rule out 46, 54, and 58 as the smallest areas allowing a common unfolding of three boxes, thereby refuting a conjecture of Xu et al. (2017).},
+  booktitle = {Automated Deduction – CADE 30: 30th International Conference on Automated Deduction, Stuttgart, Germany, July 28-31, 2025, Proceedings},
+  pages = {736–754},
+  numpages = {19},
+  keywords = {Box folding, SAT encodings, Graph connectivity, Graph cyclicity, Local constraints},
+  location = {Stuttgart, Germany},
+  selected = {true},
+  bibtex_show = {true},
+  pdf = {https://arxiv.org/pdf/2506.01079}
+}
+
+
+@article{subercaseauxExplainingKNearest2025,
+  author = {Barcel\'{o}, Pablo and Kozachinskiy, Alexander and Romero, Miguel and Subsercaseaux, Bernardo and Verschae, Jos\'{e}},
+  title = {Explaining k-Nearest Neighbors: Abductive and Counterfactual Explanations},
+  year = {2025},
+  issue_date = {May 2025},
+  publisher = {Association for Computing Machinery},
+  address = {New York, NY, USA},
+  volume = {3},
+  number = {2},
+  url = {https://doi.org/10.1145/3725234},
+  doi = {10.1145/3725234},
+  abstract = {Despite the wide use of k-Nearest Neighbors as classification models, their explainability properties remain poorly understood from a theoretical perspective. While nearest neighbors classifiers offer interpretability from a ''data perspective'', in which the classification of an input vector x is explained by identifying the vectors v1, ..., vk in the training set that determine the classification of x, we argue that such explanations can be impractical in high-dimensional applications, where each vector has hundreds or thousands of features and it is not clear what their relative importance is. Hence, we focus on understanding nearest neighbor classifications through a ''feature perspective'', in which the goal is to identify how the values of the features in x affect its classification. Concretely, we study abductive explanations such as ''minimum sufficient reasons'', which correspond to sets of features in x that are enough to guarantee its classification, and counterfactual explanations based on the minimum distance feature changes one would have to perform in x to change its classification. We present a detailed landscape of positive and negative complexity results for counterfactual and abductive explanations, distinguishing between discrete and continuous feature spaces, and considering the impact of the choice of distance function involved. Finally, we show that despite some negative complexity results, Integer Quadratic Programming and SAT solving allow for computing explanations in practice.},
+  journal = {Proc. ACM Manag. Data},
+  month = jun,
+  articleno = {97},
+  numpages = {26},
+  keywords = {XAI, explainability, interpretability, nearest neighbors},
+  selected = {true},
+  bibtex_show = {true},
+  pdf = {https://arxiv.org/pdf/2501.06078}
+}
