@@ -1,0 +1,897 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://bsubercaseaux.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://bsubercaseaux.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2026-01-16T07:02:09+00:00</updated><id>https://bsubercaseaux.github.io/feed.xml</id><title type="html">&lt;b&gt;Bernardo Subercaseaux&lt;/b&gt;</title><subtitle>My personal/academic website :)</subtitle><entry><title type="html">Subquadratic encodings for my favorite graph problems</title><link href="https://bsubercaseaux.github.io/blog/2025/subquadratic/" rel="alternate" type="text/html" title="Subquadratic encodings for my favorite graph problems" /><published>2025-05-09T15:12:00+00:00</published><updated>2025-05-09T15:12:00+00:00</updated><id>https://bsubercaseaux.github.io/blog/2025/subquadratic</id><content type="html" xml:base="https://bsubercaseaux.github.io/blog/2025/subquadratic/"><![CDATA[<p>When reducing graph problems (e.g., vertex-cover, clique, independent-set, \(k\)-coloring) to SAT, standard encodings use \(\Omega(n^2)\) binary clauses in dense graphs. This brief note shows how a trivial combination of existing ideas yields encodings that use \(\mathcal{O}(n^2 / \lg n)\) many clauses.</p>
+
+<p>Let us first consider the independent set problem, since vertex-cover, clique, and many variants of graph coloring are essentially equivalent in terms of their logical structure. The input is a graph \(G = (V, E)\), together with an integer \(k\), and the goal is to find a set of <em>selected</em> vertices \(S \subseteq V\) such that \(\binom{S}{2} \cap E = \varnothing\) and \(|S| = k\). The standard encoding is thus to create, for each vertex \(v \in V\), a variable \(s_v\) representing whether \(v \in S\). Then, the constraints are simply:
+\begin{equation}
+    (\overline{s_{u}} \lor \overline{s_{v}}),  \forall {u, v} \in E,
+\end{equation}
+stating the independence property, and then the cardinality constraint
+\(\sum_{v \in V} s_v = k.\)
+While cardinality constraints are known to admit compact encodings with \(\mathcal{O}(n \lg ^2 n)\) clauses <a href="https://www.cs.upc.edu/~oliveras/constraints.pdf">[1]</a>, I could not find any references to an encoding of Equation 1 with \(o(n^2)\) many clauses. As I show next, all the required ideas are already present in the literature.</p>
+
+<p><strong>Independent Set in a Biclique.</strong> If \(G\) happens to be a biclique \(K_{a, b}\), then it is trivial to encode the independence property efficiently. Let \(A\) and \(B\) be the parts of \(K_{a, b}\). Then, introduce auxiliary variables \(s_A\) and \(s_B\), which intuitively represent whether some vertex of \(A\) (resp. \(B\)) belongs to \(S\). This is enforced by clauses \((\overline{s_v} \lor s_A)\) for every \(v \in A\), as well as a long clause \((\overline{s_A} \lor \bigvee_{v \in A} s_v)\), and analogous clauses for \(B\) are added as well. Finally, the clause \((\overline{s_A} \lor \overline{s_B})\) enforces the independent set property. We have used
+ \(\mathcal{O}(a + b) = \mathcal{O}(|V(K_{a, b})|)\)
+  many clauses, instead of the \(a \cdot b\) used by Equation 1. Moreover, equivalence can be seen directly by resolving over \(s_A\) and \(s_B\).</p>
+
+<p><strong>Biclique Coverings.</strong> Suppose now \(G\) is an arbitrary graph again, but we have a set of bicliques \(B_1, \ldots, B_r\), with \(V(B_i) \subseteq V(G)\) for each \(1 \leq i \leq r\), and such that \(\bigcup_{i=1}^r E(B_i) = E(G)\). Such a set of bicliques is said to be a <em>``biclique covering’‘</em> of \(G\). Then, for any set \(S \subseteq V(G)\), we trivially have that \(S\) is an independent set of \(G\) if and only if \(S \cap V(B_i)\) is an independent set of \(B_i\) for every \(1 \leq i \leq r\). Now, applying the method of the previous paragraph for each \(B_i\) yields an encoding using \(\mathcal{O}(\sum_{i=1}^r |V(B_i)|)\) many clauses. Fortunately, <a href="https://users.renyi.hu/~p_erdos/1983-20.pdf">a classic result of Chung, Erdős, and Spencer</a> says that for any \(G\) there is a biclique covering such that
+ \(\sum_{i=1}^r |V(B_i)| \in \mathcal{O}(|V(G)|^2 / \lg (|V(G)|)).\)
+ Furthermore, Mubayi and Turán proved that such a covering can be computed in polynomial time <a href="https://arxiv.org/pdf/0905.2527">[3]</a>, which allows therefore to construct the succinct encoding from an input graph in polynomial time. Naturally, without this runtime restriction the result of this note would be trivial, since one could first solve the independent set instance and then build a constant-size formula according to the answer.</p>
+
+<p>## Edit from a few months later:</p>
+
+<p>I have written more in depth about this result here: https://arxiv.org/abs/2506.14042. But more importantly, together with Andrew Krapivin, Benjamin Pzybocki, and Nicolás Sanhueza-Matamala, we have improved the best bounds on biclique partitions/coverings for graphs, optimally solved the hypergraph case as well, and significantly improved the algorithmic aspects of the problem since Mubayi and Turán’s result. The paper is available here: https://www.arxiv.org/abs/2511.11855.</p>]]></content><author><name></name></author><category term="Math" /><category term="math" /><summary type="html"><![CDATA[An observation allowing to encode several graph problems in $$o(|E|)$$ clauses.]]></summary></entry><entry><title type="html">Mathematics, Philosophy, Not-poems, and learning How To Surf from a book</title><link href="https://bsubercaseaux.github.io/blog/2024/surf/" rel="alternate" type="text/html" title="Mathematics, Philosophy, Not-poems, and learning How To Surf from a book" /><published>2024-04-12T15:12:00+00:00</published><updated>2024-04-12T15:12:00+00:00</updated><id>https://bsubercaseaux.github.io/blog/2024/surf</id><content type="html" xml:base="https://bsubercaseaux.github.io/blog/2024/surf/"><![CDATA[<p>For a better formatted version of this blog-post, please go to <a href="https://chileantheoryguy.substack.com/p/mathematics-philosophy-not-poems?utm_source=post-email-title&amp;publication_id=1265277&amp;post_id=93081777&amp;isFreemail=false&amp;triedRedirect=true">https://chileantheoryguy.substack.com/p/mathematics-philosophy-not-poems?utm_source=post-email-title&amp;publication_id=1265277&amp;post_id=93081777&amp;isFreemail=false&amp;triedRedirect=true</a>.</p>
+
+<p>What can be as silly as learning how to surf from a book? (No offense to Kenneth Martin, whose book I haven’t read.)</p>
+
+<figure style="text-align:center;">
+  <img src="https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F4023c836-8177-402a-b9e8-89007fa5c8be_375x600.webp" alt="Description of image" style="max-width: 70%;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 1: </b>
+    <span style="font-size: 16px;"> A book about learning how to surf.</span>
+  </figcaption>
+</figure>
+
+<p>In this post, I’ll try to convince the reader that a valid answer might be: “learning how to Math from a book!”.</p>
+
+<p>Thanks for reading Bernardo’s Substack! Subscribe for free to receive new posts and support my work.</p>
+
+<p>Intentionally, I’m using <em>Math</em> as a verb in the same way one uses <em>Surf</em> both as a verb and for the sport itself, and I think this distinction is pretty darn important.</p>
+
+<p>I have never surfed, but I’m inclined to think that reading books about surfing can be instructive in a particular sense; you can read about Surf, about its different elements, about what kind of weather is ideal for surfing, the wood that makes the best boards, etc. But you’re not exactly learning how to Surf; at most you could get some ideas about things to have in mind once you go to the beach, which is when the “learning how to Surf” would happen. I think most people would agree with me on this, but they would argue back that Math or Philosophy are different, and those subjects you can indeed learn from a book. When asked “what is the difference?”, I’m inclined to think they would answer that it’s because Surfing is a physical activity, that you need to learn with your body, whereas Math or Philosophy are brainy stuff and thus a book going through your brain is enough to learn them. <strong>I think this is just wrong, and that learning how to Math from a book is as silly as learning how to Surf from a book!</strong></p>
+
+<p>To clarify right away, I think Math books are extremely important and helpful, but in a similar way that a surfing book can be important and helpful; I believe one could get a lot of out a surfing book if you’re going to the beach often, and contrasting your hands-on experience with the book, using it as a guide to making your hands-on in-water learning experience more effective, but never as a replacement for it. For Math, I believe one should not “read books”, but rather have them as companions for Mathing. In fact, I think the fact that one can just go to a coffee shop with a Math book and a notebook and Math away is an amazing gift of life; you can Math accompanied by the great giants of the present and the past, and there’s not even the need to stand on their shoulds as Newton famously did. Just Mathing side by side with them, behind them even, is an amazing opportunity.</p>
+
+<p>The story however is far from over. In the remaining of this post I’ll ambitiously attempt the following:</p>
+
+<ul>
+  <li>
+    <p>Present more support to these previous claims, relating them with philosophy and poetry.</p>
+  </li>
+  <li>
+    <p>Dive into the pragmatics of how love for Math can get complicated, and what has worked for me as a way to recover the flame in our relationship, that has definitely been hurt multiple times across the years.</p>
+  </li>
+  <li>
+    <p>Frame things in a way that might be helpful for establishing connections with other aspects of behavioral pragmatics that transfer across disciplines.</p>
+  </li>
+</ul>
+
+<p>Immanuel Kant, my favorite philosopher of times, is famously quoted to have said something along the lines of</p>
+
+<blockquote>
+  <p>“One should not learn Philosophy, but rather how to Philosophyze.”
+ – Immanuel Kant (Freely quoted).</p>
+</blockquote>
+
+<p>A concrete citation is the following, from his lecture note on educational aspects of Philosophy.</p>
+
+<blockquote>
+  <p>“One can thus learn philosophy, without being able to philosophize. Thus whoever properly wants to become a philosopher: he must make a free use of his reason, and not merely an imitative, so to speak, mechanical use. […] How can one learn philosophy? One either derives philosophical cognitions from the first sources of their production, i.e., from the principles of reason; or one learns them from those who have philosophized. The easiest way is the latter. But that is not properly philosophy. Suppose there were a true philosophy, [if] one learned it, then one would still have only a historical cognition. A philosopher must be able to philosophize, and for that one must not learn philosophy; otherwise one can judge nothing. […] One can make a distinction between the two expressions, to learn philosophy and to learn to philosophize. To learn is to imitate the judgments of others, hence is quite distinct from one’s own reflection.”
+ (Lectures on Pedagogy, pulled from Manchester University)</p>
+</blockquote>
+
+<p>This citation really captures most of the issue for me. But there’s still a lot left; in particular, what does the difference between learning Philosophy and learning to Philosophyze look like? What shall we do in practice the next time we sit at a Café?</p>
+
+<p>I can’t resist pulling out another reference, this time from the great Mexican poet José Emilio Pacheco. Decades ago, he wrote this beautiful not-poem that captures part of the same idea, but this time in relation to poetry. I have now the pleasure of introducing you, dear reader, to my  English translation of this brilliant not-poem, that as far as I am aware is not available in English anywhere on the internet.</p>
+
+<blockquote>
+  <p><strong>In defense of Anonimity. A letter to George B. Moore to deny him an interview.
+José Emilio Pacheco (1939-2014).</strong>
+&lt;/b&gt;
+I don’t know why we write, dear George,
+and sometimes I wonder why later on
+we publish what we have written.
+In other words, we throw 
+a bottle to the sea that is full
+of garbage and bottles with messages.
+We will never know
+to whom nor where will it be carried by the tides.
+Most likely,
+it will succumb in the storm and the abyss,
+in the bottom sand, that is death.
+&lt;/b&gt;
+ And nonetheless,
+this act of a castaway is never useless.
+Because on a Sunday
+you call me from Estes Park, Colorado.
+You tell me that you have read what’s inside the bottle
+(across the seas: our two different languages)
+and you want to interview me.
+How to explain to you that I have never given an interview?
+That my ambition is to be read, not to be “well known”?
+That is the text that matters and not the author of the text?
+That I disapprove of the literary circus?
+&lt;/b&gt;
+I then receive your enormous telegram 
+(how much must you have spent, dear friend, to send it)
+I cannot answer nor remain silent.
+And these verses come up to me. It is not a poem.
+It does not aspire to the privilege of poetry (it is not voluntary).
+And I will use, as the ancients did,
+the verse as an instrument for all of that
+(tale, letter, treatise, drama, story, agriculture manual)
+that today we say in prose.
+&lt;/b&gt;
+To begin not-answering you I’ll say:
+I have nothing to add to what is there in my poems,
+I am not interested in commenting on them, I am not worried
+about my place in “history” (if I have any).
+I write and that is all. I write: I give half of the poem.
+Poetry is not black signs on the white page.
+I call poetry to that place where of encounter
+with foreign experience.
+The reader will make (or not) the poem that I’ve only sketched.
+&lt;/b&gt;
+We don’t read others: we read ourselves in them.
+I find it a miracle
+that someone I don’t know can look at themself in my mirror.
+If there is a merit in this —said Pessoa—
+it belongs to the verses, not to the author of the verses.
+&lt;/b&gt;
+If by any chance one is a great poet,
+one will leave behind three or four valid poems,
+sorrounded by failures and drafts.
+One’s personal opinions
+are truly of little interest.
+Weird world we live in: 
+the interest in poets is every day a bit bigger,
+and the interest in poems every day a bit smaller.
+The poet stopped being the voice of the tribe,
+the one who speaks out for those who don’t.
+The poet has become another entertainer.
+Their drunkenness, their sexual scandals, their clinical history,
+their alliances and beefs with the other clowns of the circus,
+or the trapeze artist or the elephant tamer.
+They have assured a wide audience 
+who now does not need to read their poems.
+&lt;/b&gt;
+I keep thinking 
+that poetry is something else:
+a form of love that exists only in silence,
+in a secret pact between two personhoods,
+between two that almost always are strangers to one another.
+By any chance did you read that Juan Ramón Jiménez, 
+thought half a century ago about editing a poetry magazine
+that was going to be called Anonimity.
+Anonimity would publish poems, not signatures;
+it will be made out of text and not out of authors.
+And I wish, as the Spaniard poet wished,
+that poetry was anonymous, since it is collective
+(to that I aim my verses and my versions).
+There is a chance that you will agree with me.
+You, that have read me and do not know me.
+We will never meet, and nonetheless we are friends.
+&lt;/b&gt;
+<strong>If you have enjoyed my verses,
+What does it matter that they’re mine / from another / from noone? 
+The truth is, the poems you’ve read are yours:
+You, their author, who invents them when reading them.</strong></p>
+  <blockquote>
+    <blockquote>
+
+    </blockquote>
+  </blockquote>
+</blockquote>
+
+<p>Wow. Just wow. Amazing isn’t it? If there is ever a contest for the coolest ways of denying an interview, I believe this should be enough to take the first three places alone.</p>
+
+<p>This not-poem (out of respect to JEP’s will) transcends far beyond my point in this essay but meets it somewhere along the way: poetry beyond reading the work of another, but rather of working it out by the practice of reading it. Perhaps Pacheco’s point is partly that the important thing once again is not poetry, but Poeting, which is halfway done by the writer, halfway done by the reader who poets the verses out one by one whilst reading them. Once humanity is extinguished (if ever) there will be no poetry, merely black signs printed on white pages.</p>
+
+<p>So how does one Poet? how does one Math? how does one Philosophyze? I’ll try to sketch a couple of ideas that have been personally important to me.</p>
+
+<p>Also, this is probably a good time for you, dear reader, to take a short break before keep reading.</p>
+
+<h2 id="part-ii-pragmatics-that-you-probably-already-know-but-are-good-to-remember">Part II: Pragmatics that you probably already know but are good to remember</h2>
+
+<h3 id="getting-the-game">Getting the game</h3>
+
+<p>The idea of “getting the game” has probably been the most important idea I’ve learned in my lifetime. It’s probably pretty obvious in hindsight, but some of us need the extra help.</p>
+
+<p>First, in this framework, I think of many things as games. Math as a game. Poetry as a game. Philosophy as a game. Music as a game. Dentistry as a game. Dating as a game. Living life as a game.  The semantics of this should become clearer as we go. These games are composed of sub-games, for example, Math can be a sub-game of the game of life, and your Calculus class a sub-game of Math. The idea now is that I want to do well at a game, and enjoy playing it. Some games I choose to play, and some games I’m forced to play by external forces. So how do you do well at a game, and enjoy playing it? <strong>Getting the game is always the first step.</strong></p>
+
+<p><strong>Getting the game means developing an understanding of why other people have liked this game in the past, and why they have found it useful or interesting. It means developing an understanding of the mechanics of the game, the winning conditions, and of the prizes at stake. It means developing some honest respect for the game and the good players and the good moves.</strong></p>
+
+<p>Let’s take dentistry as an example. Here’s how I started really enjoying going to the dentist. I once talked to a dentistry student I met in Chile, and they were really passionate about dentistry. Weird, right? So it made me curious, what the #%@&amp; do you like about dentistry? We talked a bit about it and it got me curious. After a bit of thought, I guess it’s actually pretty cool that our bodies have teeth, these marble-looking things in our mouths that serve as the first interface between food and our body. Isn’t it kinda crazy that our DNA encodes the fabrication of these pieces, and that it actually includes doing it <em>twice</em>; baby teeth and permanent teeth? And they’re so delicate and in constant interaction with external bodies that they require a lot of additional care, more so than other parts of our body. That they’re far from uniform, with different teeth serving different purposes and their shape and structure are accordingly different. Isn’t that kind of freaking cool? If you had sat me down in an abstract world to design the way large animals would get their nutrients, I don’t think I’d have ever come up with such an amazing solution. So how did dentistry originate? what were the cornerstones of its development into its modern form? What are the most important open problems in dentistry? What cool questions about teeth are there that we don’t have answers for? This is what I mean by start getting the game of dentistry. Once you get a bit more of it, it’s pretty cool, and then once a year you get to visit someone who works with teeth full-time and gets to look at yours, your particular set of teeth, what is wrong with them? what is good about them? am I gonna lose them? what’s the right way to take care of them? All of these start being cool questions once you’ve got more of the game. Sure, the procedure might still hurt, but now it’s a painful part of a game you get. <strong>It makes it much better for me.</strong> I really recommend this animated video (in French, but you can use auto-translate), probably meant for kids, about what the heck is happening inside your mouth.</p>
+
+<p>Now let’s think about chess. It might seem like a boring nerdy game to a lot of people, but oh boy it’s beautiful once you get the game. Once you start getting the ideas behind gambits, behind openings, behind castling and king safety, once you start getting a good grasp of what the pieces are worth, and all the fascinating sub-games inside of chess. Once you get more of the game, not even being good at it, you can watch a video of Magnus Carlsen playing, and oh boy isn’t that beautiful? It’s a pure display of elegance and mastery in a way beyond the dreams of the beginner. And even though I assume a ton of the deep things going on are flying right over my head, the tiny superficial portion that a noob like me is able to appreciate is already mind-blowing; some moves are so freaking cool they make you want to stand up and clap.</p>
+
+<p>I was 14 when I started getting the game of academics. Before that, I was a really bad student. I had bad grades and bad behavior at school. So much so that I was left in “conditional” state at the second school I transferred to, the Chilean term for when you’re given a last warning before getting kicked out (which would have really limited my options of going to a good college). But the next school year something changed.</p>
+
+<p>We had a new math teacher, and he started the year with trigonometry. It’s hard to find something that sounds worse to a student that’s at risk of getting kicked out of school at 14 than trigonometry. But he started the class talking about this Greek guy, Hipparchus, much before Christ, trying to understand what was going on in the skies; where was the moon gonna go next, where was the sun gonna go next, how could you locate back your homeland if you’re lost in the sea and all you have is the stars as a guide. Álvaro Sanchez, my new math teacher, really made me think about this dude, perhaps sitting on a boat in the night, looking at the stars and thinking about whether he could figure things out, whether he could understand how the brilliant corpses in the distant sky work, and act upon it, to orientate oneself, to predict the tides, etc. I saw something in there, and I’m grateful to this day to Álvaro Sanchez for gifting me that moment. For the first time, I realized that there was, in the dreadful subject of Maths, a game that Hipparchus had engaged in, and for the first time, I had the feeling that I could also, perhaps, borrow the joystick for a second and play. Everything changed for me there. I started seeing the manipulation of trigonometric equations in a similar fashion I see a chess tactic now, or a punching combo in Street Fighter.</p>
+
+<p>Since then, whenever I try to learn something new, I try to get the game first. Even if I am forced to do or learn something, even if it’s not appealing to me personally, I try to get why others have cared, and what others have been captivated by inside the subject. I’ve also learned that playing a game you don’t get is sometimes the only way to get the game, and there will be more on this particular point later on, in a chewing vs swallowing sub-section. But it’s always important for me to remember that excitement is not zero-sum; you can get more excited about more things all the time, as a conscious decision, and it seems to only make things better.</p>
+
+<h3 id="when-there-are-no-friends-in-sight-look-for-the-enemy">When there are no friends in sight, look for the enemy</h3>
+
+<p>This one has also been huge for me, it is about the importance of identifying roadblocks. Whenever there’s something I want to do, let’s say a theorem I want to prove, there are basically two cases:</p>
+
+<ol>
+  <li>
+    <p>I have a pretty clear idea to try.</p>
+  </li>
+  <li>
+    <p>I have no idea about what to try next.</p>
+  </li>
+</ol>
+
+<p>When on case 1., there’s not too much to think through; try the idea, if it works, champagne, if it doesn’t, repeat until case 2.</p>
+
+<p>So the main issue is what to do on case 2; when there are “no friends in sight” (i.e., clear ideas of what to do next). This perhaps obvious technique is that then the next thing is to identify what the “enemy” is. If the theorem is not-trivial, then there must be a reason why it is not trivial; some obstacle along the way. If the theorem is of the form “All X’s are Y”, then look for what the obstacle to Y is. If everything is a Y and there are no obstructions, your theorem is free. So there must be something preventing some things from being Y; <strong>what are those? Can some X fall under that obstacle?</strong></p>
+
+<p>The point here is that at all points there should be a concrete enemy preventing you from accomplishing the task. This doesn’t mean that defeating the enemy will be easy, but there should be an enemy. Okay, but once you know the enemy, how do you defeat it? Here’s the trick; with the same recursive procedure. Do you have a pretty clear idea of how to beat the enemy? If not, there must be something in the enemy that’s obstructing you from it, what is it? Oh is it the big scary Bazooka they’re carrying? Well, you have a pretty clear idea of how to avoid receiving damage from a Bazooka right?  No? Then what’s between you and that?! and so on.</p>
+
+<p>Note of course that this is only a methodological procedure with no guarantee of success; if at any point one thinks, not only I don’t have any idea of how to avoid receiving damage from a Bazooka, but rather I’m utterly convinced that this is impossible… That’s great too! Can’t you just prove that it is impossible?! Uhmmm, well not quite, it’s hard to prove the Bazooka is going to kill me regardless of what I do, I mean the enemy could miss the shot, or maybe the Bazooka is not loaded. Very good, is there a strategy that safely allows you to check whether the Bazooka is loaded? Perhaps throwing a decoy instead of yourself?</p>
+
+<p>You see the point: it’s hard to get fully and completely stuck working like this because whatever you’re trying is either possible or impossible; so if you do methodologically sound steps, one way or another you should gain something. If there’s a path from your current state of knowledge A to your desired state of knowledge B, then that path must go through some intermediate state C that is very close to A, and your mission is to not focus on B and how far it seems, but rather on where C is. A different matter is whether things are achievable in a given timeframe, or whether they’re worth attempting at all given their probability of failure. But I think is crucial to be confident in that if you really really want to do something, it’s hard to be 100% mentally stuck, as decomposition techniques should get you closer to smaller and smaller tasks, that at some point should be atomically solvable, or atomically impossible. Note as well that “conceptually stuck” is different from cases like “I can’t advance on this paperwork until getting Claire’s signature on this other form”. Then you can be caught in a deadlock, but at least it is not a conceptual deadlock.</p>
+
+<p>Let’s work through an extremely simple example.</p>
+
+<p><strong>Theorem.</strong> All trees (i.e., connected acyclic undirected graphs) are bicolorable.</p>
+
+<p>If you can immediately think of a proof, pretend you don’t for the sake of the exercise. I’ll pretend so.</p>
+
+<p>Okay, so are all graphs bicolorable? If so, then we have it! No? So there are non-bicolorable graphs?! Oh, By trying on paper I got the triangle!</p>
+
+<p>Is the theorem false?! Not really, because the triangle is not a tree, as it has a cycle. But this is good, we found an enemy and his name is the triangle. Is there a way, even though the triangle itself is not a tree, that it still wins an enemy and prevents our theorem from being true, say because it’s a part of a larger tree? Well, not quite either, because a tree couldn’t really have a triangle as a part, that would break acyclicity. Okay, the triangle is defeated, so are we done? It seems that what things are pointing to is ‘‘All graphs that don’t contain triangles are bicolorable”. Is that the same as what we are trying to prove? Well not quite, a square doesn’t contain a triangle and yet it’s not a tree.</p>
+
+<p>But the square can be colored with 2 colors! Not really an enemy of bicolorable graphs. Okay so ‘‘All graphs that don’t contain triangles are bicolorable” is an appealing idea; it even seems a nice converse to “All graphs that contain triangles are not bicolorable”, which we already know by now! Squares are no problemo, so if there’s any difference between the truth value of ‘‘All graphs that don’t contain triangles are bicolorable” and that of our theorem, it must be because of longer cycles, longer than 4 in particular.</p>
+
+<p>Huh, also cycles of length 5 require 3 colors! What about 6? huh, 2 colors! What about 7? huh, 3 colors! What about 8? huh, 3 colors! Okay, the pattern is clear. It seems that cycles of odd length are not bicolorable; good thing trees don’t have them! Can we prove that if your graph doesn’t have cycles of odd length, then it is bicolorable? What would be an obstacle? A graph that is not bicolorable and yet doesn’t have cycles of odd length. Let’s look for one. After a bit of pen-and-paper time, one should get frustrated: I don’t seem to find any examples. Things start to point out to “bicolorable if, and only if, no odd-length cycles”.</p>
+
+<p>Exercise to the reader: continue this extremely painful proof method until completion, or perhaps with a different (but easy!) problem.  I really recommend doing it.</p>
+
+<p>For a longer exposition on this idea, I really encourage the reader to go for Solving Math Problems Terribly. Solving problems terribly is an amazing skill to learn!</p>
+
+<p>Once you’ve kept this idea in mind, the next step is to use it extensively in pedagogy. It’s really nice when proofs depict the enemy, and they show why it can’t hurt you, instead of just walking through the grass while leaving the reader wondering why no enemies attack. An example of a proof that I wouldn’t like to read about trees being bicolorable is the following:</p>
+
+<p>Define trees inductively as either an empty graph or a vertex (which we call root) from which an arbitrary collection of trees hang. Now let’s prove by induction the stronger statement that all trees can be colored red and blue with the root receiving the color red. Trivial for a single vertex, and for the inductive case, color the root with blue,  and each hanging tree via the inductive hypothesis. If feeling generous to the reader, argue that this is a fine coloring overall, because the only edges are those inside the trees (fine by inductive hypothesis), and those from the root to each tree root, which is fine because they are red-blue edges. Finally, invert all colors to preserve the inductive hypothesis.</p>
+
+<p>This is correct, but where is the enemy?! I don’t think good proofs have to be extremely explicit in identifying the obstacles, but it sure helps, and if anything, the non-triviality of your theorem is justified precisely by the number and difficulty of overcoming the different obstacles, so you might as well show them properly.</p>
+
+<p>It’s very important to find the smallest enemies one can tackle at the time. Usually, when you play a video game, difficulty can be bad in two ways; either the game is too easy, which makes it boring, or it is too hard, which makes it frustrating. I have never heard of a student quitting their Ph.D. because they found it to be boringly easy, so our case is always that of fighting against a game that gets frustratingly hard at times. And how can games be less frustratingly hard and thus more enjoyable? By having a well-calibrated progression of difficulty. This is not trivia; game designers (both video- and board games), need to spend a lot of time balancing the game so that it’s not too easy nor too hard. When you play a videogame, you don’t start fighting the boss right away, but rather you warm your way up to it by beating a bunch of weak little monsters. The weak little monsters in mathematics, at least for me, are concrete small examples of what I want to prove. Organizing the quest in a way that has a nice progression of difficulty is really important for me to not get frustrated and quit, and it’s not a trivial task; it requires conscious effort.</p>
+
+<h3 id="street-fighting-mathematics">Street-Fighting Mathematics</h3>
+
+<p>This is a fantastic term I learned from Ryan O’Donnell, which pointed me to an older reference, an eponymous book by Sanjoy Mahajan.</p>
+
+<p>So what the heck is street-fighting Mathematics?! First, street-fighting is a term that as opposed to other forms of fighting like Karate or Boxing, refers to a fight without rules, where everything is allowed: hair pulling, punching at the crotch, etc.</p>
+
+<p>The idea of street-fighting mathematics for me is to rebel against a preconceived notion of math as being elegant and correct at all points, justified from the beginning in all of its steps; rule-respecting. There are no rules, whatever you think  could work to help solve the problem you’re interested in, you should try. Use a computer, ask your friends, change the theorem statement so now it’s easier, assume all graphs will have only 6 vertices, assume π is equal to 3, use all the dirty tricks physicist use, etc. For the love of god, please refrain from mocking physicists for making their life easier by assuming stuff; ought to do the same first, and then start checking whether you could the same with one fewer assumption.</p>
+
+<p>I try to street-fight my way around everything honestly, obeying only the minimum set of rules I actually think I must follow. I’ve realized some of the best mathematicians I know follow this principle too, either consciously or unconsciously, they take mental shortcuts and try to see if the gaps can be filled later. The justification for the effectiveness of this technique appears to me as being something like this:</p>
+
+<p>Our brain, even when thinking about abstract concepts and formal symbolic manipulation, is driven by intuition, and details come later on, once the intuition has done the initial chopping, like our teeth that mechanically reduce our bites into much smaller pieces that then can be swallowed and absorbed. This is similar to the following: if you try to memorize the sentence “The quick brown fox jumps over the lazy dog” and then say it out loud without looking, this is pretty easy, but now that you memorized it, spell it out loud. This is harder, and usually, our strategy for doing it is going back and forth from “spelling” mode, to “remembering the next word” mode. Things can be substantially easier by not doing them right first, by going for the big picture first, and by filling in the gaps later. In other words, when you have to fill in a box at a Chinese buffet, put in the spring rolls first, and the rice later to fill in the empty spaces.</p>
+
+<p>Let me give a concrete example of how this technique is used.</p>
+
+<p><strong>Problem.</strong> Let us say a number whose digits in base 10 are only zero and one is a “binary impostor”.  So 10001 is a binary impostor and so is 1110, but not 1030. Now prove that there are infinitely many binary impostors divided by the current year.</p>
+
+<p>If you read this in 2022, the problem is not too hard. 2022*5 = 10110, which is a binary impostor, and we can always add more 0s, making for infinite binary impostors. This easy case gave us the idea of finding a single multiple of the year that is a binary impostor, and then padding it with 0s. But what if you’re reading this in 2023?! The first thing to do, unless you immediately see the solution, is to go to Python and print the first 100 multiples of 2023. Huh, unfortunately, none of them is a binary impostor. What about 2024? Huh neither…</p>
+
+<p>The opposite way around, print the remainder mod 2023 of randomly generated binary impostors.</p>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">random</span>
+
+<span class="k">def</span> <span class="nf">to_bin</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span> <span class="k">return</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="nf">to_bin</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span>
+
+<span class="n">rems</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">50</span><span class="p">):</span>
+    <span class="n">bi</span> <span class="o">=</span> <span class="nf">to_bin</span><span class="p">(</span><span class="n">random</span><span class="p">.</span><span class="nf">randint</span><span class="p">(</span><span class="mi">100</span><span class="p">,</span> <span class="mi">5000</span><span class="p">))</span>
+    <span class="n">rems</span><span class="p">.</span><span class="nf">append</span><span class="p">(</span><span class="n">bi</span><span class="o">%</span><span class="mi">2023</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="nf">sorted</span><span class="p">(</span><span class="n">rems</span><span class="p">))</span>
+</code></pre></div></div>
+<p>Here’s what I got.</p>
+
+<p>Notice something? 230 appears twice! Now I’m curious if the numbers that gave rise to these 230s look weird.</p>
+
+<p>Now 230 doesn’t show up, but I see 3 different random binary impostors that are 56 mod 2023. This is perhaps useful, but I don’t see a pattern right away.</p>
+
+<p>Binary impostors are constructed (see the Python code) by taking one, and adding a 1 or 0 are the end. What does that do mod 2023? I don’t even think now, just go to Python; street-fighting. I get some output, but still don’t see any patterns. What to do?! I’m going to cheat now and pretend the question was with a number smaller than 2023, because spotting patterns in these decently large numbers is not obvious.</p>
+
+<p>What about 2? Mmh, but I immediately see 10 as a multiple. What about 3? The first binary impostor divisible by 3 seems to be 111, I could have thought this, but I shamelessly just coded it. Huh okay. What about 4? Then it’s 100. What about 5? Then it’s 10 again. What about 6? It’s 1110.  Okay, too many similar questions, I’ll just do the little piece of code that prints for every small value of N the smallest binary impostor divisible by N.</p>
+<div class="language-py highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">random</span>
+
+<span class="k">def</span> <span class="nf">to_bin</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span> <span class="k">return</span> <span class="n">n</span>
+    <span class="k">return</span> <span class="nf">to_bin</span><span class="p">(</span><span class="n">n</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span><span class="o">*</span><span class="mi">10</span> <span class="o">+</span> <span class="n">n</span><span class="o">%</span><span class="mi">2</span>
+
+<span class="n">rems</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">M</span> <span class="o">=</span> <span class="p">{}</span>
+
+<span class="k">def</span> <span class="nf">first_bi_div</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="o">*</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">if</span> <span class="nf">to_bin</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="o">%</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">return</span> <span class="nf">to_bin</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">60</span><span class="p">):</span>
+    <span class="nf">print</span><span class="p">(</span><span class="nf">first_bi_div</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
+</code></pre></div></div>
+
+<p>You might ask now, why the <code class="language-plaintext highlighter-rouge">n*n*n</code> upper-bound? I don’t know, just made it up, seemed big enough and tractable; street-fighting.</p>
+
+<p>I look at the output and now I notice something; these don’t look like the random ones I was generating earlier, they have lots of 1s in a row or lots of 0s in a row.</p>
+
+<p>Question: if I consider numbers of the form 111…0000, what are they divisible by?</p>
+
+<p>Okay, obvious observation, the 0s at the end will make for 2s and 5s… But 2023 is not divisible by 2 or 5, so not super helpful. At least now I know that I should look at impostors ending in 1.</p>
+
+<p>Except for the first one, they have prime divisors, and 3 pops up (2 and 5 are discarded by the previous idea), 7 appears, 11 appears, and 13 appears, but I don’t see 17. I look at my previous code and it tells me the first binary impostor divisible by 17 is 11101. I now wonder if at some point 1111…..111 will be divisible by 17. Let Python figure it out. I do the first hacky code I come up with. The answer is 1111111111111111; incidentally only a single 1 more than what I tried with the factor Unix tool. Reminds me of this meme.</p>
+
+<p>Okay, so I’ll keep going and checking whether the numbers of the form 111….111 are eventually divisible by anything (that is a multiple of 2 or 5).</p>
+
+<p>Huh, is true up to 100 at least. Promising stuff!</p>
+
+<p>It quickly found one divisible by 2023! Our original problem is done.</p>
+
+<p>But now I want more, it seems to be true for any number!</p>
+
+<p>This is a fairly large number of 1s though, I don’t know how much further I can push the computer… I guess I don’t really need to keep all these 1s on the computer, I’ll just see how adding an extra 1 affects the result mod 2023. I do this but don’t see an obvious pattern… At some point, the sequence of mods repeats itself naturally, so I’ll check what the period is.</p>
+
+<p>The first binary impostor of the form 1111….111 divisible by 2023 has 816 ones, the next has 1632, and so on. 816 is the period. Quite cool actually, so I don’t even need the 0-padding, I’m actually showing that there are infinitely many unary impostors divisible by 2023!</p>
+
+<p>What if it’s not 2023 though? Well, I realize that the sequence mod N must be periodic as well, with a period smaller than N. The problem is that perhaps in all that period it never gives me a 0 mod N.  If all numbers have infinite many unary impostors divisible by them, then this never happens. If it happens, then there are no unary impostors divisible by them, but there are pairs of unary impostors that have the same remainder mod N. Now I see it, if I subtract the smaller unary impostor from the larger one, I get a binary impostor, and it has to be 0 mod N, because it’s the subtraction of two numbers that are equal mod N :)</p>
+
+<p>Nice! I finally have infinitely binary impostors divisible by any given year :)</p>
+
+<p>Exercise to the reader. Play around and see whether it’s true that all numbers not divisible by 2 or 5 have infinitely many unary impostors divisible by them.</p>
+
+<p>Now here is how I’d probably write the proof of infinitely many binary impostors divisible by any natural N in a paper:</p>
+
+<p>This sort of writing hides the attempts and failures of the mathematician behind it, and even though concision is a very positive quality, it’s worth thinking about this trade-off, and about how there’s so much more behind the scenes of a proof that a first glance shows. It’s very common to hear amongst undergrads in Math classes that “there’s no way in hell I could’ve come up with that proof”.  They might be right some of the time, but other times they just ignore the highly non-linear path the authors might have taken to get where they got. It’s very dangerous for one education to think that the reason you couldn’t come up with that proof by yourself is because of some fundamental difference between you and the authors, e.g., they’re simply smarter; they might be smarter, who knows, but that doesn’t have much to do with the phenomenon at hand.</p>
+
+<p>Of course, this methodology is harder to apply to more abstract problems, and it’s not a recipe for problem-solving, which remains wide open. The idea for me is to avoid “mathematicians’ block”; similar to how writers get blocked in front of the white piece of paper, the mathematician gets blocked in front of the whiteboard, the computer, or the white piece of paper. The standard advice to go past the well-documented writers block is: just sit down and write something, anything; make it as bad as you need to be able to write something, but write! Street-fighting and looking for obstacles are key aspects of my methodology to avoid the mathematicians’ block.</p>
+
+<h3 id="chewing-vs-swallowing">Chewing vs. Swallowing</h3>
+
+<p>Something I struggled with for a long time, and I’m just starting to be a tiny bit better about, is that sometimes one gets in the trap of trying to understand every single thing that is required to do something, prove a theorem, understand a paper, fill out a tax-form, etc. Most of the time, this is simply a procrastination strategy to avoid doing whatever we are dreading.</p>
+
+<p>One could think that the best thinkers really process all the details, and understand every single thing that they’re reading, and every single previous result required to understand what they’re reading, and so on. My experience with the best philosophers and mathematicians I’ve met is quite the opposite; they swallow a lot of the stuff, rather than careful timid wise owls I associate them more with fast-moving astute foxes; they try things rapidly, look up stuff, constantly assume things, swallow other people’s results without chewing them, and recognize when what they want to do requires going back to the previous result and chew it out to obtain the missing bits.</p>
+
+<p>This point is very tightly related to having clear goals; once goals are clear, this also sheds light on which parts of the process one should chew and really try to understand, and which parts of the process one can just swallow.</p>
+
+<h3 id="do-what-you-want--or-even-better-dont-do-what-you-dread">Do what you want — or even better, don’t do what you dread</h3>
+
+<p>A key component of my mathematical growth is to try as hard as I can to work on problems and approaches I really want to work on, regardless of whether other people find them silly or useless. Cultivating my own excitement for mathematics is globally more important for my career than an impactful paper, so it’s not worth losing much global excitement to win some local recognition points.</p>
+
+<p>For example, I have published 2 papers at FUN with algorithms, a conference about CS applied to fun contexts. One about the game of Hangman, with Jérémy Barbay, and one about Wordle with Daniel Lokshtanov. It’s very likely that they won’t serve my career much, but I enjoyed working on them, and it cultivated my love for Maths. In hindsight, I’m pretty happy I did it; not only I had fun, but they made me a better mathematician.</p>
+
+<p>The website for FUN with algorithms had at some point the following quote by the great Donald Knuth:</p>
+
+<blockquote>
+  <p>“…pleasure has probably been the main goal all along. But I hesitate to admit it, because computer scientists want to maintain their image as hard-working individuals who deserve high salaries. Sooner or later society will realise that certain kinds of hard work are in fact admirable even though they are more fun than just about anything else.”</p>
+</blockquote>
+
+<p>A practical application of this idea for me is in the negative case; when there’s something I don’t want to do, I try really hard to not do it. I mean that I try hard to explore whether I actually really really really have to do it, “and there’s not another way?”, and see where that leads. A good fraction of the time I figure out a workaround that allows me to not do the thing I don’t want to do. The other fraction of the time, I’m confident that the dreadful thing really really has to be done, and I know of a good reason for that, which helps me do it. So if one’s to be doing something one doesn’t enjoy, at least it needs to be something one really must do.</p>
+
+<p>An example I read recently was about someone on Twitter who really hated doing dishes, and so they just started buying plastic disposable silverware and plates. Maybe this is not great for environmental reasons, but the mindset is great; if I dread this thing so much, how can I not have to do it anymore?</p>
+
+<p>A step beyond this; I try to collaborate as much as I can with people that share this value, as I feel more comfortable discussing research aesthetics with them. I believe research aesthetics and compatibility are real things that shouldn’t be discounted for building effective collaborations. I’m happy, for example, about my advisor Marijn Heule being explicit about working on the problems we really want to solve and see solved.</p>
+
+<h3 id="a-lot-of-the-magic-happens-in-post-production">A lot of the magic happens in post-production</h3>
+
+<p>This part can be summarized as “don’t finish too quickly”. I learned this very recently in life, and it improved my mathematical, philosophical, and literary skills immediately; very few pieces of learning have done that for me.</p>
+
+<p>The main idea is that, perhaps because of some internal mild form of anxiety, one really wants to finish the proof, the paragraph, the argument, and be done. You wrote the last sentence or said the last phrase, and you’re done. Nice.</p>
+
+<p>But the thing is, a lot of the magic happens in post-production, once you sit down calmly with the material you have created and squeeze the lemon until the last drop. When you see a wonderful video on YouTube, it didn’t look like that the whole time. It probably looked like a disaster if you had been able to see the intermediate stages. The last 20% of the effort, at post-production, can really be the 80% of the “wow, this is so high-quality” effect.</p>
+
+<p>So my intention here is to never be quick in brushing off a proof once I think I have it. A lot of the time for me, the real gain in understanding comes after having come up with a proof, but when I’m looking back at this disastrous creation and cleaning it up. I try to ask myself “why is it that I was able to succeed with this method here?”; I had an idea A, and it was not obvious to me before that A was going to work. Then I went ahead and tried it, and it turned out to work, but notice that if I stop here, because my proof is ready, I still don’t understand super well why it worked, it’s still not absorbed as part of my new intuition. So I try to investigate what part of the ideas was I doubtful about, what part was I not confident it, and why my doubts were justified; what was the obstacle preventing the obstacle my initial doubt was worried about.</p>
+
+<p>Let’s see a philosophical example. Anselm’s ontological argument for the existence of god goes as follows.</p>
+
+<blockquote>
+  <p>“[Even a] fool, when he hears of … a being than which nothing greater can be conceived … understands what he hears, and what he understands is in his understanding.… And assuredly that, than which nothing greater can be conceived, cannot exist in the understanding alone. For suppose it exists in the understanding alone: then it can be conceived to exist in reality; which is greater.… Therefore, if that, than which nothing greater can be conceived, exists in the understanding alone, the very being, than which nothing greater can be conceived, is one, than which a greater can be conceived. But obviously this is impossible. Hence, there is no doubt that there exists a being, than which nothing greater can be conceived, and it exists both in the understanding and in reality.” 
+<strong>St. Anselm, Archbishop of Canterbury (1033-1099).</strong></p>
+</blockquote>
+
+<p>A bullet-point version of the argument in modern English (that I am taking literally from the Internet Encyclopedia of Philosophy) is:</p>
+
+<blockquote>
+  <ol>
+    <li>It is a conceptual truth (or, so to speak, true by definition) that God is a being than which none greater can be imagined (that is, the greatest possible being that can be imagined).</li>
+    <li>God exists as an idea in the mind.</li>
+    <li>A being that exists as an idea in the mind and in reality is, other things being equal, greater than a being that exists only as an idea in the mind.</li>
+    <li>Thus, if God exists only as an idea in the mind, then we can imagine something that is greater than God (that is, a greatest possible being that does exist).</li>
+    <li>But we cannot imagine something that is greater than God (for it is a contradiction to suppose that we can imagine a being greater than the greatest possible being that can be imagined.)</li>
+    <li>Therefore, God exists.</li>
+  </ol>
+</blockquote>
+
+<p>The first criticism I read against this argument came from a monk contemporary to Anselm: Gaunilo of Marmoutier. He basically posited that the same argument could be used to prove the existence of a perfect Island, as a perfect Island that exists in the real world is more perfect than one that exists only in the mind, and therefore the perfect Island must also exist in the real world.</p>
+
+<p>I made a 3-year long intellectual mistake by thinking that Anselm’s idea was destroyed by this counter. But the thing is, the “pisland” (short for perfect island, one of my favorite philosophy-lingo) argument, is more like a gotcha, like an issue that has been raised, but it doesn’t give you good intuition on why Anslem’s argument is wrong, just on a way of exposing a potential failure mode in the argument.</p>
+
+<p>The issue is actually much more complicated than this, and one really needs to stay after the credits to see it. I don’t think the failure in the argument was understood until Kant introduced the Copernican Revolution of philosophy, 700 years later.</p>
+
+<p>In a nutshell, Kant tackles the argument by going against point 3., his idea being that thinking of existence as a property is a categorical mistake. In other words, the universe is not made out of objects that have a <code class="language-plaintext highlighter-rouge">self.exists = True</code> or <code class="language-plaintext highlighter-rouge">self.exists = False</code> property; existence is not a property, but a precondition for the instantiation of properties into a particular object; and properties themselves are representational concepts rather than real things. There are real things, exactly as they are, and then their properties are in our mental representations of them. Redness, as a property is only a conceptual representation; (over-simplifying) there are red things, which are things whose reality makes the “redness” mental representation toggle on in our brains. For a statistical example, even if your data looks like the following image:</p>
+
+<p>clusters do not exist in the data, only in our conceptual representation of the data. Existence, however, is not even a candidate for a conceptual representation that real objects trigger, but rather a precondition for any conceptual representation. Talking about existence as a property is a type error, so to say.</p>
+
+<p>However, even this is not enough! Because Anselm actually had a second formulation of the ontological argument, which uses the property of necessary existence rather than existence, which can be formalized as an actual property. Using necessary existence, Kurt Gödel, the greatest logician, came up with a formal proof in modal logic of god’s existence based on a refined version of Anselm’s second ontological argument. Funnily enough, Gödel’s argument can be verified by a computer given its formal nature, and it turns out to be consistent! (that is, if one accepts its axioms, the conclusion follows!).  To the best of my knowledge, the implication of modal collapse, and the axioms themselves, are still a matter of research.</p>
+
+<p>By finishing too quickly with the pisland argument, I missed on a lot more about the subject.</p>
+
+<h3 id="stealing-as-much-as-possible">Stealing as much as possible</h3>
+
+<p>The following is a picture of the magnificent Las Meninas, by Diego Velázquez. It’s one of the most studied paintings of all time, a true masterpiece (there’s a lot to say about this painting, but I won’t go into it. Luckily for you, people with infinitely more knowledge about art and art history have extensively written about it. If you’re into Foucault, he wrote some very… Foucaultian things about it, it’s quite interesting),</p>
+
+<p>But now take a look at this.</p>
+
+<p>This is Picasso’s 1957 version of Las Meninas. Truly fantastic stuff. So the thing is, Picasso once said jokingly: Good artists copy, great artists steal. This is a phrase that needs to be taken very carefully to make sense of it. It’s not about defending actual intellectual property theft (please don’t do that — and double please don’t do that saying I told you to do that), but rather about the way great artists relate to their inspirations. Stealing is a way of saying appropriating fully, it is a way of saying that you don’t owe any faithfulness to your inspirations, only credit. They did it first, and that needs to be acknowledged, but you can do with it whatever you want, transform it at your wish, use it for all kinds of silly stuff. Copying has a connotation of sameness that does not allow for repurposing; copying means using the same solution for the same problem, but it is when you steal someone’s toolkit that you can use it in all kinds of new problems.</p>
+
+<p>A concept I really like about good science is that it should not only contain results, but also “reusable brain stuff” (RBS), RBS is what you can steal from the paper and use, probably with tweaks, to solve other new problems. Being mindful of the reusable brain stuff in other people’s work has really changed my relation to the material I read; now I’m constantly on the look for what can I steal. Richard Feynman famously said that he kept around a dozen math or physics problems that he wanted to solve memorized in his head, and whenever he was going to a talk that showed a new math trick, or read a new paper, he would iterate over the dozen problems in his head asking the question “can this trick I’m learning now help me solve this problem?”.</p>
+
+<p>Paraphrasing Pacheco, the Mexican writer, coming up with the equation is only half of the way, and the other half is done by the reader when they use it. By using them, you become in some sense their author, who invents them again in the use.</p>
+
+<hr />
+<p>Thanks for staying here.</p>
+
+<p>P.S. The excuse for this post can be said to be the following tweet, by Jérémy Barbay, in response to my public declaration of a renewed love for mathematics.</p>
+
+<p>So thanks Jérémy for the encouragement! and I hope this reflection can be helpful, or interesting, to someone out there. If it is interesting to you, reader, please let me know what you think!</p>
+
+<p>Or at least within the first page of Google search. I’d be happy to find other translations if anyone points them out to me.</p>
+
+<p>There’s at least one reasonable way I can think for my argument to be wrong; imagine a world where understanding is fundamentally obtained through quantum leaps that cannot be broken down in intermediate steps. In this world I’m wrong, and I don’t see a simple way to prove (nor disprove for that matter) our world is not that world, but I’m pretty confident in this argument being reasonably inferred by Bayesian updating over my inner mental experience. I’d be more than happy to update these beliefs, or simply discuss them further, with the interested reader. It is also worth clarifying that this world model does not mean that our brain works in some sort of continuous fashion over a manifold of possible mental states; far from it, I mean that the resolution of our possible mental states seems good enough to abstractly model reasoning as a continuous phenomenon, similarly to how at human-scale physics, it’s reasonable to model position or speed as continuous variables, regardless of whether they actually only admit a discrete number of quantum states they can collapse into, simply because that is happening way beyond our resolution of interest. More in general, what can continuity possibly be if not the limiting idea (i.e., a purely mental construction) of discreteness being small enough to be abstracted away?</p>]]></content><author><name></name></author><category term="Math" /><category term="math," /><category term="poetry," /><category term="learning" /><summary type="html"><![CDATA[A long and painfully ambitious post about how I engage with the disciplines I love.]]></summary></entry><entry><title type="html">The story behind the Packing Chromatic paper.</title><link href="https://bsubercaseaux.github.io/blog/2023/packingchromatic/" rel="alternate" type="text/html" title="The story behind the Packing Chromatic paper." /><published>2023-01-30T00:00:00+00:00</published><updated>2023-01-30T00:00:00+00:00</updated><id>https://bsubercaseaux.github.io/blog/2023/packingchromatic</id><content type="html" xml:base="https://bsubercaseaux.github.io/blog/2023/packingchromatic/"><![CDATA[<p style="font-weight:500;">This post tells the <em>story behind the scenes</em> of my latest paper, which solves a 20-year-old open problem in combinatorics through the use of SAT-solvers. It’s about how good math problems can come from anywhere, including a Facebook group, and how non-linear research can be. Usually when we look at a theorem, a paper, or pretty much any human creation, it’s easy to believe, even unconsciously, that the creators had it easy, and that they knew exactly what they were doing. 
+This post shares the messy story behind my latest paper, hopefully showing that even though sometimes you have no idea if things will work out until the very last second, things can still work out.</p>
+
+<hr />
+
+<p>It all started in 2019, when I took <a href="https://pleiad.cl/people/etanter">Éric Tanter</a>’s class on <em>Programming Languages</em> at University of Chile. It was an amazing class; I didn’t know anything about programming languages beforehand, and just absorbed the content like a sponge.
+So at the end of the semester I asked Éric if I could TA for it the following year, and he said yes. Moreover, he invited me to participate in <strong><em>CASS</em></strong> (Coq Andes Summer School) 2020, a week-long course on Coq, the theorem prover. I wanted to learn more about theorem provers, so I happily accepted. The course took place not too far from my city during the Chilean summer, from January 6th to Friday 10th.</p>
+
+<figure style="text-align:center;">
+  <img src="https://www.nic.cl/img/anuncios/cass2020.png" alt="Description of image" style="max-width: 70%;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 1: </b>
+    <span style="font-size: 16px;"> logo of the summer school.</span>
+  </figcaption>
+</figure>
+
+<p>I learned a lot during that week, and my main takeaway about theorem provers was that they were very cool and yet not quite ready; it felt like writing even simple proofs was such a pain, and also the thought-process of writing verifiable proofs felt totally different from the standard way of thinking when doing math, which operates at a much higher level of abstraction. The school convinced me about the importance of the issue at hand: math proofs are quite complex, and full of little gaps that require the generous reader to fill in. Most of the time this is totally fine… except for when it’s not and an entire paper or result needs to be retracted!</p>
+
+<p>Who is making sure that mathematical articles don’t contain false results, and that other people will not be building new false results on top of the false results they cite? Nobody. Peer review can and will catch some mistakes, but I think it’s quite naive to presume it will be a sufficient barrier to protect the infiltration of a few little falsehoods here and there in the long term, which is quite dangerous.</p>
+
+<p>As anecdotal evidence, I’ve been on both sides of peer review and its current form is quite limited as an error-catching process. On the one hand, in a paper related to my master’s thesis I made a mistake that no reviewer caught, and we only fixed it because a coauthor (thanks Marcelo Arenas!) noticed an issue with one of the proofs months after the paper had been accepted. On the other hand, in the 8 papers I’ve reviewed so far in my career, I always had tight deadlines to review, and I would not vouch for any of those 8 papers to be free of bugs I missed. In my defense, I think I’d have catched any obvious or egregious errors, or statements contradicting the literature. But an algebraic mistake in a sequence of 10 equations could definitely have gone unnoticed. 
+My point here is that I believe that as mathematicians, and especially as people who care about the long term future of mathematics, we should have some amount of fear about falsehood slipping in.</p>
+
+<p>Automated theorem provers offer a potential solution to this, where proofs can be verified by a computer program. That verification program has itself been checked and verified to be bug-free, by another verified program, and so on. Naturally we cannot verify the verifiers in an infinite recursion, and so at some point of the pipeline we need an unverified piece that starts the verification chain. The idea is that this last unverified piece is quite small, and lots of very smart people have looked at it carefully and nodded in agreement. It’s pretty much the closest we can get to full certainty. Once again, using these theorem provers can be quite complicated, and it would be unrealistic to suggest that from now on all math proofs should be accompanied by code in a theorem prover. But the goal of theorem provers is laudable, and the software can always improve (and probably will!).</p>
+
+<p>For an example, take a look at these <a href="https://github.com/coq-community/qarith-stern-brocot/blob/master/theories/sqrt2.v">169 lines of Coq used to prove the irrationality of \(\sqrt{2}\).</a></p>
+
+<p>But enough about Coq for now. The thing is, my week at CASS was severely interrupted on its second day, January 7th. I received a notification from one of my favorite Facebook groups: <em>“actually good math problems”.</em> It’s a group where math lovers from all over the world and from different areas in math post and discuss <em>good</em> math problems. It’s pretty much the only reason  I still have a Facebook account. So on January 7th,  I received a notification, with the following post.</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/dylan-post.png" alt="Description of image" style="max-width: 70%;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 2: </b>
+    <span style="font-size: 16px;"> Screenshot of Dylan Pizzo's original Facebook post on the "actually good math problems" group.</span>
+  </figcaption>
+</figure>
+
+<p>Before continuing, let me explain the problem a bit more precisely, and provide some examples. The first name I made up for this problem was <em>“distance-coloring”</em>, simply because it is a coloring problem in which the coloring restrictions are based on the distances between vertices. So we can consider the following definition:</p>
+
+<p><strong>Definition 1:</strong> Given a graph \(G = (V, E)\), a distance-coloring with \(k\) colors is a mapping \(\varphi: V \to \{1, \ldots, k\}\) such that for all pairs of distinct vertices \(u, v\) it holds that 
+\[
+    \varphi(u) = \varphi(v) = c \implies \textrm{dist}_G(u, v) &gt; c.
+\]</p>
+
+<p>That is, if two different vertices receive the same color, \(c\), then they need to be further than \(c\) apart.</p>
+
+<p>Note that the standard notion of graph coloring can be rephrased as</p>
+
+<p><strong>Definition 2:</strong> Given a graph \(G = (V, E)\), a coloring with \(k\) colors is a mapping \(\varphi: V \to \{1, \ldots, k\}\) such that for all pairs of distinct vertices \(u, v\) it holds that 
+\[
+    \varphi(u) = \varphi(v) = c \implies \textrm{dist}_G(u, v) &gt; 1.
+\]</p>
+
+<p>So just change a \(1\) for a \(c\); <em>distance-colorings</em> are a very natural generalization! The concept of chromatic numbers can naturally be extended to distance-colorings: for a graph \(G\) we define \(\chi_d(G)\) as the minimum number of colors such that \(G\) admits a distance-coloring with said colors.</p>
+
+<p>For example, let’s consider a <em>distance-coloring</em> for the infinite path \(\mathbb{Z}^1.\)</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/path-pc.svg" alt="Description of image" style="max-width: 70%; width: 500px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 3: </b>
+    <span style="font-size: 16px;"> A depiction of <tt>(1312)*</tt> as a distance-coloring for \(\mathbb{Z}^1\), proving that \(\chi_d(\mathbb{Z}^1) \leq 3.\)</span>
+  </figcaption>
+</figure>
+
+<p>It only uses 3 colors and can be repeated periodically! Vertices receiving color 1 are at distance at least 2 from each other, vertices receiving color 3 are at distance at least 4 from each other, and so are vertices receiving color 2. The definition is respected. The reader can also check that colors 1 and 2 alone are not enough!</p>
+
+<p>For a more interesting example, we will consider <em>sub-graphs of the infinite square grid</em>, that is, a graph where vertices are cells from an infinite grid, and two orthogonally adjacent cells have an edge between them. The following image shows how \(D_3\) (the <em>“diamond”</em> of radius 3) admits a distance-coloring with 7 colors.</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/d3-pc.svg" alt="Description of image" style="max-width: 70%; width: 350px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 4: </b>
+    <span style="font-size: 16px;"> A proof for \(\chi_d(D_3) \leq 7.\)</span>
+  </figcaption>
+</figure>
+
+<p>Now, by changing the center color to 6, we can produce a more efficient solution, only using 6 colors, as displayed next.</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/d3-6-pc.svg" alt="Description of image" style="max-width: 70%; width: 350px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 5: </b>
+    <span style="font-size: 16px;"> A proof for \(\chi_d(D_3) \leq 6.\)</span>
+  </figcaption>
+</figure>
+
+<p>So now let’s go back to the Facebook post. The question is basically whether the infinite square grid can be distance-colored with a finite number of different colors, and if so, how many are required.</p>
+
+<p>I started working on that during that first week of January 2020. I scribbled and doodled over many pages of a squared-grid-paper notebook, futilely trying to color it. I started sharing the problem with different friends, and before I knew it, I was obsessed with it.</p>
+
+<p>The main idea I was playing around with was that of <strong><em>“densities”</em></strong>, where you study what proportion of the graph will receive a certain color \(c\). For example, in Figure 5 the density of color \(1\) is \(\frac{16}{25}\), while in Figure 3 it’s fair to say that density of color \(1\) is \(\frac{1}{2}\).</p>
+
+<p>First, let me show how densities can be useful to prove things. First, let us prove that 2 colors are not enough to color the infinite path \(\mathbb{Z}^1\). Indeed, color \(1\) cannot cover more than half the vertices, and \(2\) cannot cover more than a third. So their maximum density together is \(\frac{5}{6} &lt; 1\), and thus they cannot color \(\mathbb{Z}^1\). This, together with Figure 3, proves that \(\chi_d(\mathbb{Z}^1) = 3\).</p>
+
+<p>Now let us consider a more interesting example. Let \(\mathbb{Z}^2_\infty\) be the graph whose vertex set is \(\mathbb{Z}^2\), and that has edges not only between orthogonally adjacent vertices, but also diagonally adjacent pairs. Formally, for \(u, v \in \mathbb{Z}^2\), they are connected if \(\vert u - v \vert_\infty = 1\).</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/z2_linfty.png" alt="Description of image" style="max-width: 70%; width: 300px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 6: </b>
+    <span style="font-size: 16px;"> A local view of \( \mathbb{Z}^2_\infty \).</span>
+  </figcaption>
+</figure>
+
+<p>Now, if we consider the subgraph induced by any \((k+1) \times (k+1)\) subgrid of \(\mathbb{Z}^2_\infty\), we can only distance-color a single vertex \(v\) with color \(k\), as the other vertices of the subgraph are at distance at most \(k\) from \(v\). This means that color \(k\) has density at most \(\frac{1}{(k+1)^2}\). Therefore, even if we were to use colors \(1, \ldots, \infty\), the total fraction of the graph we could color would be at most:</p>
+
+\[\sum_{k=1}^\infty \frac{1}{(k+1)^2} = \left( \sum_{k=1}^\infty \frac{1}{k^2} \right) - 1 = \frac{\pi^2}{6} - 1\approx 0.644... &lt; 1.\]
+
+<p>This means \(\mathbb{Z}^2_\infty\) does not admit a distance-coloring with a finite number of colors. It even uses the cute <em>Basel problem</em> result for the infinite sum, how cool!</p>
+
+<p>I discovered this that January, and of course the natural next step was to try to use the same strategy for the standard infinite grid \(\mathbb{Z}^2\) as the original Facebook post inquired. The problem is… this doesn’t work! If one considers a \((k+3) \times (k+3)\) subgrid of \(\mathbb{Z}^2\), it is possible to distance-color \(5\) different vertices with color \(k\) (1 in the center and 4 in the corners), so one ends up with a sum that is greater than \(1\), meaning it does not discard a finite coloring (note that if an infinite sum converges above 1, that means a finite prefix of it is enough to get past 1). So I started thinking that maybe for \(\mathbb{Z}^2\) there was a solution with finite colors. The problem was… I couldn’t find one!</p>
+
+<p>To make things worse, I wasn’t making any interesting progress, so at some point I basically just let it go. Also, it’s worth mentioning that I tried googling about it, to see whether it had been solved before. At that point I would have been perfectly happy with finding a full solution online and calling it a day. But satisfying my mathematical curiosity on this one turned out to be much harder than that…</p>
+
+<p>Also, some pretty important global events happened soon after the January 2020 summer school…</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/santiago-pandemia.jpeg" alt="Description of image" style="max-width: 70%; width: 500px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 7: </b>
+    <span style="font-size: 16px;"> A picture of people wearing face masks in Santiago, Chile, during the Covid pandemic.</span>
+  </figcaption>
+</figure>
+
+<p>Flash-forward to September 2021. I enroll as a PhD student at Carnegie Mellon University. My main idea was to work on algorithms and discrete math with <a href="http://www.cs.cmu.edu/~anupamg/">Anupam Gupta</a>, whom I had met before in the Chilean Summer School of Discrete Mathematics. Now comes a pivotal point in this story. At CMU, one’s first semester as a Computer Science PhD student starts with an <em>Introductory Course (IC)</em> in which the different faculty present their research, and one is introduced to different aspects of life at CMU and in Pittsburgh.</p>
+
+<p><a href="https://www.cs.cmu.edu/~mheule/">Marijn Heule</a> gave his IC talk on his automated approach to the <em>Pythagorean triples problem</em>, which consists of coloring the integers with red and blue in a way that no Pythagorean triple is monochromatic. For example, if 12 and 16 receive color blue, then 20 must receive color red, as \(12^2 + 16^2 = 20^2\). It was a great talk, but also a 10-15 minutes one, directed to students with very different backgrounds and interests, so he couldn’t say anything very deep or technical. The main thing I got out of the talk was: <em>“This CMU professor has been applying automated reasoning techniques to solve hard coloring problems; interesting.”</em></p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/solution-zoom.png" alt="Description of image" style="max-width: 70%; width: 700px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 8: </b>
+    <span style="font-size: 16px;"> An illustration (from Marijn's website) of a bicoloring that avoids mono-chromatic Pythagorean triples.</span>
+  </figcaption>
+</figure>
+
+<p>I didn’t know anything about automated reasoning techniques. So I e-mailed Marijn asking if we could chat for a little bit because I was wondering if <em>“his automated reasoning techniques”</em> could be applied to my silly Facebook-post coloring problem.</p>
+
+<p>Marijn agreed to chat, and he liked the problem. Moreover, he was willing to work with me on it!  This is actually quite rare in academia based on my personal experience. Professors love motivated students, but it’s generally risky for them to dive into a problem that occurred to the student; professors are usually pushing lines of research for the medium-long term, and usually have a way better grasp than students about which problems are solvable, and how impactful it would be to solve them. So it’s usually sub-optimal to sink their teeth into any random problem a student proposes. But Marijn was so intrigued by the problem that he was willing to guide me on it; to see if his techniques could be helpful for it, which he intuited to be the case.</p>
+
+<p>Soon after, I was having lunch with <a href="https://isaacg1.github.io/">Isaac Grosof</a>, a 5th year PhD student at the time. Isaac is a truly brilliant student, one of those that shine blindingly bright even within a context as selective as a CMU CS PhD. I told them about the problem, and they liked it too. So much so that after we finished our lunch we went straight to their office and started to work on it together. We made a couple of simple observations I had already made on my own before, so I wasn’t terribly excited, and then Isaac had to leave for a meeting. If my recollection is right, I received an e-mail from them the next day, or at most 2 days later, with a partial solution to the problem. Isaac had found a way to color the infinite grid by using 23 colors in a periodic manner. To the best of my knowledge, they found this solution “manually” (i.e., trying things by hand on a computer, inspired by density arguments). I was completely blown away; it had only take Isaac a few hours to do something I had tried several times during the course of more than a year!</p>
+
+<p>Marijn and I met shortly thereafter, and he explained me how to run a SAT solver on the problem. Armed with that, we were able to obtain a solution with 17 colors pretty quickly, and later that same week another solution with only 15 colors. Before understanding how a computer can be used to prove that 15 colors are enough to distance-color the infinite grid, it’s convenient to understand first how a computer can be used to prove that 3 colors are enough to distance-color the infinite path (which we know it’s possible from Figure 3). In order to do this, we can consider a subgraph of the infinite path, like \(P_4\), the path on 4 vertices, and try to distance-color it with \(3\) colors. Consider the following attempt<sup id="fnref:1"><a href="#fn:1" class="footnote" rel="footnote" role="doc-noteref">1</a></sup>:</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/in-path.svg" alt="Description of image" style="max-width: 70%; width: 700px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 9: </b>
+    <span style="font-size: 16px;"> A distance-coloring of \(P_4\) using 3 colors.</span>
+  </figcaption>
+</figure>
+
+<p>The problem with the distance-coloring in Figure 9 is that we cannot extend it to the infinite path. The next vertex to the right must receive color \(1\), and the following one will not be able to receive any color. This is illustrated in Figure 10.</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/in-path-fail.svg" alt="Description of image" style="max-width: 70%; width: 700px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 10: </b>
+    <span style="font-size: 16px;"> The distance-coloring of \(P_4\) illustrated in Figure 9 cannot be extended to the infinite path.</span>
+  </figcaption>
+</figure>
+
+<p>The question is therefore: how can find a distance-coloring of a finite path that can be extended to the infinite path, and hopefully in a periodic manner? The answer is: <em>toroidal edges</em>. The idea is that by connecting the endpoints of a finite path, and transforming it into a cycle, we will capture the property of the distance-coloring being periodically extendable; from a distance-coloring of \(C_4\) we can obtain a distance-coloring of \(C_8\), and thus for \(C_{16}\), and so on. This is illustrated next in Figure 11.</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/path-unroll.svg" alt="Description of image" style="max-width: 70%; width: 700px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 11: </b>
+    <span style="font-size: 16px;"> A distance-coloring of \(C_4\) induces a distance-coloring of \(\mathbb{Z}^1\) by <i>unrolling</i> the cycle. Toroidal edges are shown in dashed dark red.</span>
+  </figcaption>
+</figure>
+
+<p>For showing that \(15\) colors are enough for a distance-coloring of the infinite grid we can proceed in a similar manner, by considering a \(72 \times 72\) subgrid of \(\mathbb{Z}^2\) with <em>toroidal edges</em>, meaning that the vertices of the left-most column of the subgrid are connected to the right-most column, and similarly top and bottom rows are connected.</p>
+
+<p>The recipe for establishing coloring bounds on an infinite graph is thus as follows:</p>
+
+<ol>
+  <li>
+    <p>For establishing an <em>upper bound</em> (meaning that \(k\) colors are enough for the infinite graph), we need a finite subgraph with <em>toroidal edges</em> (i.e., edges that capture periodicity, in a way that guarantees that the coloring for the finite subgraph would allows us to obtain one for the infinite graph).<sup id="fnref:2"><a href="#fn:2" class="footnote" rel="footnote" role="doc-noteref">2</a></sup></p>
+  </li>
+  <li>
+    <p>For establishing a <em>lower bound</em> (meaning that \(k\) colors are not enough for the infinite graph), we simply need to show a finite subgraph for which \(k\) colors are not enough; if you can’t even color this finite tiny portion of the infinite graph, then no hope for the infinite graph!<sup id="fnref:3"><a href="#fn:3" class="footnote" rel="footnote" role="doc-noteref">3</a></sup></p>
+  </li>
+</ol>
+
+<p>Both for finding a coloring of a finite subgraph, or showing that no coloring can exist with the target number of colors, we can use a SAT solver.  The most direct SAT encoding for this problem is quite straightforward: if you have a graph \(G = (V, E)\), and want to decide whether it admits a distance-coloring with \(k\) colors, then create variables \(x_{v, c}\) representing that vertex \(v \in V\) gets color \(c \in \lbrace 1, \ldots, k \rbrace\), and add the following constraints:</p>
+
+<ol>
+  <li><em>Each vertex must get a color:</em></li>
+</ol>
+
+\[\quad \left(\bigvee_{c \in \lbrace 1, \ldots, k \rbrace} x_{v, c}\right),  \quad \text{for every vertex } v \in V.\]
+
+<ol>
+  <li><em>Vertices at distance at most \(c\) cannot share color \(c\):</em></li>
+</ol>
+
+\[\left( \overline{x_{u, c}} \lor \overline{x_{v, c}}\right), \quad \text{for every pair of vertices } u, v \in \binom{V}{2}, \text{ such that } d_G(u, v) \leq c.\]
+
+<p>Using this direct encoding over a \(72 \times 72\) subgrid with toroidal edges, and passing the resulting instance to a <em>local search</em> SAT solver, we obtained the following periodic solution:</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/72-15.svg" alt="Description of image" style="max-width: 70%; width: 800px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 12: </b>
+    <span style="font-size: 16px;"> A periodic coloring for \(\mathbb{Z}^2\) with \(15\) colors, showing that \(\chi_d(\mathbb{Z}^2) \leq 15.\)</span>
+  </figcaption>
+</figure>
+
+<p>Wow, we were making great progress! It was not hard to see that 9 colors were not enough, using  some density arguments, but could 10 be enough? Maybe 11?</p>
+
+<p>Marijn quickly came up with a very nice recursive SAT encoding for the problem, and after struggling to implement it (even though the idea is nice and simple, the details were quite tricky), we unfortunately discovered that it didn’t yield any practical improvements. It was asymptotically better, but in practice it turned out to be worse than the most direct and naive encoding. A constant of \(32\) can oftentimes be worse than a \(\log n\) factor!</p>
+
+<p>I started to investigate related sub-problems, like the complexity of <em>distance-colorings</em> or the minimum number of colors required for other infinite graphs. I started to get some really cool results myself, which made me quite happy. Marijn was excited too.</p>
+
+<p>A couple of months later we knew that 15 colors were enough and that one needed at least 13, that’s pretty close to a final answer!</p>
+
+<p>But the terminology was bothering me. I was calling these <em>“distance-colorings”</em>, but I knew (as a quick Google search revealed), that people were using <em>“distance-colorings”</em> to refer to something else, and therefore I wanted a new term. I started doing an actual proper literary review (i.e., beyond a Google search) by reading surveys on different coloring problems, to see what was the nearest neighbor of our problem and figure out a related name. At some point during this literature review I stumbled upon this:</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/pack-def.png" alt="Description of image" style="max-width: 70%; width: 700px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 13: </b>
+    <span style="font-size: 16px;"> An innocent-looking definition of a weird kind of graph coloring...</span>
+  </figcaption>
+</figure>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/scream.jpeg" alt="Description of image" style="max-width: 70%; width: 500px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 14: </b>
+    <span style="font-size: 16px;"> A schematic representation of my reaction to Figure 13.</span>
+  </figcaption>
+</figure>
+
+<p>Despite the notation being different, this is actually the same problem! Wow, people knew about this! So I googled <em>“packing chromatic number”</em> and a survey came up.
+To my absolute horror (see Figure 14), a bunch of the results I had proved were already known, spread out over a dozen of papers (the survey cited over 60 papers on the topic!). Moreover, the survey mentioned that the packing chromatic number of the infinite square grid was… <strong>OPEN!</strong>  and known to be between 13 and 15… The idea of packing colorings, and the problem of the infinite square grid had been posed 20 years ago, in 2002! As a fun fact, the first upper bound, obtained by Goddard et al. in their seminal paper introducing these colorings, was 23, the same number Isaac Grosof had obtained manually!</p>
+
+<p>I was horrified. I had basically been working for several months on a problem without realizing this, and even worse, I had made Marijn <em>waste his time on it</em>! So I e-mailed him asking for a quick meeting ASAP, which I was extremely nervous about. But Marijn’s reaction was incredible: he was actually happy instead of upset! He was happy that other people cared about the problem, and he was happy that the original core part of the problem, that of <em>determining the packing-chromatic number of the infinite square grid</em>, was still open. Needless to say, I was very relieved.</p>
+
+<p>So Marijn and I started pushing to improve the \(13 \leq \chi_\rho(\mathbb{Z}^2) \leq 15\) gap (note that our notation has changed from \(\chi_d(\cdot)\) to \(\chi_\rho(\cdot)\)!), and in a few months, after several optimizations and discussions and dozens of experiments, we managed to prove the answer was not 13. At this point the title of the paper we wrote about it is not hard to guess: <em><a href="https://www.cs.cmu.edu/~mheule/publications/SAT22-gridcolor.pdf">“The Packing Chromatic Number of the Infinite Square Grid is At Least 14”</a>.</em> It got accepted at SAT’2022 🙂.</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/ack.png" alt="Description of image" style="max-width: 70%; width: 700px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 15: </b>
+    <span style="font-size: 16px;"> Acknowledgment section of the SAT'2022 paper.</span>
+  </figcaption>
+</figure>
+
+<p>One of the simplest optimizations we used, for example, is <em>symmetry breaking</em>. The idea of symmetry breaking is that CDCL SAT solvers can be understood as programs that try the different Boolean assignments in a way that’s more clever than simply iterating over the \(2^{\# {\rm vars}}\) possibilities, and they do this by learning things from the partial assignments they try. As the following figure shows, many of these partial assignments can be symmetric, which means that exploring them separately is a waste of time.</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/cube1.svg" alt="Description of image" style="max-width: 70%; width: 350px; margin-right:20px;" />
+  <img src="/assets/img/cube2.svg" alt="Description of image" style="max-width: 70%; width: 350px; margin-left: 20px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 16: </b>
+    <span style="font-size: 16px;"> Example of symmetric partial assignments.</span>
+  </figcaption>
+</figure>
+
+<p>A way to avoid this waste of time is by <em>breaking the symmetry</em>, meaning that by incorporating additional restrictions the instance is no longer symmetric. In the case of a <em>diamond</em> subgraph, we can add the following constraint: <em>“the occurrence of the largest color that appears the closest to the center must appear in the north-north-east octant</em>”, thus gaining a factor of 8 in runtime.</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/symmetry.svg" alt="Description of image" style="max-width: 70%; width: 500px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 17: </b>
+    <span style="font-size: 16px;"> Illustration of an x8 symmetry breaking constraint, that distinguishes a main octant (in light blue).</span>
+  </figcaption>
+</figure>
+
+<p>After even more rounds of experiments, optimizations and meetings, we had proved that the answer was at least 14, and it had taken all the optimizations and ideas we had. To prove that the answer was actually 15, meaning that 14 colors were not enough, we pretty much needed to optimize our computation by a factor of roughly 100. Note that a really nice optimization idea sometimes gives you a factor of 2, so you’d need 7 of those ideas to improve by a factor of <em>100</em>!</p>
+
+<p>But Marijn had faith in us solving the problem, so we kept working on it. We started reverse engineering automatic tools to see how they operated in this particular problem, and we started learning from that. At this point I was playing around with 20 different ideas a week; I had made some visual interactive interfaces where I could try out optimization ideas more quickly by clicking on stuff with my mouse instead of writing code for each optimization.</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/ss-placing-4.png" alt="Description of image" style="max-width: 70%; width: 700px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 18: </b>
+    <span style="font-size: 16px;">A screenshot of <i>Interactive Encoder</i>, one of the many small tools I built for working on this project.</span>
+  </figcaption>
+</figure>
+
+<p>We were getting closer and closer to the result, but we were still missing more optimizations. Let me present in the next paragraph one of the coolest results from this project:</p>
+
+<p>When trying to find packing-colorings for the infinite grid, and also for the \(D_r\) graphs (i.e., diamond of radius \(r\)), color \(1\) is the most helpful, as it can have a density of \(\frac{1}{2}\) (i.e., cover half of the graph). For example, in Figure 12, out of the \(72 \times 72 = 5184\) vertices, exactly \(2592 = \frac{5184}{2}\) receive color \(1\). At this point, we were conjecturing that using color \(1\) in the <em>chessboard pattern</em> that yields density \(\frac{1}{2}\) was optimal, meaning that you could packing-color a graph \(D_r\) with \(k\) colors (forcing any color \(c \neq 1\) in the center, this is called a \(D_{r, k, c}\) instance)  <em>if, and only if,</em> you could do it enforcing the chessboard pattern of \(1\)’s. 
+The motivation to prove this conjecture was very simple: if true, then by enforcing the chessboard pattern of \(1\)’s the number of vertices would go effectively down by half (as the vertices colored \(1\) don’t need to be included in the encoding). Note that in a problem whose runtime is exponential on the input size, reducing the input size by a factor of 2 is monumental; runtime goes down to its square root!</p>
+
+<p>In fact, we quickly managed to prove that assuming the  <em>chessboard conjecture</em> was true, then that would imply \(\chi_\rho(\mathbb{Z}^2) = 15\), the answer we suspected. So I was trying really hard to prove this conjecture by pen and paper, but was failing equally hard at the task…</p>
+
+<p>After more optimizations, it turned out the <em>chessboard conjecture</em> was false, and our optimized techniques allowed us to find the smallest counterexample!</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/chessboard.svg" alt="Description of image" style="max-width: 70%; width: 700px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 19: </b>
+    <span style="font-size: 16px;">The smallest counterexample to the <i>chessboard conjecture</i>. The diamond of radius 14, and a 6 forced in the center, can be packing-colored with 14 colors only if the chessboard pattern is broken. In this case, two occurrences of color 1 in the north-west edge are out of the chessboard pattern, and this cannot be fixed.</span>
+  </figcaption>
+</figure>
+
+<p>But this didn’t stop us, we kept optimizing and after a couple more months we finally managed to solve the problem. <strong>We had proved that 14 colors weren’t enough!</strong> Really exciting! \(\chi_\rho(\mathbb{Z}^2) = 15\)! This was roughly 3 years after I first discovered the problem.
+A summary of the historical progress on the problem is presented below:</p>
+
+<figure style="text-align:center;">
+  <img src="/assets/img/table-crop.png" alt="Description of image" style="max-width: 70%; width: 700px;" />
+  <figcaption>
+    <b style="font-size: 18px;"> Figure 20: </b>
+    <span style="font-size: 16px;">Summary of the progress on computing \(\chi_\rho(\mathbb{Z}^2).\)</span>
+  </figcaption>
+</figure>
+
+<p>For a point of reference on much we optimized, in 2010, Ekstein et al. <a href="https://arxiv.org/abs/1003.2291">proved a lower bound of 12</a>, and it took them 120 days of computation, whereas our techniques allow us to get the same lower bound in less than 10 seconds. This is a <strong>x1000000</strong> factor improvement! Admittedly, hardware has improved substantially since 2010, but we went far beyond the hardware speed-up.</p>
+
+<p>There was however one crucial part missing: how could we be sure that all our code and all our optimizations and all our symmetry breaking was correct? Marijn and I started working on generating a single automated proof, which could be then checked by an independent verified checker. 
+This turned out to be a tricky endeavor, and moreover, we found several mistakes in our code during the process! Fortunately, all the bugs we found were fixable, and thus we ended up with a fully verified proof. To be a bit more precise, the exact theorem we proved is:  <em>assuming the direct encoding shown above is correct, then \(\chi_\rho(\mathbb{Z}^2) = 15.\)</em> This means the only unverified part is the correctness of the direct encoding (which corresponds to only 26 lines of Python).</p>
+
+<p>The solution to the problem took a total of 4851 CPU hours (we used a supercomputer with 128 cores!), and verifying the proof took another 4336 CPU hours. The total uncompressed proof weighed <strong>122 terabytes</strong>! and <em>only</em> <strong>34 terabytes</strong> after compression.</p>
+
+<p>Finally, we wrote a paper for TACAS’2023 with this final result. The title is not hard to guess: <strong><em>“The Packing Chromatic Number of the Infinite Square Grid is 15”</em></strong>. We have put up an <a href="https://arxiv.org/abs/2301.09757">arXiv version</a>!</p>
+
+<p>Donald Knuth, one of my all-time Computer Science heros, happens to know my advisor Marijn, so he read a draft of our TACAS paper. Knuth, my idol, was reading a paper I co-authored! He gave us extremely careful feedback and suggestions: there was not a single typo he missed! In fact, the reviews we got from the conference were almost a subset of Knuth’s extensive feedback. At the end of his long email he wrote a high-level review:</p>
+
+<blockquote>
+  <p><em>In general, of course, I found this paper extremely interesting and stimulating. The ideas are presented lucidly and in a well motivated way; the illustrations are wonderful. I agree with the remark on page 16 that “split-encoding compatibility” is probably the innovation most likely to become widely applicable to other problems. (I love “reverse engineering” of mechanical optimizations! That’s how I once came up with my 1/3 of the “Knuth-Morris-Pratt” algorithm, for instance: Steve Cook had published a mechanical way to convert small-space stack automata into small-time random-access-machine code.)</em></p>
+
+  <p><em>Best regards, Don</em></p>
+
+</blockquote>
+
+<p>Also, Knuth wrote us that he believes the chessboard conjecture might still be true for diamonds of odd radius! I couldn’t be happier! This little problem, taken from a Facebook group, has given me so much joy! Some frustration at times, but mostly joy. The paper of Martin et al. from 2017, in which they proved the answer to be between 13 and 15, contains the following quote:</p>
+
+<blockquote>
+  <p><em>“The first author heard of this problem at a talk by Bernard
+Lidicky at the 8th Slovenian Conference on Graph Theory (Bled 2011). <strong>While
+this problem may not be especially important, few who worked on it can
+doubt that it is very addictive, and further provides a vehicle through which
+to ponder different algorithmic techniques.</strong> One of the curiosities of the
+problem is that we have little theoretical insight into it.”</em></p>
+</blockquote>
+
+<p>This problem was definitely very addictive to me too!</p>
+
+<p>To close this post, I’ll circle back all the way to Coq, the theorem prover. During the Coq summer school I learned about the importance of verified proofs, which ended up having significant research implications for me years later! I’ve now started using <em>Lean</em> (another theorem prover) to verify my proofs on some unrelated mathematical problems. Furthermore, Yong Kiam Tan, a CMU alumni who has worked with Marijn, verified our direct encoding in <em>CakeML</em> (yet another theorem prover), meaning that now every single bit of our proof has been verified!</p>
+
+<hr />
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1">
+      <p>The figures in this post alternate between: (i) a <em>grid</em> representation (as in Figures 3, 4, and 5), in which vertices are represented by squares, and the edges between them are implicit (as they are defined by orthogonal adjacency between the squares), and (ii) a graph representation in which vertices are represented as circles and edges between vertices are drawn explicitly. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:2">
+      <p>Many people have asked me the same great question here: what if you want to find a coloring that’s <em>aperiodic</em>? Then certainly you won’t find that with toroidal edges and a SAT solver. In fact, it might be that deciding whether a finite set of colors \(S\) (not necessarily \(\lbrace 1, \ldots, k \rbrace\)) can distance-color the infinite square grid is undecidable! So far, I only know that if you have a grid that is infinite in one direction, but finite in the other one, then any set of colors that can distance-color it can do so periodically, and thus the problem is decidable. If you have any mathematical ideas to prove decidability or indecidability for the infinite square grid, please get in touch with me. <a href="#fnref:2" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:3">
+      <p>In a more general sense, this is just the <a href="https://en.wikipedia.org/wiki/De_Bruijn%E2%80%93Erd%C5%91s_theorem_(graph_theory)#:~:text=The%20De%20Bruijn%E2%80%93Erd%C5%91s%20theorem%20then%20shows%20that%20every%20graph,can%20again%20be%20four%2Dcolored.">De Bruijn–Erdős theorem</a>, which holds as well for distance-colorings. <a href="#fnref:3" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+  </ol>
+</div>]]></content><author><name></name></author><category term="Math" /><category term="math," /><category term="research," /><category term="automated" /><category term="reasoning" /><summary type="html"><![CDATA[A personal tale about what it's been to determine the packing chromatic number of the infinite square grid.]]></summary></entry><entry><title type="html">A cute problem about asymptotics of a summation</title><link href="https://bsubercaseaux.github.io/blog/2023/asymptotic/" rel="alternate" type="text/html" title="A cute problem about asymptotics of a summation" /><published>2023-01-23T15:12:00+00:00</published><updated>2023-01-23T15:12:00+00:00</updated><id>https://bsubercaseaux.github.io/blog/2023/asymptotic</id><content type="html" xml:base="https://bsubercaseaux.github.io/blog/2023/asymptotic/"><![CDATA[<p>Chilean mathematician <a href="https://sanhueza.net/nicolas/">Nicolás Sanhueza-Matamala</a> gave me the following problem:</p>
+
+<p><strong>Problem 1.</strong> Prove that for any \(c \leq n/3\) we have: 
+\begin{equation}
+           \sum_{r=1}^c \frac{c^r r^c}{r^{2r}} n^r  = O(n^c).
+\end{equation}</p>
+
+<p>Given that there are two variables involved, \(n\) and \(c\), to avoid confusion (some people were confused by this), let me restate the problem unrolling the big-Oh notation to avoid any potential ambiguities.</p>
+
+<p><strong>Problem 1.</strong> Define the function \(F(n, c) = \sum_{r = 1}^c \frac{c^r r^c}{r^{2r}} n^r\). Now prove that there is an absolute constant \(K\) and a natural \(n_0\) such that, for any \(n \geq n_0\) it holds that for every \(c \leq \frac{n}{3}\) we have
+	\begin{equation}
+		F(n, c) \leq K \cdot n^c.
+	\end{equation}</p>
+
+<p>This problem came up in Nicolás’ research in combinatorics, while trying to bound some combinatorial expression. At the end, this particular sub-problem didn’t end up being useful for his project, and thus instead of simply throwing this solution to the trash can, I have decided to put it up here.</p>
+
+<hr />
+
+<h3 id="my-solution">My solution.</h3>
+
+<p>I now present my solution. If any reader of this blog has a nicer one, I’d be thrilled to check it out!
+Funnily enough, it is crucial that \(c \leq n/3\), as \(c \leq n/2.5\) would make this proof fail!</p>
+
+<p>Start with the following algebra:</p>
+
+<div style="overflox-x: scroll;">
+$$\begin{align}
+		\sum_{r = 1}^c \frac{c^r r^c}{r^{2r}} n^r &amp;= \sum_{k = 0}^{c-1} \frac{c^{(c-k)} (c-k)^c}{(c-k)^{2(c-k)}} n^{(c-k)}\\ 
+		&amp;= \sum_{k = 0}^{c-1} \left(\frac{c}{c-k}\right)^{c-k} \cdot (c-k)^{k} n^{(c-k)}\\
+		&amp;= \sum_{k = 0}^{c-1} \left(\frac{c}{c-k}\right)^{c-k} \cdot \left(\frac{c-k}{n}\right)^{k} n^{c}\\
+		&amp;\leq \sum_{k = 0}^{c-1} \left(\frac{c}{c-k}\right)^{c-k} \cdot \left(\frac{c}{n}\right)^{k} n^{c}\\
+		&amp;\leq \sum_{k = 0}^{c-1} \left(\frac{c}{c-k}\right)^{c-k} \cdot \left(\frac{1}{3}\right)^{k} n^{c}\\
+		&amp;= \sum_{k = 0}^{c-1} \left(1 + \frac{k}{c-k}\right)^{c-k} \cdot \left(\frac{1}{3}\right)^{k} n^{c}\\
+		&amp;= \sum_{r = 1}^{c} \left(1 + \frac{c-r}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r} n^{c}\\
+		&amp;= \sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r} n^{c}\\
+		&amp;=  n^{c} \cdot\sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}.
+	\end{align}$$
+</div>
+
+<p>The idea of this part is that we have obtained an expression of the form \(n^c \cdot f(c)\), where \(f(c) = \sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}\). Our goal now is, naturally, to argue that \(f(c)\) is bounded above by a constant. As a first step towards this goal, let us prove first that \(f(c)\) is always increasing. In order to do this consider that</p>
+
+\[\begin{align}
+        f(c+1)  - f(c) &amp;= \left(\sum_{r = 1}^{c} \frac{1}{3} \left(\frac{c+1}{c}\right)^{r} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r} - \sum_{r = 1}^{c} 		\left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}\right) + 1\\
+			&amp;= \sum_{r=1}^c \left[\frac{1}{3}
+			\left(\frac{c+1}{c}\right)^{r} - 1\right]\left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r} + 1.
+	\end{align}\]
+
+<p>We now propose the following claim, which is equivalent to \(f\) being increasing.</p>
+
+<p><strong>Claim 1.</strong> \(f(c+1) - f(c) &gt; 0.\)</p>
+
+<p><em>Proof of Claim 1.</em> Because of the previous equation for \(f(c+1) - f(c)\), what we want to prove is equivalent to.</p>
+
+<p>\begin{equation}
+\sum_{r=1}^c \left[\frac{1}{3}
+                \left(\frac{c+1}{c}\right)^{r} - 1\right]\left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r} &gt; -1.
+\end{equation}
+In turn, this is equivalent to proving 
+\begin{equation}
+         \sum_{r=1}^c \left[1 - \frac{1}{3}
+                \left(1+\frac{1}{c}\right)^{r} \right]\left(\frac{3c}{r}\right)^{r}  &lt; 3^{c} 
+\end{equation}
+but as \(\left(1+\frac{1}{c}\right)^{r} &gt; 1\), we have that	
+\begin{equation}
+  \left[1 - \frac{1}{3}
+                \left(1+\frac{1}{c}\right)^{r} \right]\left(\frac{c}{r}\right)^{r} &lt;   \left[1 - \frac{1}{3}
+                 \right]\left(\frac{c}{r}\right)^{r}, 
+\end{equation}
+        and thus our claim is implied by
+\begin{equation}
+         \sum_{r=1}^c \left(\frac{3c}{r}\right)^{r} &lt; \frac{3^{c+1}}{2}.
+\end{equation}
+Let us prove that this is the case by induction on \(c\). For \(c=1\) it is equivalent to \(3 &lt; \frac{9}{2}\), which obviously holds. For the general case consider that
+\(\begin{align}
+         \sum_{r=1}^{c+1} \left(\frac{3(c+1)}{r}\right)^{r} &amp;= \left(\sum_{r=1}^{c} \left(\frac{3(c+1)}{r}\right)^{r}\right) + 3^{c+1}\\
+         &amp;= \left(\sum_{r=1}^{c} \left(\frac{3c}{r}\right)^{r} \left(\frac{c+1}{c}\right)^r\right) + 3^{c+1}\\
+         &amp;\leq \left(\sum_{r=1}^{c} \left(\frac{3c}{r}\right)^{r}e \right) + 3^{c+1}\\ % \tag{Using that $(1+1/c)^r \leq (1+1/c)^c \leq e$}\\
+         &amp;\leq e \cdot \frac{3^{c+1}}{2} + 3^{c+1}\\ %\tag{Inductive hypothesis}\\
+         &amp;= 3^{c+1} \left(\frac{e}{2} + 1 \right)\\
+         &amp;\leq 3^{c+2}. 		
+\end{align}\)</p>
+
+<p>Now let us study the ratio \(f(c+1)/f(c)\). We have that
+\(\begin{align}
+        \frac{f(c+1)}{f(c)} &amp;= \frac{\sum_{r = 1}^{c+1} \left(\frac{c+1}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c+1-r}}{\sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}}\\
+        &amp;= \frac{1}{3} \cdot  \frac{\sum_{r = 1}^{c+1} \left(\frac{c+1}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}}{\sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}}\\
+        &amp;= \frac{1}{3} \cdot  \frac{\left(\sum_{r = 1}^{c} \left(\frac{c+1}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}\right) + 3}{\sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}}\\
+        &amp;= \frac{1}{3} \cdot  \frac{\left(\sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \left(\frac{c+1}{c}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}\right) + 3}{\sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}}.
+\end{align}\)</p>
+
+<p>Now, using that \((1+\frac{1}{c})^r \leq (1+\frac{1}{c})^c  \leq e\) for every positive integer \(c\), we have that
+\(\begin{align}
+        \frac{f(c+1)}{f(c)} &amp;\leq \frac{1}{3} \cdot  \frac{e\left(\sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}\right) + 3}{\sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}}\\
+        &amp;\leq \frac{e}{3} + \frac{1}{\sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r}}.
+\end{align}\)</p>
+
+<p>Now assume, expecting a contradiction, that there is some positive integer \(C\) such that \(f(C) &gt; 11\). This would imply that
+\begin{equation}
+\frac{f(C+1)}{f(C)} \leq \frac{e}{3} + \frac{1}{11} &lt; 0.907 + 0.091 = 0.998 &lt; 1,
+\end{equation}
+meaning that \(f(C+1) &lt; f(C)\), which contradicts Claim 1. Therefore, \(f(c) \leq 11\) for every integer \(c\), and thus we have our desired inequality:
+\begin{equation}
+\sum_{r = 1}^c \frac{c^r r^c}{r^{2r}} n^r \leq n^{c} \cdot\sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r} = n^c \cdot f(c) \leq 11 n^c.
+\end{equation}</p>]]></content><author><name></name></author><category term="Math" /><category term="math," /><category term="asymptotics," /><category term="puzzle" /><summary type="html"><![CDATA[A solution to a nice little problem given to my Nicolás Sanhueza-Matamala.]]></summary></entry></feed>
