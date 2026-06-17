@@ -2,7 +2,7 @@
 <html lang="en">
 
   <!-- Head -->
-  <head><meta http-equiv="refresh" content="3; url=https://bsubercaseaux.github.io/" />        
+  <head>        
     <!-- Metadata, OpenGraph and Schema.org -->
     
 
@@ -10,23 +10,23 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title><b>Bernardo Subercaseaux</b> | Page not found</title>
+    <title><b>Bernardo Subercaseaux</b> | Subquadratic encodings for my favorite graph problems</title>
     <meta name="author" content="Bernardo Anibal Subercaseaux Roa" />
-    <meta name="description" content="Looks like there has been a mistake. Nothing exists here." />
+    <meta name="description" content="An observation allowing to encode several graph problems in $$o(|E|)$$ clauses." />
 
     <!-- OpenGraph -->
     <meta property="og:site_name" content="<b>Bernardo Subercaseaux</b>" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="<b>Bernardo Subercaseaux</b> | Page not found" />
-    <meta property="og:url" content="https://bsubercaseaux.github.io/404.html" />
-    <meta property="og:description" content="Looks like there has been a mistake. Nothing exists here." />
+    <meta property="og:title" content="<b>Bernardo Subercaseaux</b> | Subquadratic encodings for my favorite graph problems" />
+    <meta property="og:url" content="https://bsubercaseaux.github.io/blog/2025/subquadratic/" />
+    <meta property="og:description" content="An observation allowing to encode several graph problems in $$o(|E|)$$ clauses." />
     
     <meta property="og:locale" content="en" />
 
     <!-- Twitter card -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Page not found" />
-    <meta name="twitter:description" content="Looks like there has been a mistake. Nothing exists here." />
+    <meta name="twitter:title" content="Subquadratic encodings for my favorite graph problems" />
+    <meta name="twitter:description" content="An observation allowing to encode several graph problems in $$o(|E|)$$ clauses." />
     
     <meta name="twitter:site" content="@b_subercaseaux" />
     <meta name="twitter:creator" content="@b_subercaseaux" />
@@ -39,10 +39,10 @@
           "@type": "Person",
           "name": "Bernardo Anibal Subercaseaux Roa"
         },
-        "url": "https://bsubercaseaux.github.io/404.html",
+        "url": "https://bsubercaseaux.github.io/blog/2025/subquadratic/",
         "@type": "WebSite",
-        "description": "Looks like there has been a mistake. Nothing exists here.",
-        "headline": "Page not found",
+        "description": "An observation allowing to encode several graph problems in $$o(|E|)$$ clauses.",
+        "headline": "Subquadratic encodings for my favorite graph problems",
         "sameAs": ["https://orcid.org/0000-0003-2295-1299", "https://scholar.google.com/citations?user=0EOonpYAAAAJ", "https://github.com/bsubercaseaux", "https://twitter.com/b_subercaseaux"],
         "name": "Bernardo Anibal Subercaseaux Roa",
         "@context": "https://schema.org"
@@ -67,7 +67,7 @@
     <!-- Styles -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐒</text></svg>">
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://bsubercaseaux.github.io/404.html">
+    <link rel="canonical" href="https://bsubercaseaux.github.io/blog/2025/subquadratic/">
   </head>
 
   <!-- Body -->
@@ -97,7 +97,7 @@
               </li>
               
               <!-- Blog -->
-              <li class="nav-item ">
+              <li class="nav-item active">
                 <a class="nav-link" href="/blog/">Blog</a>
               </li>
 
@@ -131,20 +131,69 @@
 
     <!-- Content -->
     <div class="container mt-5 Site-content">
-      <!-- page.html -->
-        <div class="post center-rectangle">
+      <!-- _layouts/post.html -->
 
-          <header class="post-header">
-            <h1 class="post-title">Page not found</h1>
-            <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
-          </header>
+<div class="post center-rectangle">
 
-          <article>
-            <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="https://bsubercaseaux.github.io/">here</a>.</p>
+  <header class="post-header">
+    <h1 class="post-title">Subquadratic encodings for my favorite graph problems</h1>
+    <p class="post-meta">May 9, 2025</p>
+    <p class="post-tags">
+      <a href="/blog/2025"> <i class="fas fa-calendar fa-sm"></i> 2025 </a>
+        ·  
+        <a href="/blog/tag/math">
+          <i class="fas fa-hashtag fa-sm"></i> math</a>  
+          
+        ·  
+        <a href="/blog/category/Math">
+          <i class="fas fa-tag fa-sm"></i> Math</a>  
+          
 
-          </article>
+    </p>
+  </header>
 
-        </div>
+  <article class="post-content">
+    <p>When reducing graph problems (e.g., vertex-cover, clique, independent-set, \(k\)-coloring) to SAT, standard encodings use \(\Omega(n^2)\) binary clauses in dense graphs. This brief note shows how a trivial combination of existing ideas yields encodings that use \(\mathcal{O}(n^2 / \lg n)\) many clauses.</p>
+
+<p>Let us first consider the independent set problem, since vertex-cover, clique, and many variants of graph coloring are essentially equivalent in terms of their logical structure. The input is a graph \(G = (V, E)\), together with an integer \(k\), and the goal is to find a set of <em>selected</em> vertices \(S \subseteq V\) such that \(\binom{S}{2} \cap E = \varnothing\) and \(|S| = k\). The standard encoding is thus to create, for each vertex \(v \in V\), a variable \(s_v\) representing whether \(v \in S\). Then, the constraints are simply:
+\begin{equation}
+    (\overline{s_{u}} \lor \overline{s_{v}}),  \forall {u, v} \in E,
+\end{equation}
+stating the independence property, and then the cardinality constraint
+\(\sum_{v \in V} s_v = k.\)
+While cardinality constraints are known to admit compact encodings with \(\mathcal{O}(n \lg ^2 n)\) clauses <a href="https://www.cs.upc.edu/~oliveras/constraints.pdf" target="_blank" rel="noopener noreferrer">[1]</a>, I could not find any references to an encoding of Equation 1 with \(o(n^2)\) many clauses. As I show next, all the required ideas are already present in the literature.</p>
+
+<p><strong>Independent Set in a Biclique.</strong> If \(G\) happens to be a biclique \(K_{a, b}\), then it is trivial to encode the independence property efficiently. Let \(A\) and \(B\) be the parts of \(K_{a, b}\). Then, introduce auxiliary variables \(s_A\) and \(s_B\), which intuitively represent whether some vertex of \(A\) (resp. \(B\)) belongs to \(S\). This is enforced by clauses \((\overline{s_v} \lor s_A)\) for every \(v \in A\), as well as a long clause \((\overline{s_A} \lor \bigvee_{v \in A} s_v)\), and analogous clauses for \(B\) are added as well. Finally, the clause \((\overline{s_A} \lor \overline{s_B})\) enforces the independent set property. We have used
+ \(\mathcal{O}(a + b) = \mathcal{O}(|V(K_{a, b})|)\)
+  many clauses, instead of the \(a \cdot b\) used by Equation 1. Moreover, equivalence can be seen directly by resolving over \(s_A\) and \(s_B\).</p>
+
+<p><strong>Biclique Coverings.</strong> Suppose now \(G\) is an arbitrary graph again, but we have a set of bicliques \(B_1, \ldots, B_r\), with \(V(B_i) \subseteq V(G)\) for each \(1 \leq i \leq r\), and such that \(\bigcup_{i=1}^r E(B_i) = E(G)\). Such a set of bicliques is said to be a <em>``biclique covering’‘</em> of \(G\). Then, for any set \(S \subseteq V(G)\), we trivially have that \(S\) is an independent set of \(G\) if and only if \(S \cap V(B_i)\) is an independent set of \(B_i\) for every \(1 \leq i \leq r\). Now, applying the method of the previous paragraph for each \(B_i\) yields an encoding using \(\mathcal{O}(\sum_{i=1}^r |V(B_i)|)\) many clauses. Fortunately, <a href="https://users.renyi.hu/~p_erdos/1983-20.pdf" target="_blank" rel="noopener noreferrer">a classic result of Chung, Erdős, and Spencer</a> says that for any \(G\) there is a biclique covering such that
+ \(\sum_{i=1}^r |V(B_i)| \in \mathcal{O}(|V(G)|^2 / \lg (|V(G)|)).\)
+ Furthermore, Mubayi and Turán proved that such a covering can be computed in polynomial time <a href="https://arxiv.org/pdf/0905.2527" target="_blank" rel="noopener noreferrer">[3]</a>, which allows therefore to construct the succinct encoding from an input graph in polynomial time. Naturally, without this runtime restriction the result of this note would be trivial, since one could first solve the independent set instance and then build a constant-size formula according to the answer.</p>
+
+<p>## Edit from a few months later:</p>
+
+<p>I have written more in depth about this result here: https://arxiv.org/abs/2506.14042. But more importantly, together with Andrew Krapivin, Benjamin Pzybocki, and Nicolás Sanhueza-Matamala, we have improved the best bounds on biclique partitions/coverings for graphs, optimally solved the hypergraph case as well, and significantly improved the algorithmic aspects of the problem since Mubayi and Turán’s result. The paper is available here: https://www.arxiv.org/abs/2511.11855.</p>
+
+  </article><hr style="margin-top: 50px; margin-bottom: 50px;"> 
+    
+    <h1 style="text-align:center;"> Comment Section </h1>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'https-bsubercaseaux-github-io';
+      var disqus_identifier = '/blog/2025/subquadratic';
+      var disqus_title      = "Subquadratic encodings for my favorite graph problems";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+
+</div>
 
     </div>
 
