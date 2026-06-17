@@ -10,7 +10,7 @@ nav: true
 My most up-to-date list of papers is usually on [Google Scholar](https://scholar.google.com/citations?user=0EOonpYAAAAJ&hl=en), but here you can find some summarized data as well as my best attempt to have an updated and tidy list, with bibtex references, abstracts, and links to download.
 
 ## Summarized Data
-1. **h-index**: 10
+1. **h-index**: 11
 2. **Erdős number**: 3 (e.g., me → Daniel Lokshtanov → Noga Alon → Paul Erdős).
 3. **Collaborators from**: Austria, Chile, China, Germany, France, Japan, India, Netherlands, Norway, Portugal, Russia, Slovakia, Spain, USA. 
 4. **Most common conference**: NeurIPS (5 papers there). Actively trying to change this 🙃.
