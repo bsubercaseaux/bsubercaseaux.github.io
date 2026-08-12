@@ -4,8 +4,9 @@ permalink: /teaching/
 title: Teaching
 description: In this page you can find materials about different classes I have contributed to, or more in general material about teaching and pedagogy. 
 nav: true
+nav_order: 3
 ---
-I **really really really** love teaching. So far, I have being a Teaching Assistant for the following classes: [^1]
+I **really, really, really** love teaching. So far, I have been a teaching assistant for the following classes: [^1]
 <div>
     <ol>
         <li> 
@@ -14,7 +15,7 @@ I **really really really** love teaching. So far, I have being a Teaching Assist
 at CMU. For professor [Marijn Heule](https://www.cs.cmu.edu/~mheule/)</p>
         </li>
         <li> 
-            <div style="margin-bottom:2px;"> <b><em>Undergraduate Quatum Computing</em></b> </div>
+            <div style="margin-bottom:2px;"> <b><em>Undergraduate Quantum Computing</em></b> </div>
             <p style="padding-left: 20px; align:right; font-size:18px;" markdown="1">
 at CMU. For professor [Ryan O'Donnell](https://www.cs.cmu.edu/~odonnell/)</p>
         </li>

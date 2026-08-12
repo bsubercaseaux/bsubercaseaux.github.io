@@ -1,9 +1,9 @@
 $(document).ready(function() {
-    $('a.abstract').click(function() {
-        $(this).parent().parent().find(".abstract.hidden").toggleClass('open');
-    });
-    $('a.bibtex').click(function() {
-        $(this).parent().parent().find(".bibtex.hidden").toggleClass('open');
+    $('button.abstract, button.bibtex').click(function() {
+        var target = $('#' + $(this).attr('aria-controls'));
+        var willOpen = !target.hasClass('open');
+        target.toggleClass('open', willOpen).prop('hidden', !willOpen);
+        $(this).attr('aria-expanded', willOpen);
     });
     $('.navbar-nav').find('a').removeClass('waves-effect waves-light');
 });

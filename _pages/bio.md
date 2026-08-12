@@ -2,14 +2,15 @@
 layout: page
 permalink: /bio/
 title: Bio
-description: A personal (i.e., beyond academical) biography of Bernardo Subercaseaux.
+description: A personal, non-academic biography of Bernardo Subercaseaux.
 nav: true
+nav_order: 4
 ---
 
 I was thrown into the world the Tuesday 21<sup>st</sup> of November of 1995, in Santiago, <a href="https://en.wikipedia.org/wiki/Chile">Chile</a>. As a result, my native language is Spanish, my nationality is Chilean, my favorite comedian is <a href="https://www.felipeavello.cl/">Felipe Avello</a>, and my favorite liquor is <a href="https://en.wikipedia.org/wiki/Pisco" >Pisco</a>. Also I forgot to mention that I was born as a member of <a href="https://en.wikipedia.org/wiki/Human">the most abundant and widespread species of primate</a>.
 
 <figure style="text-align:center;">
-  <img src="../assets/img/leyo.jpeg" alt="Description of image" style="max-width: 70%;">
+  <img src="../assets/img/leyo.jpeg" alt="The author at Machu Picchu in Peru" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 1: </b>
     <span style="font-size: 16px;"> A picture of me, a human being, in Machu Picchu (Perú).</span>
@@ -20,7 +21,7 @@ I was thrown into the world the Tuesday 21<sup>st</sup> of November of 1995, in 
 I grew up in Santiago, where I first attended the German school <a href="https://dsmorus.cl/">Deustche Schule Sankt Thomas Morus</a>. Because of how poorly I was doing at school (my German was terrible, and I had troubles with other kids), my parents helped me transfer to the Catholic school <a href="https://www.colegiosanfranciscodeasis.cl/csfda/">Colegio San Francisco de Asis</a>. After a first year where I also did poorly and got complains about my behavior, the next year everything changed. I became a Catholic, and for the first time started doing well academically and making good friends (I still talk to many of them today, and I love them!). As time went by, I went more and more into Catholicism, until the point of considering priesthood. Fortunately, I started being mentored by the amazing Chilean philosopher <a href="https://en.wikipedia.org/wiki/Roberto_Torretti"> Roberto Torretti</a>, from whom I basically learned all the philosophy I know today. He would suggest a book for me to read, and we would discuss it. This way, I read most of Plato, Aristotle, Leibniz, Spinoza, Hume, Kant, and others. The result of this process made me an atheist, and also oriented me towards the political left-wing. 
 
 <figure style="text-align:center;">
-  <img src="../assets/img/polos_rojas.jpeg" alt="Description of image" style="max-width: 70%;">
+  <img src="../assets/img/polos_rojas.jpeg" alt="Roberto Torretti, Pedro Vicuña, and the author wearing red shirts" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 2: </b>
     <span style="font-size: 16px;"> A picture of (left-to-right) Chilean philosopher of science Roberto Torretti, Chilean actor Pedro Vicuña (my step-dad!), and me. The shirts were actually just a random coincidence!</span>
@@ -34,7 +35,7 @@ In my last year of high school our math teacher (thanks for everything Álvaro S
 
 
 <figure style="text-align:center;">
-  <img src="../assets/img/robotica.jpeg" alt="Description of image" style="max-width: 70%;">
+  <img src="../assets/img/robotica.jpeg" alt="The 2013 UNAB first-place high school robotics team" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 3: </b>
     <span style="font-size: 16px;"> My high school robotics team getting the first prize at the UNAB high school robotics competition 2013. We have (left-to-right) Vicente Méndez, Álvaro Sánchez, Felipe Vergara, Eugenio Voticky and me.</span>
@@ -49,7 +50,7 @@ Professor Jorge Pérez invited me to participate in *Competitive Programming* (i
 
 
 <figure style="text-align:center;">
-  <img src="../assets/img/prog_comp0.jpeg" alt="Description of image" style="max-width: 70%;">
+  <img src="../assets/img/prog_comp0.jpeg" alt="The third-place @Pérez y #LosFabulososMechones programming team" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 4: </b>
     <span style="font-size: 16px;"> The team "@Pérez y #LosFabulososMechones", which translates to "@Pérez and #TheFantasticFreshmen". Left to right: Professor Jorge Pérez, Robinson Castro, Lucas Cabello, and me. We got 3<sup>rd</sup> nationwide place that year.</span>
@@ -58,7 +59,7 @@ Professor Jorge Pérez invited me to participate in *Competitive Programming* (i
 
 
 <figure style="text-align:center;">
-  <img src="../assets/img/prog_comp1.jpeg" alt="Description of image" style="max-width: 70%;">
+  <img src="../assets/img/prog_comp1.jpeg" alt="Robinson Castro and the author competing in 2015" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 5: </b>
     <span style="font-size: 16px;"> My friend Robinson Castro and I competing on 2015. We also got 3<sup>rd</sup> place that evening.</span>
@@ -69,7 +70,7 @@ Professor Jorge Pérez invited me to participate in *Competitive Programming* (i
 After 3 semesters, I was selected to participate in a <em>dual-degree</em> program in Paris, France. Moreover, I was the only Chilean of that year in getting the prestigious  <em><a href="https://www.campusfrance.org/en/eiffel-scholarship-program-of-excellence">Eiffel Scholarship</a></em>, which supported elite international students to study in France. A very minor setback was caused by the fact that I didn't know absolutely any French!
 
 <figure style="text-align:center;">
-  <img src="../assets/img/french.jpeg" alt="Description of image" style="max-width: 70%;">
+  <img src="../assets/img/french.jpeg" alt="The author's French class in Vichy in 2016" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 5: </b>
     <span style="font-size: 16px;"> My French class in Vichy, 2016. We have (left-to-right):  (South Korea, missing name), Yu Feng (China), Manuel Michael (Kenya), Xu Yuanxin (China),Xiaodu Yang (China), Pablo Uribe (Chile), Professor Karine (France), Nick (China, missing last name), (Germany, missing name), (China, missing name), Tokyo Kibata (Japan) and me (Chile).</span>
@@ -83,7 +84,7 @@ But I learned French, and many other things too, graduating with two bachelors a
 Before graduating, I had to come back to Chile, take a few classes and do a master thesis. That's how the French-Chilean dual-degree was structured. So I went back, and I wanted something better than a 3<sup>rd</sup> place in Competitive Programming. The problem is, ACM-ICPC competitions are limited by age, so I basically had my last opportunity to make it. Fortunately things turn out in my favor, and with a new team I got the 1<sup>st</sup> place in the TCP (Chilean Programming Tournament) twice in a row, while also winning the 1<sup>st</sup> place in Chile at the ACM-ICPC South American Finals. Also, that same year, we participated in the IEEEXtreme 12.0 and got the 29<sup>th</sup> place **worldwide**. Here are some pictures.
 
 <figure style="text-align:center;">
-  <img src="../assets/img/prog_comp6.jpeg" alt="Description of image" style="max-width: 70%;">
+  <img src="../assets/img/prog_comp6.jpeg" alt="The GraceHoppers competitive programming team in 2018" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 6: </b>
     <span style="font-size: 16px;"> My competitive programming team of 2018: "The GraceHoppers", in honor to the great Computer Scientist <a href="https://en.wikipedia.org/wiki/Grace_Hopper"> Grace Hopper</a>. Left to right: Professor Jorge Pérez, Thibault Swysen, me, and Robinson Castro.</span>
@@ -91,7 +92,7 @@ Before graduating, I had to come back to Chile, take a few classes and do a mast
 </figure>
 
 <figure style="text-align:center;">
-  <img src="../assets/img/prog_comp5.jpeg" alt="Description of image" style="max-width: 70%;">
+  <img src="../assets/img/prog_comp5.jpeg" alt="The author competing at the 2018 ACM-ICPC South American Finals" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 7: </b>
     <span style="font-size: 16px;"> Me in full-focus mode during the ACM-ICPC South American Finals of 2018.</span>
@@ -99,7 +100,7 @@ Before graduating, I had to come back to Chile, take a few classes and do a mast
 </figure>
 
 <figure style="text-align:center;">
-  <img src="../assets/img/prog_comp7.jpeg" alt="Description of image" style="max-width: 70%;">
+  <img src="../assets/img/prog_comp7.jpeg" alt="The GraceHoppers receiving first place" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 8: </b>
 <span style="font-size: 16px;"> The GraceHoppers obtaining 1<sup>st</sup> place.</span></figcaption>
@@ -112,7 +113,7 @@ My thesis obtained the maximum possible score, which implied the especial distin
 
 
 <figure style="text-align:center;">
-  <img src="../assets/img/master_defense.png" alt="Description of image" style="max-width: 70%;">
+  <img src="../assets/img/master_defense.png" alt="Zoom screenshot from the author's master's thesis defense during the COVID-19 pandemic" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 9: </b>
     <span style="font-size: 16px;"> Screenshot of my master thesis defense happening on Zoom, during the Covid pandemic.</span>
@@ -121,7 +122,7 @@ My thesis obtained the maximum possible score, which implied the especial distin
 
 
 <figure style="text-align:center;">
-  <img src="../assets/img/graduation_france.jpg" alt="Description of image" style="max-width: 70%;">
+  <img src="../assets/img/graduation_france.jpg" alt="The author and classmates at their in-person graduation in France" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 10: </b>
     <span style="font-size: 16px;"> my much more fun in-person graduation in France. In the top row we have (left-to-right): Pati Gómez de Olea (Spain), Elena Kostaropoulou (Greece), Pablo Uribe (Chile), Paloma Gómez de Olea (Spain) and Ignacio Legarraga (Chile). In the bottom row: Daniel Da Costa (Brazil), Amine Chokairi (Morocco) and me.</span>
@@ -135,7 +136,7 @@ In the meantime, I did an internship at Facebook (now Meta), on the Oculus organ
 However, I wanted something more juicy than money: Math. So I enrolled in grad-school at Carnegie Mellon University (CMU) in August 2021, co-advised by <a href="http://www.cs.cmu.edu/~anupamg/">Anupam Gupta</a> and <a href="https://www.cs.cmu.edu/~mheule/">Marijn Heule</a>. I had an amazing first year in Pittsburgh, doing research, meeting new friends, and struggling through my coldest winter so far!
 
 <figure style="text-align:center;">
-  <img src="../assets/img/pittsburgh_friends.png"  alt="Description of image" style="max-width: 70%;">
+  <img src="../assets/img/pittsburgh_friends.png"  alt="Friends at Urban Tap in Pittsburgh with the author" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 11: </b>
     <span style="font-size: 16px;"> Hanging out with my friends at Urban Tap, Pittsburgh. Left-to-right: Caroline Pellegrini, Alexander Goldberg, Alexander Wilf, me and Bailey Miller. Hiding behind the camera: Saranya Vijayakumar.</span>
@@ -150,7 +151,7 @@ Berkeley).
 After that time, I was struggling with having two different advisors with two completely disjoint projects, so I acknowledged the old bible verse: <em><a href="https://en.wikipedia.org/wiki/Matthew_6:24#:~:text=%E2%80%9CNo%20one%20can%20serve%20two,other.">"No one can serve two masters"</a></em>, and Anupam and I decided to become simply collaborators, while I am now solely advised by Marijn Heule.
 
 <figure style="text-align:center;">
-  <img src="../assets/img/floc.jpg"  alt="Description of image" style="max-width: 70%;">
+  <img src="../assets/img/floc.jpg"  alt="Marijn Heule's research group at FLoC 2022 in Haifa, Israel" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Picture 12: </b>
     <span style="font-size: 16px;"> My advisor's research group attending the Federated Logic Coference (FLoC) 2022 in Haifa, Israel. From left to right: Evan Lohn, me, Marijn Heule, Joseph Reeves, Emre Yolcu and MD Solimul Chowdhury.</span>

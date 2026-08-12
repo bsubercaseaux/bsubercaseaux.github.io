@@ -1,47 +1,84 @@
 ---
 layout: about
-title: about
+title: Home
 permalink: /
-subtitle: 5th year Computer Science PhD student at <a href="https://www.cs.cmu.edu/">Carnegie Mellon University</a>, bersub@cmu.edu
-profile:
-  align: right
-  image1: prof_pic4.jpg
-  image2: Curious_George.png
-  address: 
-    <font size="+1.5" style="text-align:left">
-    <p> ✉️  <a href="javascript:location='mailto:\u0062\u0073\u0075\u0062\u0065\u0072\u0063\u0061\u0040\u0063\u0073\u002e\u0063\u006d\u0075\u002e\u0065\u0064\u0075';void 0"><script type="text/javascript">document.write('\u0062\u0073\u0075\u0062\u0065\u0072\u0063\u0061\u0040\u0063\u0073\u002e\u0063\u006d\u0075\u002e\u0065\u0064\u0075')</script></a>
-    </p>
-
-     <p> <a href="../assets/pdf/CV-BernardoSubercaseaux.pdf"> 📎 my resume/cv </a></p>
-    <p> <a href="https://scholar.google.com/citations?user=0EOonpYAAAAJ&hl=en"> <img src="../assets/img/Google_Scholar_logo.png" style="width:20px;height:20px;" alt="the standard Google scholar icon"> Google scholar</a> </p>
-    </font>
-
-news: false  # includes a list of news items
-selected_papers: false # includes a list of papers marked as "selected={true}"
-social: true  # includes social icons at the bottom of the page
+description: Bernardo Subercaseaux is a theoretical computer scientist working on automated reasoning, discrete mathematics, and trustworthy computational proofs.
+nav_order: 0
+math: false
 ---
-I am a 5<sup>th</sup> year Computer Science PhD student at <a href="https://www.cs.cmu.edu/">CMU</a>, where I'm advised by the amazing <a href="http://www.cs.cmu.edu/~mheule/">Marijn Heule</a>.
- For a more detailed biography of myself you can click <a href="bio/">here</a>.
-<!--
- Before that, I had the fortune of doing my masters under the greats <a href="https://pbarcelo.ing.uc.cl/">Pablo Barceló</a> and <a href="https://users.dcc.uchile.cl/~jperez/">Jorge Pérez</a>, on theoretical aspects of <i>interpretability in Machine Learning</i>. Even before that, I got engineering degrees from <a href="https://www.centralesupelec.fr/"> CentraleSupélec (École Centrale Paris)</a> , and <a href="http://ingenieria.uchile.cl/">University of Chile</a>.
--->
+<article class="home-sheet">
+  <div class="mondrian-rule" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
 
-<strong style="font-weight:800;">  Research statement. </strong>
-I am passionate about several topics in discrete mathematics and theoretical computer science. My current focus is on the intersection between <i>automated reasoning</i> (e.g., SAT solving) and mathematics. I also have signficant experience in theoretical explainability/interpretability in AI, online algorithms, and the study of combinatorial games.
+  <header class="home-intro">
+    <div>
+      <p class="home-role">Computer Science PhD candidate at Carnegie Mellon University</p>
+      <h1 class="home-title">Bernardo Subercaseaux</h1>
+      <p class="home-lede">I am a PhD candidate at <a href="https://www.cs.cmu.edu/">CMU</a>, where I am advised by the amazing <a href="https://www.cs.cmu.edu/~mheule/">Marijn Heule</a>. I think mostly about using <a href="https://www.sat4math.com">SAT for mathematics</a>,  but to be honest, I just love computer science and discrete mathematics in their full diversity.</p>
 
-<!-- <ul class="starlist">
-<li> Automated reasoning applied to problems in discrete mathematics. </li>
-<u>Example</u>: <em><a href="https://arxiv.org/pdf/2301.09757.pdf">The Packing Chromatic Number of the Infinite Square Grid is 15.</a></em>
-<li> Understanding the impact of partially accurate advice for solving algorithmic problems. </li>
-<u>Example</u>: <em><a href="https://openreview.net/pdf?id=HFkxZ_V0sBQ">Augmenting Online Algorithms with 𝛆-accurate predictions.</a></em>
-<li> Machine Learning interpretability from a formal theoretical standpoint. </li>
-<u>Example</u>: <em><a href="https://arxiv.org/abs/2207.12213">On Computing Probabilistic Explanations for Decision Trees.</a></em>
-</ul> -->
-<!--
-More in general, I'm a [human being](https://en.wikipedia.org/wiki/Human), born and raised in [Chile](https://en.wikipedia.org/wiki/Chili_pepper), who is interested in all sorts of things. My academic interests usually revolve around algorithms, complexity and logic. Some of my non-academic interests are non-human animals ([monkeys](https://static.independent.co.uk/2021/01/14/11/newFile-9.jpg?width=990&auto=webp&quality=75) are my faves!), brewing beer, dancing salsa, playing sports, [writing poetry or short stories](https://bsub.cl/escritos/), languages (🇪🇸🇺🇸🇫🇷), and philosophy.
--->
+      <ul class="home-links" aria-label="Contact and academic profiles">
+        <li><a href="mailto:{{ site.email | encode_email }}">email</a></li>
+        <li><a href="{{ '/assets/pdf/CV-BernardoSubercaseaux.pdf' | relative_url }}">resume / CV</a></li>
+        <li><a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}">Google Scholar</a></li>
+        <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
+        <li><a href="https://orcid.org/{{ site.orcid_id }}">ORCID</a></li>
+      </ul>
+    </div>
 
-<strong style="font-weight:800;"> Social statement. </strong>
-I deeply believe that Math and CS are some of the most beautiful collective enterprises of humankind. Understanding Math and CS as human activities that take place inside human communities is crucial for me.
-<!-- , and therefore I am committed to contributing to their social aspects as well. -->
- As a consequence, I am very interested in: peer review, philosophy of science, history of mathematics, and thinking about how we can better leverage computers for doing mathematics. A long term goal of mine is to contribute to the development of the theoretical CS community in Chile and South America. If you are interested in my research, or discussing anything else mentioned here, please reach out to me!
+    <figure class="hero-portrait-card" tabindex="0" aria-label="Portrait of Bernardo; focus to reveal a Curious George illustration">
+      <div class="portrait-frame">
+        <img class="portrait-main" src="{{ '/assets/img/prof_pic4.jpg' | relative_url }}" alt="Bernardo Subercaseaux in profile" width="852" height="1280">
+        <img class="portrait-easter-egg" src="{{ '/assets/img/Curious_George.png' | relative_url }}" alt="" width="360" height="450" aria-hidden="true">
+      </div>
+      <figcaption class="portrait-caption"><strong>Photographic evidence</strong><span>hover for surprise</span></figcaption>
+    </figure>
+  </header>
+
+  <section class="home-statement" aria-labelledby="research-statement-heading">
+    <h2 class="statement-label" id="research-statement-heading">Research statement.</h2>
+    <div class="statement-copy">
+      <p>I am passionate about several topics in discrete mathematics and theoretical computer science. My current focus is the intersection between <em>automated reasoning</em> (especially SAT solving) and mathematics. I also have significant experience in theoretical explainability and interpretability in AI, online algorithms, and combinatorial games.</p>
+
+      <ul class="research-threads">
+        <li><span class="thread-mark" aria-hidden="true"></span><span><strong>SAT encodings.</strong> How much of a solver's power is a result of the way we choose to describe a problem?</span></li>
+        <li><span class="thread-mark" aria-hidden="true"></span><span><strong>Computers doing mathematics.</strong> Discovery is exciting, but checkable proofs are what lets me sleep at night. The LLM avalanche is pressing us against the wall with questions about the future of mathematics, and I want to engage with them seriously. </span></li>
+        <li><span class="thread-mark" aria-hidden="true"></span><span><strong>Good side quests.</strong> Wordle, Mastermind, explainable AI, online algorithms, geometric puzzles and others; I like working on problems that refuse to let me go.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="recent-work" aria-labelledby="recent-work-heading">
+    <h2 class="recent-heading" id="recent-work-heading">Lately, on paper.</h2>
+    <div>
+      <ol class="paper-notes">
+        <li>
+          <span class="paper-date">March 2026</span>
+          <span><a class="paper-note-title" href="https://arxiv.org/abs/2603.28954">Near-Optimal Encodings of Cardinality Constraints</a><span class="paper-note-detail">with Andrew Krapivin and Benjamin Przybocki; it begins with SAT encodings and somehow ends at a fifty-year-old circuit problem.</span></span>
+        </li>
+        <li>
+          <span class="paper-date">March 2026</span>
+          <span><a class="paper-note-title" href="https://arxiv.org/abs/2603.27774">Automated Reencoding Meets Graph Theory</a><span class="paper-note-detail">with Benjamin Przybocki and Marijn Heule; we ask graph theory what a reencoding tool is really doing—and where it must eventually get stuck.</span></span>
+        </li>
+        <li>
+          <span class="paper-date">January 2026</span>
+          <span><a class="paper-note-title" href="https://arxiv.org/abs/2601.19161">Price of Locality in Permutation Mastermind</a><span class="paper-note-detail">a solo excursion into whether TikTok influencers are chaotic enough.</span></span>
+        </li>
+      </ol>
+      <a class="all-papers-link" href="{{ '/publications/' | relative_url }}">All papers, abstracts, and BibTeX →</a>
+    </div>
+  </section>
+
+  <section class="social-statement" aria-labelledby="social-statement-heading">
+    <h2 class="statement-label" id="social-statement-heading">Social statement.</h2>
+    <div class="statement-copy">
+      <p>I deeply believe that Math and CS are some of the most beautiful collective enterprises of humankind. Understanding them as human activities (at least partially) that take place inside human communities is crucial for me.</p>
+      <p>As a consequence, I am very interested in peer review, philosophy of science, history of mathematics, and how we can better leverage computers for doing mathematics. A long-term goal of mine is to contribute to the development of the theoretical CS community in Chile and South America. If you are interested in my research—or in discussing anything else mentioned here—please reach out!</p>
+    </div>
+  </section>
+
+  <nav class="home-detours" aria-label="Other parts of the site">
+    <span>Other doors in this house:</span>
+    <a href="{{ '/bio/' | relative_url }}">a long (yet outdated) biography of yours truly</a>
+    <a href="{{ '/blog/' | relative_url }}">way too few thoughts on math, philosophy, and life</a>
+    <a href="{{ '/literature/' | relative_url }}">poetry and fiction (of the non-mathematical kind)</a>
+  </nav>
+</article>

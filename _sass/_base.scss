@@ -2,6 +2,8 @@
  * Styles for the base elements of the theme.
  ******************************************************************************/
 
+@use "variables" as *;
+
 // Typography
 
 p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
@@ -640,5 +642,4 @@ html.transition *:after {
   font-size: 0.875rem;
   padding-top: 0.25rem;
 }
-
 

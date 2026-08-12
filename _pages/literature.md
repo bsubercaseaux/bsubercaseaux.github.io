@@ -4,6 +4,7 @@ permalink: /literature/
 title: Literature
 description: In this page you can find material related to a different passion of mine, literature, which as Borges said, is <i>a directed form of dreaming</i>.
 nav: true
+nav_order: 5
 ---
 
 <details>

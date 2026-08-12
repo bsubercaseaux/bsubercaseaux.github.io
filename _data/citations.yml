@@ -1,0 +1,24 @@
+profile_url: "https://scholar.google.com/citations?user=0EOonpYAAAAJ&hl=en"
+updated: "2026-08-11"
+total: 615
+h_index: 12
+# Match the axis shown by Scholar for this snapshot. Raise it with the ticks
+# whenever a future bar would exceed it.
+scale_max: 180
+ticks: [180, 135, 90, 45, 0]
+years:
+  - year: 2020
+    count: 8
+  - year: 2021
+    count: 25
+  - year: 2022
+    count: 44
+  - year: 2023
+    count: 107
+  - year: 2024
+    count: 117
+  - year: 2025
+    count: 147
+  - year: 2026
+    count: 163
+    partial: true

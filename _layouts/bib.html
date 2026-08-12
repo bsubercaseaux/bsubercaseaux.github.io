@@ -1,24 +1,29 @@
 ---
 ---
 <!-- _layouts/bib.html -->
-      <div class="row">
-        <div class="col-sm-2 abbr">
-        {%- if entry.abbr -%}
-          {%- if site.data.venues[entry.abbr] -%}
-          <abbr class="badge"><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
-          {%- else -%}
-          <abbr class="badge">{{entry.abbr}}</abbr>
+      {%- assign visual = nil -%}
+      {%- assign publication_abstract = site.data.publication_abstracts[entry.key] | default: entry.abstract -%}
+      {%- assign distinctions = site.data.publication_distinctions[entry.key] -%}
+      {%- if page.publication_previews -%}
+        {%- assign visual = site.data.publication_visuals[entry.key] -%}
+      {%- endif -%}
+      <article id="{{entry.key}}" class="publication-entry{% unless visual %} publication-entry--text-only{% endunless %}" aria-labelledby="{{entry.key}}-title">
+        <div class="publication-copy">
+          {%- if entry.abbr -%}
+          <div class="publication-abbr">
+            {%- if site.data.venues[entry.abbr] -%}
+            <abbr class="badge"><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
+            {%- else -%}
+            <abbr class="badge">{{entry.abbr}}</abbr>
+            {%- endif -%}
+          </div>
           {%- endif -%}
-        {%- endif -%}
-        </div>
 
-        <!-- Entry bib key -->
-        <div id="{{entry.key}}" class="col-sm-8">
         {% if entry.type == "thesis" -%}
           {{reference}}
         {%- else %}
           <!-- Title -->
-          <div class="title" style="font-weight: 700; font-size: 22px;"> <em>{{entry.title}}</em></div>
+          <h3 class="title" id="{{entry.key}}-title" style="font-weight: 700; font-size: 22px;"> <em>{{entry.title}}</em></h3>
           <!-- Author -->
           <div class="author" style="font-size: 16px;">
           {%- for author in entry.author_array -%}
@@ -74,7 +79,8 @@
           {% if entry.type == "article" -%}
             {%- capture entrytype -%}<em>{{entry.journal}}</em>{%- endcapture -%}
           {%- elsif entry.type == "inproceedings" -%}
-            {%- capture entrytype -%}<em>In {{entry.booktitle}}</em> {%- endcapture -%}
+            {%- assign display_venue = entry.venue | default: entry.booktitle -%}
+            {%- capture entrytype -%}<em>In {{display_venue}}</em> {%- endcapture -%}
           {%- endif -%}
           {%- if entry.month -%}
             {%- capture entrymonth -%}{{ " " }}{{ entry.month | capitalize }}{%- endcapture -%}
@@ -87,17 +93,32 @@
             {{ periodical | strip }}
           </div>
         {%- endif %}
+
+          {%- if distinctions -%}
+          <ul class="publication-distinctions" aria-label="Distinctions and awards">
+            {%- for distinction in distinctions -%}
+            <li class="publication-distinction">
+              <strong>{{ distinction.label }}</strong>
+              {%- if distinction.venue %}<span aria-hidden="true"> · </span>{{ distinction.venue }}{% endif -%}
+            </li>
+            {%- endfor -%}
+          </ul>
+          {%- endif -%}
         
           <!-- Links/Buttons -->
           <div class="links">
-          {%- if entry.abstract %}
-            <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
+          {%- if publication_abstract %}
+            <button class="abstract btn btn-sm z-depth-0" type="button" aria-expanded="false" aria-controls="abstract-{{ entry.key }}">Abstract</button>
           {%- endif %}
           {%- if entry.arxiv %}
-            <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+            {%- if entry.arxiv contains '://' -%}
+            <a href="{{ entry.arxiv }}" class="btn btn-sm z-depth-0">arXiv</a>
+            {%- else -%}
+            <a href="https://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0">arXiv</a>
+            {%- endif -%}
           {%- endif %}
           {%- if entry.bibtex_show %}
-            <a class="bibtex btn btn-sm z-depth-0" role="button">Bibtex</a>
+            <button class="bibtex btn btn-sm z-depth-0" type="button" aria-expanded="false" aria-controls="bibtex-{{ entry.key }}">BibTeX</button>
           {%- endif %}
           {%- if entry.html %}
             <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
@@ -141,18 +162,30 @@
           {%- endif %}
           </div>
 
-          {% if entry.abstract -%}
+          {% if publication_abstract -%}
           <!-- Hidden abstract block -->
-          <div class="abstract hidden">
-            <p>{{ entry.abstract }}</p>
+          <div class="abstract hidden" id="abstract-{{ entry.key }}" hidden>
+            <p>{{ publication_abstract }}</p>
           </div>
           {%- endif -%}
 
           {% if entry.bibtex_show -%}
           <!-- Hidden bibtex block -->
-          <div class="bibtex hidden">
+          <div class="bibtex hidden" id="bibtex-{{ entry.key }}" hidden>
             {% highlight bibtex %}{{ entry.bibtex }}{% endhighlight %}
           </div>
           {%- endif %}
         </div>
-      </div>
+        {%- if visual -%}
+        <figure class="publication-figure publication-figure--{{ visual.kind | default: 'custom' }}">
+          <img
+            class="publication-figure-image"
+            src="{{ visual.src | relative_url }}"
+            alt="{{ visual.alt | default: '' | escape }}"
+            width="480"
+            height="300"
+            loading="lazy"
+            decoding="async">
+        </figure>
+        {%- endif -%}
+      </article>

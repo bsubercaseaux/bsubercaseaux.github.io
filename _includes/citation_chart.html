@@ -1,0 +1,39 @@
+{%- assign citations = site.data.citations -%}
+{%- assign citation_scale = citations.scale_max | default: 1 -%}
+{%- if citation_scale <= 0 -%}{%- assign citation_scale = 1 -%}{%- endif -%}
+{%- assign latest_citation = citations.years | last -%}
+<figure class="citation-history" aria-labelledby="citation-history-title" aria-describedby="citation-history-caption">
+  <h2 id="citation-history-title">Citations by year</h2>
+
+  <p class="citation-metrics"><strong>{{ citations.total }}</strong> total citations · h-index <strong>{{ citations.h_index }}</strong></p>
+
+  <div class="citation-plot">
+    <div class="citation-grid" aria-hidden="true">
+      {%- for tick in citations.ticks -%}
+        {%- assign tick_height = tick | times: 100.0 | divided_by: citation_scale -%}
+        {%- assign tick_top = 100 | minus: tick_height -%}
+        <span class="citation-grid-line" style="--tick-top: {{ tick_top }}%;"><span>{{ tick }}</span></span>
+      {%- endfor -%}
+    </div>
+
+    <ol class="citation-bars" style="--citation-columns: {{ citations.years | size }};" aria-label="Google Scholar citations per year">
+      {%- for item in citations.years -%}
+        {%- assign bar_height = item.count | times: 100.0 | divided_by: citation_scale -%}
+        {%- assign short_year = item.year | modulo: 100 -%}
+        <li style="--citation-height: {{ bar_height }}%;" aria-label="{{ item.year }}: {{ item.count }} citations{% if item.partial %}, year to date{% endif %}">
+          <span class="citation-bar-wrap" aria-hidden="true">
+            <span class="citation-bar"><span class="citation-value">{{ item.count }}</span></span>
+          </span>
+          <span class="citation-year" aria-hidden="true"><span class="citation-year-long">{{ item.year }}</span><span class="citation-year-short">{{ short_year }}</span></span>
+          <span class="citation-row-value" aria-hidden="true">{{ item.count }}</span>
+        </li>
+      {%- endfor -%}
+    </ol>
+  </div>
+
+  <figcaption id="citation-history-caption">
+    <a href="{{ citations.profile_url }}">Google Scholar</a>
+    · <time datetime="{{ citations.updated }}" aria-label="Updated {{ citations.updated | date: "%B %-d, %Y" }}">{{ citations.updated | date: "%b %Y" }}</time>{% if latest_citation.partial %}
+    ({{ latest_citation.year }} YTD){% endif %}
+  </figcaption>
+</figure>

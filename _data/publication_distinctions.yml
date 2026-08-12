@@ -1,0 +1,27 @@
+subercaseauxAutomatedSymmetricConstructions2026:
+  - label: Best paper
+    venue: CICM 2025
+
+sh2023LPAR:
+  - label: Best paper
+    venue: LPAR 2023
+
+subercaseauxExplainingKNearest2025:
+  - label: Distinguished paper
+    venue: PODS 2025
+
+subercaseauxAutomatedMathematicalDiscovery2024:
+  - label: Best-paper runner-up
+    venue: CICM 2024
+
+sh2023:
+  - label: Best-paper nominee
+    venue: TACAS 2023
+
+abbps2021:
+  - label: Spotlight
+    venue: NeurIPS 2021
+
+bps2020:
+  - label: Spotlight
+    venue: AFCI @ NeurIPS 2020

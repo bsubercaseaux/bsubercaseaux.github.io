@@ -2,25 +2,34 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: 
+description: Papers, preprints, abstracts, and links—organized by year.
 years: [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
 nav: true
+nav_order: 1
+publication_previews: true
 ---
 
-My most up-to-date list of papers is usually on [Google Scholar](https://scholar.google.com/citations?user=0EOonpYAAAAJ&hl=en), but here you can find some summarized data as well as my best attempt to have an updated and tidy list, with bibtex references, abstracts, and links to download.
+<p class="publication-intro">My most up-to-date list of papers is usually on <a href="{{ site.data.citations.profile_url }}">Google Scholar</a>, but this page is my tidier, annotated list, with BibTeX, abstracts, and links whenever they are available.</p>
 
-## Summarized Data
-1. **h-index**: 11
-2. **Erdős number**: 3 (e.g., me → Daniel Lokshtanov → Noga Alon → Paul Erdős).
-3. **Collaborators from**: Austria, Chile, China, Germany, France, Japan, India, Netherlands, Norway, Portugal, Russia, Slovakia, Spain, USA. 
-4. **Most common conference**: NeurIPS (5 papers there). Actively trying to change this 🙃.
-5. **Most fun conference**: <a href="https://sites.google.com/view/fun2022/home?pli=1">FUN with algorithms.</a>
-6. **Distinctions**: Best paper award at CICM'2025, Distinguished paper award, PODS'2025. Runner-up for Best paper award at CICM'2024, Best paper award at LPAR'2023. Best paper award nomination at TACAS'2023.  Spotlight paper at NeurIPS'2021, and spotlight paper at <a href="https://www.afciworkshop.org/afci-2020/home">AFCI@NeurIPS'2020 workshop</a>. 1st place in Latin American Contest of Master theses in Artificial Intelligence IEEE LA-CCI.
+<div class="publication-overview">
+  <section class="publication-datapoints" aria-labelledby="publication-datapoints-title">
+    <h2 id="publication-datapoints-title">Some datapoints</h2>
+    <ol>
+      <li><strong>Erdős number:</strong> 3 (for example, Paul Erdős → Noga Alon → Daniel Lokshtanov → me).</li>
+      <li><strong>Collaborators from:</strong> Austria, Chile, China, France, Germany, India, Japan, the Netherlands, Norway, Portugal, Russia, Slovakia, Spain, and the USA.</li>
+      <li><strong>Most common conference:</strong> NeurIPS (five papers). Actively trying to change this 🙃.</li>
+      <li><strong>Most fun conference:</strong> <a href="https://sites.google.com/view/fun2022/home?pli=1">FUN with Algorithms</a>.</li>
+      <li><strong>Distinctions:</strong> Best paper at CICM 2025 and LPAR 2023; distinguished paper at PODS 2025; runner-up for best paper at CICM 2024; best-paper nomination at TACAS 2023; spotlights at NeurIPS 2021 and AFCI@NeurIPS 2020; and first place in the IEEE LA-CCI Latin American master's thesis contest in AI.</li>
+    </ol>
+  </section>
+  {% include citation_chart.html %}
+</div>
 
 
-## Attempt of an Updated List of Papers
+## Papers
 <div class="publications">
   {% for y in page.years %}
+    <h2 class="year" id="year-{{ y }}">{{ y }}</h2>
     {% bibliography -f papers -q @*[year={{y}}]* %}
   {% endfor %}
 </div>

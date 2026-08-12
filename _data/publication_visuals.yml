@@ -1,0 +1,209 @@
+bannai2026repetitiveness:
+  src: /assets/img/publications/compact-encodings.svg
+  kind: custom
+  alt: "Three repetitive string measures compressed into compact MAX-SAT encodings."
+
+quan2026slowRubiks:
+  src: /assets/img/publications/rubik-hamiltonian-path.svg
+  kind: custom
+  alt: "A scrambled two-by-two Rubik's Cube followed by a long winding path through the puzzle's state space to a solved cube."
+
+przybocki2026doublySaturatedRamsey:
+  src: /assets/img/publications/automated-reencoding.svg
+  kind: custom
+  alt: "A colored graph being searched and transformed in a computer-assisted Ramsey construction."
+
+arenas2026countingOrderings:
+  src: /assets/img/publications/online-sorting.svg
+  kind: custom
+  alt: "Numbered elements arranged into a constrained ordering along a graph."
+
+arenas2026explainer:
+  src: /assets/img/publications/decision-language.svg
+  kind: custom
+  alt: "A classification tree translated into a compact declarative explanation query."
+
+krapivin2026nearOptimalEncodings:
+  src: /assets/img/publications/cardinality-network.svg
+  kind: custom
+  alt: "Boolean inputs passing through a compact hierarchy of cardinality gates to produce an at-most-k count."
+
+przybocki2026automatedReencoding:
+  src: /assets/img/publications/automated-reencoding.svg
+  kind: custom
+  alt: "A dense colored graph being automatically transformed into a smaller, more structured graph."
+
+subercaseaux2026priceOfLocality:
+  src: /assets/img/publications/permutation-mastermind.webp
+  kind: generated
+  alt: "Orderly rows of colored Mastermind pegs and local swaps opening into a large chaotic spiral of pegs."
+
+woodruff2026gemini:
+  src: /assets/img/publications/scientific-research.svg
+  kind: custom
+  alt: "Twin star-like agents moving a scientific question through exploration and toward a verified result."
+
+subercaseauxAutomatedSymmetricConstructions2026:
+  src: /assets/img/publications/symmetric-constructions.svg
+  kind: custom
+  alt: "A three-point seed expanded into an eightfold rotationally symmetric geometric construction."
+
+subercaseauxUnfoldingBoxesLocalConstraints2025:
+  src: /assets/img/publications/box-unfolding.svg
+  kind: custom
+  alt: "A colored polyomino net folding along dashed lines into two different rectangular boxes."
+
+subercaseauxExplainingKNearest2025:
+  src: /assets/img/publications/knn-explanations.svg
+  kind: custom
+  alt: "A query point, its nearest colored neighbors, and an arrow to a nearby counterfactual point."
+
+arenas2025probabilisticDecisionTreesJAIR:
+  src: /assets/img/publications/probabilistic-tree.svg
+  kind: custom
+  alt: "A colored decision tree leading to four bars representing the probabilities of different explanations."
+
+subercaseaux2025linearModelsAAAI:
+  src: /assets/img/publications/linear-explanations.svg
+  kind: custom
+  alt: "Two classes of points divided by a linear boundary, with one partial instance highlighted and explained by feature bars."
+
+gurushankar2025delayedHitsINFOCOM:
+  src: /assets/img/publications/delayed-cache.svg
+  kind: custom
+  alt: "A stream of colored requests above a cache timeline, with delayed requests curving into their eventual slots."
+
+merino2025demigodsNumber:
+  src: /assets/img/publications/rubik-demigod.svg
+  kind: custom
+  alt: "An isometric three-color Rubik's Cube with a curved move arrow around one corner."
+
+subercaseaux2025smallerEncodings:
+  src: /assets/img/publications/compact-encodings.svg
+  kind: custom
+  alt: "A dense rectangular encoding collapsing into a much smaller colored graph."
+
+kirchweger2025norinConjecture:
+  src: /assets/img/publications/finite-to-infinite.svg
+  kind: custom
+  alt: "Three finite concentric graph patterns pointing toward two limiting asymptotic curves."
+
+krapivin2025partiteDecompositions:
+  src: /assets/img/publications/hypergraph-parts.svg
+  kind: custom
+  alt: "Overlapping hyperedges separating into three aligned partite columns of colored vertices."
+
+BCA2024LPAR:
+  src: /assets/img/publications/blocked-clauses.svg
+  kind: custom
+  alt: "A red clause added to a stack of clauses, triggering a directed cycle among colored nodes."
+
+gutierrez2024assortment:
+  src: /assets/img/publications/conference-assortment.svg
+  kind: custom
+  alt: "A mixed tray of colorful conference goodies being matched to a line of indifferent attendees."
+
+garrison2024packit:
+  src: /assets/img/publications/rectangle-packing.svg
+  kind: custom
+  alt: "Red, yellow, blue, and ivory rectangles of different sizes forming a nearly perfect rectangular packing."
+
+subercaseauxHeuleNAW:
+  src: /assets/img/publications/long-proof.svg
+  kind: custom
+  alt: "A very long, machine-checkable proof scroll connecting two colored endpoints."
+
+subercaseauxAutomatedMathematicalDiscovery2024:
+  src: /assets/img/publications/automated-pentagons.svg
+  kind: custom
+  alt: "Three candidate point configurations passing through an automated proof funnel into a checked certificate."
+
+mackey2024pentagonminimizationcomputation:
+  src: /assets/img/publications/pentagon-points.svg
+  kind: custom
+  alt: "A field of points with one convex pentagon highlighted in mustard and red."
+
+subercaseauxFormalVerificationEmpty2024:
+  src: /assets/img/publications/empty-hexagon.svg
+  kind: custom
+  alt: "A red six-sided polygon whose interior is visibly empty among a larger set of points."
+
+cuevas2024placeIt:
+  src: /assets/img/publications/online-sorting.svg
+  kind: custom
+  alt: "A numbered tile falling into a permanently ordered row of online sorting slots."
+
+arenas2024uniformLanguage:
+  src: /assets/img/publications/decision-language.svg
+  kind: custom
+  alt: "A colored decision tree translated through quantified logical syntax into a checked explanation."
+
+sh2023LPAR:
+  src: /assets/img/publications/radio-hypercube.svg
+  kind: custom
+  alt: "SAT clauses feeding a projected hypercube whose vertices receive distance-constrained radio labels."
+
+sh2023:
+  src: /assets/img/publications/packing-fifteen.svg
+  kind: custom
+  alt: "A dense 72 by 72 packing-color grid connected to a magnified local pattern using fifteen colors."
+
+abrs2022:
+  src: /assets/img/publications/probabilistic-tree.svg
+  kind: custom
+  alt: "A colored decision tree leading to four bars representing the probabilities of different explanations."
+
+gpss2022:
+  src: /assets/img/publications/prediction-stream.svg
+  kind: custom
+  alt: "A dashed prediction curve tracking an actual online sequence and guiding a row of colored decisions."
+
+ls2022:
+  src: /assets/img/publications/word-grid.svg
+  kind: custom
+  alt: "Four rows of five Wordle-like feedback tiles feeding into a compact hardness constraint."
+
+sh2022:
+  src: /assets/img/d3-pc.svg
+  kind: paper
+  alt: "A diamond-shaped patch of the square grid colored with seven distance-constrained packing colors."
+
+barcelo2022laraTCS:
+  src: /assets/img/publications/lara-algebra.svg
+  kind: custom
+  alt: "A relational table and a colored matrix joined through one algebraic operator."
+
+bs2021:
+  src: /assets/img/publications/evil-hangman.webp
+  kind: paper
+  alt: "A hand-drawn Hangman figure surrounded by families of words that can shift as the game proceeds."
+
+abbps2021:
+  src: /assets/img/publications/logic-bridge.svg
+  kind: custom
+  alt: "A bridge of logical symbols connecting a layered machine-learning model to a verified explanation."
+
+bpms2020:
+  src: /assets/img/publications/interpretability-complexity.svg
+  kind: custom
+  alt: "A linear classifier, decision tree, and dense neural network compared through a magnifying glass."
+
+bps2020:
+  src: /assets/img/publications/logic-bridge.svg
+  kind: custom
+  alt: "A bridge of logical symbols connecting a layered machine-learning model to a verified explanation."
+
+bhps2020:
+  src: /assets/img/publications/lara-algebra.svg
+  kind: custom
+  alt: "A relational table and a colored matrix joined through one algebraic operator."
+
+bhps2019:
+  src: /assets/img/publications/tensor-query.svg
+  kind: custom
+  alt: "A three-dimensional tensor sliced by a small convolution kernel into a compact colored matrix."
+
+clps2016:
+  src: /assets/img/publications/wavelet-tree.svg
+  kind: custom
+  alt: "A colored sequence recursively splitting into a wavelet tree with one query path highlighted in red."

@@ -2,7 +2,11 @@
 layout: default
 ---
 <!-- _layouts/post.html -->
-{%- assign year = page.date | date: "%Y" -%}
+{%- assign dated_post = false -%}
+{%- if page.collection == "posts" -%}
+  {%- assign dated_post = true -%}
+  {%- assign year = page.date | date: "%Y" -%}
+{%- endif -%}
 {%- assign tags = page.tags | join: "" -%}
 {%- assign categories = page.categories | join: "" -%}
 
@@ -17,26 +21,32 @@ layout: default
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
-    <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}{%- if page.author -%} • {{ page.author }}{%- endif -%}{%- if page.meta -%} • {{ page.meta }}{%- endif -%}</p>
+    {%- if dated_post or page.author or page.meta -%}
+    <p class="post-meta">{%- if dated_post -%}{{ page.date | date: "%B %-d, %Y" }}{%- endif -%}{%- if page.author -%}{%- if dated_post -%} • {% endif -%}{{ page.author }}{%- endif -%}{%- if page.meta -%}{%- if dated_post or page.author -%} • {% endif -%}{{ page.meta }}{%- endif -%}</p>
+    {%- endif -%}
+    {%- if dated_post or tags != "" or categories != "" -%}
     <p class="post-tags">
+      {%- if dated_post -%}
       <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}"> <i class="fas fa-calendar fa-sm"></i> {{ year }} </a>
+      {%- endif -%}
       {%- if tags != "" %}
-      &nbsp; &middot; &nbsp;
+        {%- if dated_post -%}&nbsp; &middot; &nbsp;{%- endif -%}
         {% for tag in page.tags -%}
-        <a href="{{ tag | prepend: '/blog/tag/' | prepend: site.baseurl}}">
+        <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl}}">
           <i class="fas fa-hashtag fa-sm"></i> {{ tag }}</a> &nbsp;
           {% endfor -%}
       {% endif %}
 
       {%- if categories != "" %}
-      &nbsp; &middot; &nbsp;
+      {%- if dated_post or tags != "" -%}&nbsp; &middot; &nbsp;{%- endif -%}
         {% for category in page.categories -%}
-        <a href="{{ category | prepend: '/blog/category/' | prepend: site.baseurl}}">
+        <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">
           <i class="fas fa-tag fa-sm"></i> {{ category }}</a> &nbsp;
           {% endfor -%}
       {% endif %}
 
     </p>
+    {%- endif -%}
   </header>
 
   <article class="post-content">

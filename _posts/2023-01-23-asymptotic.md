@@ -3,7 +3,7 @@ layout: post
 title: A cute problem about asymptotics of a summation
 date: 2023-01-23 11:12:00-0400
 description: A solution to a nice little problem given to my Nicolás Sanhueza-Matamala.
-tags: math, asymptotics, puzzle
+tags: [math, asymptotics, puzzle]
 categories: Math
 comments: true
 ---
@@ -114,4 +114,3 @@ meaning that $$f(C+1) < f(C)$$, which contradicts Claim 1. Therefore, $$f(c) \le
 \begin{equation}
 \sum_{r = 1}^c \frac{c^r r^c}{r^{2r}} n^r \leq n^{c} \cdot\sum_{r = 1}^{c} \left(\frac{c}{r}\right)^{r} \cdot \left(\frac{1}{3}\right)^{c-r} = n^c \cdot f(c) \leq 11 n^c.
 \end{equation} 
-

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#fffaf0"/>
+  <path d="M18 52 H462 M18 250 H462" stroke="#eee5d3" stroke-width="2"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="135" cy="150" r="40" fill="none" stroke="#b53a2e" stroke-width="3" opacity="1"/><circle cx="135" cy="150" r="64" fill="none" stroke="#28547f" stroke-width="3" opacity="1"/><circle cx="135" cy="150" r="88" fill="none" stroke="#e0b53f" stroke-width="3" stroke-dasharray="5 7" opacity="1"/><circle cx="223.0" cy="150.0" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="211.2102355330306" cy="194.0" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="179.0" cy="226.21023553303058" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="135.0" cy="238.0" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="91.00000000000001" cy="226.2102355330306" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="58.78976446696939" cy="194.0" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="47.0" cy="150.0" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="58.78976446696939" cy="106.00000000000003" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="90.99999999999996" cy="73.78976446696942" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="134.99999999999997" cy="62.0" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="179.0" cy="73.7897644669694" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="211.21023553303058" cy="105.99999999999996" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><line x1="244" y1="150" x2="329" y2="150" stroke="#20201f" stroke-width="4" opacity="1"/><polygon points="329,150 319.79891085093294,156.0282633047106 319.79891085093294,143.9717366952894" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><path d="M350 198 C375 75 415 75 442 198" fill="none" stroke="#b53a2e" stroke-width="5" opacity="1"/><path d="M350 198 C375 115 415 115 442 198" fill="none" stroke="#28547f" stroke-width="5" opacity="1"/>
+  </g>
+  <g stroke="#20201f" stroke-width="2">
+    <rect x="0" y="0" width="116" height="12" fill="#b53a2e"/>
+    <rect x="116" y="0" width="174" height="12" fill="#fffaf0"/>
+    <rect x="290" y="0" width="70" height="12" fill="#28547f"/>
+    <rect x="360" y="0" width="120" height="12" fill="#28547f"/>
+  </g>
+</svg>

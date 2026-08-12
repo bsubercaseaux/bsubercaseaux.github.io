@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#fffaf0"/>
+  <path d="M18 52 H462 M18 250 H462" stroke="#eee5d3" stroke-width="2"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <line x1="45" y1="235" x2="256" y2="235" stroke="#20201f" stroke-width="3" opacity="1"/><line x1="45" y1="235" x2="45" y2="55" stroke="#20201f" stroke-width="3" opacity="1"/><line x1="66" y1="211" x2="231" y2="76" stroke="#b53a2e" stroke-width="5" opacity="1"/><circle cx="73" cy="92" r="8" fill="#28547f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="105" cy="118" r="8" fill="#28547f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="123" cy="76" r="8" fill="#28547f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="150" cy="143" r="8" fill="#28547f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="86" cy="164" r="8" fill="#28547f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="184" cy="184" r="8" fill="#e0b53f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="213" cy="151" r="8" fill="#e0b53f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="220" cy="213" r="8" fill="#e0b53f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="157" cy="204" r="8" fill="#e0b53f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="150" cy="143" r="29" fill="none" stroke="#b53a2e" stroke-width="3" stroke-dasharray="5 5" opacity="1"/><line x1="263" y1="150" x2="298" y2="150" stroke="#20201f" stroke-width="4" opacity="1"/><polygon points="298,150 288.79891085093294,156.0282633047106 288.79891085093294,143.9717366952894" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><rect x="312" y="72" width="88" height="24" rx="0" fill="#28547f" stroke="#20201f" stroke-width="2" opacity="1"/><rect x="312" y="115" width="124" height="24" rx="0" fill="#e0b53f" stroke="#20201f" stroke-width="2" opacity="1"/><rect x="312" y="158" width="65" height="24" rx="0" fill="#b53a2e" stroke="#20201f" stroke-width="2" opacity="1"/><rect x="312" y="201" width="105" height="24" rx="0" fill="#eee5d3" stroke="#20201f" stroke-width="2" opacity="1"/>
+  </g>
+  <g stroke="#20201f" stroke-width="2">
+    <rect x="0" y="0" width="116" height="12" fill="#28547f"/>
+    <rect x="116" y="0" width="174" height="12" fill="#fffaf0"/>
+    <rect x="290" y="0" width="70" height="12" fill="#28547f"/>
+    <rect x="360" y="0" width="120" height="12" fill="#b53a2e"/>
+  </g>
+</svg>

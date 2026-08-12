@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#fffaf0"/>
+  <path d="M18 52 H462 M18 250 H462" stroke="#eee5d3" stroke-width="2"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="62" cy="55" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="87" cy="126" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="60" cy="210" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="119" cy="248" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="257" cy="102" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="399" cy="63" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="423" cy="142" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="400" cy="234" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><polygon points="132,77 223,58 315,86 347,172 279,231 175,224" fill="#fffaf0" stroke="#b53a2e" stroke-width="6" opacity="1"/><circle cx="132" cy="77" r="8" fill="#28547f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="223" cy="58" r="8" fill="#e0b53f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="315" cy="86" r="8" fill="#28547f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="347" cy="172" r="8" fill="#e0b53f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="279" cy="231" r="8" fill="#28547f" stroke="#20201f" stroke-width="2" opacity="1"/><circle cx="175" cy="224" r="8" fill="#e0b53f" stroke="#20201f" stroke-width="2" opacity="1"/>
+  </g>
+  <g stroke="#20201f" stroke-width="2">
+    <rect x="0" y="0" width="116" height="12" fill="#b53a2e"/>
+    <rect x="116" y="0" width="174" height="12" fill="#fffaf0"/>
+    <rect x="290" y="0" width="70" height="12" fill="#28547f"/>
+    <rect x="360" y="0" width="120" height="12" fill="#28547f"/>
+  </g>
+</svg>

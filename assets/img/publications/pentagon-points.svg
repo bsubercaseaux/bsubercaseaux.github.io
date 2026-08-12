@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#fffaf0"/>
+  <path d="M18 52 H462 M18 250 H462" stroke="#eee5d3" stroke-width="2"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="63" cy="75" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="119" cy="54" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="175" cy="88" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="238" cy="64" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="298" cy="93" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="365" cy="64" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="420" cy="105" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="76" cy="167" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="142" cy="144" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="214" cy="177" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="281" cy="145" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="346" cy="180" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="413" cy="165" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="110" cy="237" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="193" cy="220" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="270" cy="240" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><circle cx="374" cy="229" r="5" fill="#20201f" stroke="#20201f" stroke-width="1" opacity="1"/><polygon points="175,88 298,93 346,180 270,240 214,177" fill="#e0b53f" stroke="#b53a2e" stroke-width="5" opacity="0.66"/>
+  </g>
+  <g stroke="#20201f" stroke-width="2">
+    <rect x="0" y="0" width="116" height="12" fill="#b53a2e"/>
+    <rect x="116" y="0" width="174" height="12" fill="#fffaf0"/>
+    <rect x="290" y="0" width="70" height="12" fill="#28547f"/>
+    <rect x="360" y="0" width="120" height="12" fill="#e0b53f"/>
+  </g>
+</svg>

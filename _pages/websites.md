@@ -6,7 +6,7 @@ description:
 nav: false
 ---
 
-I'm excited to maintain a website collecting papers and other resources related to the use of SAT solvers in mathematics. You can find it at <a href="https://bsubercaseaux.github.io/sat-for-math/">bsubercaseaux.github.io/sat-for-math</a>.
+I'm excited to maintain a website collecting papers and other resources related to the use of SAT solvers in mathematics. You can find it at <a href="https://sat4math.com">sat4math.com</a>.
 
 Here's a collection of some small websites I've built (some with help of others):
 <ul class="starlist">

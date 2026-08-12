@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" role="img" aria-labelledby="title desc">
+  <title id="title">A slow route through Rubik's Cube states</title>
+  <desc id="desc">A scrambled two by two cube feeds into a long winding path through many state nodes, ending at a solved cube.</desc>
+
+  <rect width="480" height="300" fill="#fffaf0"/>
+  <path d="M18 52 H462 M18 250 H462" fill="none" stroke="#eee5d3" stroke-width="2"/>
+
+  <!-- A compact, scrambled 2x2x2 cube. -->
+  <g stroke="#20201f" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5">
+    <polygon points="92,61 120,76 92,91 64,76" fill="#b53a2e"/>
+    <polygon points="120,76 148,91 120,106 92,91" fill="#28547f"/>
+    <polygon points="92,91 120,106 92,121 64,106" fill="#e0b53f"/>
+    <polygon points="64,76 92,91 64,106 36,91" fill="#fffaf0"/>
+
+    <polygon points="36,91 64,106 64,139 36,124" fill="#28547f"/>
+    <polygon points="64,106 92,121 92,154 64,139" fill="#e0b53f"/>
+    <polygon points="36,124 64,139 64,172 36,157" fill="#b53a2e"/>
+    <polygon points="64,139 92,154 92,187 64,172" fill="#fffaf0"/>
+
+    <polygon points="92,121 120,106 120,139 92,154" fill="#b53a2e"/>
+    <polygon points="120,106 148,91 148,124 120,139" fill="#e0b53f"/>
+    <polygon points="92,154 120,139 120,172 92,187" fill="#28547f"/>
+    <polygon points="120,139 148,124 148,157 120,172" fill="#fffaf0"/>
+  </g>
+
+  <!-- One deliberately long, exhaustive-looking walk through the state graph. -->
+  <polyline
+    points="148,124 174,68 210,68 246,68 282,68 318,68 354,68 390,68 426,68 426,104 390,104 354,104 318,104 282,104 246,104 210,104 174,104 174,140 210,140 246,140 282,140 318,140 354,140 390,140 426,140 426,176 390,176 354,176 318,176 282,176 246,176 210,176 174,176 174,216 210,216 246,216 282,216 318,216 354,216 390,216 414,216"
+    fill="none"
+    stroke="#28547f"
+    stroke-width="3.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- States visited by the path; a few are picked out like landmarks. -->
+  <g stroke="#20201f" stroke-width="2">
+    <circle cx="174" cy="68" r="6" fill="#b53a2e"/>
+    <circle cx="210" cy="68" r="5" fill="#fffaf0"/>
+    <circle cx="246" cy="68" r="5" fill="#fffaf0"/>
+    <circle cx="282" cy="68" r="5" fill="#e0b53f"/>
+    <circle cx="318" cy="68" r="5" fill="#fffaf0"/>
+    <circle cx="354" cy="68" r="5" fill="#fffaf0"/>
+    <circle cx="390" cy="68" r="5" fill="#b53a2e"/>
+    <circle cx="426" cy="68" r="5" fill="#fffaf0"/>
+
+    <circle cx="426" cy="104" r="5" fill="#e0b53f"/>
+    <circle cx="390" cy="104" r="5" fill="#fffaf0"/>
+    <circle cx="354" cy="104" r="5" fill="#fffaf0"/>
+    <circle cx="318" cy="104" r="5" fill="#b53a2e"/>
+    <circle cx="282" cy="104" r="5" fill="#fffaf0"/>
+    <circle cx="246" cy="104" r="5" fill="#fffaf0"/>
+    <circle cx="210" cy="104" r="5" fill="#e0b53f"/>
+    <circle cx="174" cy="104" r="5" fill="#fffaf0"/>
+
+    <circle cx="174" cy="140" r="5" fill="#fffaf0"/>
+    <circle cx="210" cy="140" r="5" fill="#b53a2e"/>
+    <circle cx="246" cy="140" r="5" fill="#fffaf0"/>
+    <circle cx="282" cy="140" r="5" fill="#e0b53f"/>
+    <circle cx="318" cy="140" r="5" fill="#fffaf0"/>
+    <circle cx="354" cy="140" r="5" fill="#fffaf0"/>
+    <circle cx="390" cy="140" r="5" fill="#b53a2e"/>
+    <circle cx="426" cy="140" r="5" fill="#fffaf0"/>
+
+    <circle cx="426" cy="176" r="5" fill="#e0b53f"/>
+    <circle cx="390" cy="176" r="5" fill="#fffaf0"/>
+    <circle cx="354" cy="176" r="5" fill="#fffaf0"/>
+    <circle cx="318" cy="176" r="5" fill="#b53a2e"/>
+    <circle cx="282" cy="176" r="5" fill="#fffaf0"/>
+    <circle cx="246" cy="176" r="5" fill="#fffaf0"/>
+    <circle cx="210" cy="176" r="5" fill="#e0b53f"/>
+    <circle cx="174" cy="176" r="5" fill="#fffaf0"/>
+
+    <circle cx="174" cy="216" r="5" fill="#b53a2e"/>
+    <circle cx="210" cy="216" r="5" fill="#fffaf0"/>
+    <circle cx="246" cy="216" r="5" fill="#fffaf0"/>
+    <circle cx="282" cy="216" r="5" fill="#e0b53f"/>
+    <circle cx="318" cy="216" r="5" fill="#fffaf0"/>
+    <circle cx="354" cy="216" r="5" fill="#fffaf0"/>
+    <circle cx="390" cy="216" r="6" fill="#b53a2e"/>
+  </g>
+
+  <!-- The route finally reaches a solved state. -->
+  <g stroke="#20201f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polygon points="436,193 456,204 436,215 416,204" fill="#e0b53f"/>
+    <polygon points="416,204 436,215 436,238 416,227" fill="#28547f"/>
+    <polygon points="436,215 456,204 456,227 436,238" fill="#b53a2e"/>
+    <path d="M426 209 L446 198 M426 221 L446 210 M436 215 V238 M446 210 V233" fill="none" stroke-width="1.25"/>
+  </g>
+
+  <g stroke="#20201f" stroke-width="2">
+    <rect x="0" y="0" width="116" height="12" fill="#28547f"/>
+    <rect x="116" y="0" width="174" height="12" fill="#fffaf0"/>
+    <rect x="290" y="0" width="70" height="12" fill="#b53a2e"/>
+    <rect x="360" y="0" width="120" height="12" fill="#e0b53f"/>
+  </g>
+</svg>

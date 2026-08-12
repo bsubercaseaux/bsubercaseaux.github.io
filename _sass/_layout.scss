@@ -2,6 +2,8 @@
  * Content
  ******************************************************************************/
 
+@use "settings" as *;
+
 body {
   padding-bottom: 70px;
   color: var(--global-text-color);

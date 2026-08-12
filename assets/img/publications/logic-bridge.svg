@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300">
+  <rect width="480" height="300" fill="#fffaf0"/>
+  <path d="M18 52 H462 M18 250 H462" stroke="#eee5d3" stroke-width="2"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <rect x="38" y="65" width="72" height="24" rx="0" fill="#28547f" stroke="#20201f" stroke-width="2" opacity="1"/><rect x="38" y="107" width="88" height="24" rx="0" fill="#e0b53f" stroke="#20201f" stroke-width="2" opacity="1"/><rect x="38" y="149" width="104" height="24" rx="0" fill="#b53a2e" stroke="#20201f" stroke-width="2" opacity="1"/><rect x="38" y="191" width="120" height="24" rx="0" fill="#eee5d3" stroke="#20201f" stroke-width="2" opacity="1"/><path d="M164 209 C189 116 287 116 316 209" fill="none" stroke="#20201f" stroke-width="9" opacity="1"/><line x1="171" y1="191" x2="308" y2="191" stroke="#b53a2e" stroke-width="4" stroke-dasharray="7 6" opacity="1"/><circle cx="198" cy="161" r="15" fill="#e0b53f" stroke="#20201f" stroke-width="2" opacity="1"/><text x="198" y="161" fill="#20201f" font-family="ui-monospace, monospace" font-size="16" font-weight="700" text-anchor="middle" dominant-baseline="middle">∀</text><circle cx="229" cy="143" r="15" fill="#28547f" stroke="#20201f" stroke-width="2" opacity="1"/><text x="229" y="143" fill="#fffaf0" font-family="ui-monospace, monospace" font-size="16" font-weight="700" text-anchor="middle" dominant-baseline="middle">∧</text><circle cx="260" cy="161" r="15" fill="#e0b53f" stroke="#20201f" stroke-width="2" opacity="1"/><text x="260" y="161" fill="#20201f" font-family="ui-monospace, monospace" font-size="16" font-weight="700" text-anchor="middle" dominant-baseline="middle">¬</text><circle cx="291" cy="143" r="15" fill="#28547f" stroke="#20201f" stroke-width="2" opacity="1"/><text x="291" y="143" fill="#fffaf0" font-family="ui-monospace, monospace" font-size="16" font-weight="700" text-anchor="middle" dominant-baseline="middle">∃</text><rect x="349" y="83" width="84" height="104" rx="0" fill="#fffaf0" stroke="#20201f" stroke-width="3" opacity="1"/><path d="M365 136 l14 15 l37 -43" fill="none" stroke="#b53a2e" stroke-width="5" opacity="1"/>
+  </g>
+  <g stroke="#20201f" stroke-width="2">
+    <rect x="0" y="0" width="116" height="12" fill="#b53a2e"/>
+    <rect x="116" y="0" width="174" height="12" fill="#fffaf0"/>
+    <rect x="290" y="0" width="70" height="12" fill="#28547f"/>
+    <rect x="360" y="0" width="120" height="12" fill="#28547f"/>
+  </g>
+</svg>

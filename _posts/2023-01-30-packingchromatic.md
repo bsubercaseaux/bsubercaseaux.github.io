@@ -3,7 +3,7 @@ layout: post
 title: The story behind the Packing Chromatic paper.
 date: 2023-01-30
 description: A personal tale about what it's been to determine the packing chromatic number of the infinite square grid.
-tags: math, research, automated reasoning
+tags: [math, research, automated-reasoning]
 comments: true
 categories: Math
 ---
@@ -17,7 +17,7 @@ It all started in 2019, when I took [Éric Tanter](https://pleiad.cl/people/etan
 So at the end of the semester I asked Éric if I could TA for it the following year, and he said yes. Moreover, he invited me to participate in ***CASS*** (Coq Andes Summer School) 2020, a week-long course on Coq, the theorem prover. I wanted to learn more about theorem provers, so I happily accepted. The course took place not too far from my city during the Chilean summer, from January 6th to Friday 10th.
 
 <figure style="text-align:center;">
-  <img src="https://www.nic.cl/img/anuncios/cass2020.png" alt="Description of image" style="max-width: 70%;">
+  <img src="https://www.nic.cl/img/anuncios/cass2020.png" alt="Logo for the 2020 Coq Andes Summer School" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 1: </b>
     <span style="font-size: 16px;"> logo of the summer school.</span>
@@ -38,7 +38,7 @@ For an example, take a look at these [169 lines of Coq used to prove the irratio
 But enough about Coq for now. The thing is, my week at CASS was severely interrupted on its second day, January 7th. I received a notification from one of my favorite Facebook groups: *“actually good math problems”.* It’s a group where math lovers from all over the world and from different areas in math post and discuss _good_ math problems. It’s pretty much the only reason  I still have a Facebook account. So on January 7th,  I received a notification, with the following post.
 
 <figure style="text-align:center;">
-  <img src="/assets/img/dylan-post.png" alt="Description of image" style="max-width: 70%;">
+  <img src="/assets/img/dylan-post.png" alt="Screenshot of Dylan Pizzo's post in the actually good math problems Facebook group" style="max-width: 70%;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 2: </b>
     <span style="font-size: 16px;"> Screenshot of Dylan Pizzo's original Facebook post on the "actually good math problems" group.</span>
@@ -67,7 +67,7 @@ So just change a $$1$$ for a $$c$$; *distance-colorings* are a very natural gene
 For example, let’s consider a _distance-coloring_ for the infinite path $$\mathbb{Z}^1.$$
 
 <figure style="text-align:center;">
-  <img src="/assets/img/path-pc.svg" alt="Description of image" style="max-width: 70%; width: 500px;">
+  <img src="/assets/img/path-pc.svg" alt="Infinite path labeled with the repeating distance-coloring 1, 3, 1, 2" style="max-width: 70%; width: 500px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 3: </b>
     <span style="font-size: 16px;"> A depiction of <TT>(1312)*</TT> as a distance-coloring for \(\mathbb{Z}^1\), proving that \(\chi_d(\mathbb{Z}^1) \leq 3.\)</span>
@@ -80,7 +80,7 @@ It only uses 3 colors and can be repeated periodically! Vertices receiving color
 For a more interesting example, we will consider *sub-graphs of the infinite square grid*, that is, a graph where vertices are cells from an infinite grid, and two orthogonally adjacent cells have an edge between them. The following image shows how $$D_3$$ (the _“diamond”_ of radius 3) admits a distance-coloring with 7 colors.
 
 <figure style="text-align:center;">
-  <img src="/assets/img/d3-pc.svg" alt="Description of image" style="max-width: 70%; width: 350px;">
+  <img src="/assets/img/d3-pc.svg" alt="Radius-three diamond grid with a valid distance-coloring using seven colors" style="max-width: 70%; width: 350px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 4: </b>
     <span style="font-size: 16px;"> A proof for \(\chi_d(D_3) \leq 7.\)</span>
@@ -90,7 +90,7 @@ For a more interesting example, we will consider *sub-graphs of the infinite squ
 Now, by changing the center color to 6, we can produce a more efficient solution, only using 6 colors, as displayed next.
 
 <figure style="text-align:center;">
-  <img src="/assets/img/d3-6-pc.svg" alt="Description of image" style="max-width: 70%; width: 350px;">
+  <img src="/assets/img/d3-6-pc.svg" alt="Radius-three diamond grid with a valid distance-coloring using six colors" style="max-width: 70%; width: 350px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 5: </b>
     <span style="font-size: 16px;"> A proof for \(\chi_d(D_3) \leq 6.\)</span>
@@ -108,7 +108,7 @@ First, let me show how densities can be useful to prove things. First, let us pr
 Now let us consider a more interesting example. Let $$\mathbb{Z}^2_\infty$$ be the graph whose vertex set is $$\mathbb{Z}^2$$, and that has edges not only between orthogonally adjacent vertices, but also diagonally adjacent pairs. Formally, for $$u, v \in \mathbb{Z}^2$$, they are connected if $$\vert u - v \vert_\infty = 1$$.
 
 <figure style="text-align:center;">
-  <img src="/assets/img/z2_linfty.png" alt="Description of image" style="max-width: 70%; width: 300px;">
+  <img src="/assets/img/z2_linfty.png" alt="Local square-grid graph with edges to orthogonal and diagonal neighbors" style="max-width: 70%; width: 300px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 6: </b>
     <span style="font-size: 16px;"> A local view of \( \mathbb{Z}^2_\infty \).</span>
@@ -131,7 +131,7 @@ Also, some pretty important global events happened soon after the January 2020 s
 
 
 <figure style="text-align:center;">
-  <img src="/assets/img/santiago-pandemia.jpeg" alt="Description of image" style="max-width: 70%; width: 500px;">
+  <img src="/assets/img/santiago-pandemia.jpeg" alt="People wearing face masks in Santiago, Chile, during the COVID-19 pandemic" style="max-width: 70%; width: 500px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 7: </b>
     <span style="font-size: 16px;"> A picture of people wearing face masks in Santiago, Chile, during the Covid pandemic.</span>
@@ -143,7 +143,7 @@ Flash-forward to September 2021. I enroll as a PhD student at Carnegie Mellon Un
 [Marijn Heule](https://www.cs.cmu.edu/~mheule/) gave his IC talk on his automated approach to the _Pythagorean triples problem_, which consists of coloring the integers with red and blue in a way that no Pythagorean triple is monochromatic. For example, if 12 and 16 receive color blue, then 20 must receive color red, as $$12^2 + 16^2 = 20^2$$. It was a great talk, but also a 10-15 minutes one, directed to students with very different backgrounds and interests, so he couldn’t say anything very deep or technical. The main thing I got out of the talk was: *“This CMU professor has been applying automated reasoning techniques to solve hard coloring problems; interesting.”*
 
 <figure style="text-align:center;">
-  <img src="/assets/img/solution-zoom.png" alt="Description of image" style="max-width: 70%; width: 700px;">
+  <img src="/assets/img/solution-zoom.png" alt="Red-and-blue integer coloring with no monochromatic Pythagorean triple" style="max-width: 70%; width: 700px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 8: </b>
     <span style="font-size: 16px;"> An illustration (from Marijn's website) of a bicoloring that avoids mono-chromatic Pythagorean triples.</span>
@@ -162,7 +162,7 @@ Soon after, I was having lunch with [Isaac Grosof](https://isaacg1.github.io/), 
 Marijn and I met shortly thereafter, and he explained me how to run a SAT solver on the problem. Armed with that, we were able to obtain a solution with 17 colors pretty quickly, and later that same week another solution with only 15 colors. Before understanding how a computer can be used to prove that 15 colors are enough to distance-color the infinite grid, it's convenient to understand first how a computer can be used to prove that 3 colors are enough to distance-color the infinite path (which we know it's possible from Figure 3). In order to do this, we can consider a subgraph of the infinite path, like $$P_4$$, the path on 4 vertices, and try to distance-color it with $$3$$ colors. Consider the following attempt[^1]:
 
 <figure style="text-align:center;">
-  <img src="/assets/img/in-path.svg" alt="Description of image" style="max-width: 70%; width: 700px;">
+  <img src="/assets/img/in-path.svg" alt="Four-vertex path labeled 2, 1, 3, and 2 in a three-color distance-coloring" style="max-width: 70%; width: 700px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 9: </b>
     <span style="font-size: 16px;"> A distance-coloring of \(P_4\) using 3 colors.</span>
@@ -172,7 +172,7 @@ Marijn and I met shortly thereafter, and he explained me how to run a SAT solver
 The problem with the distance-coloring in Figure 9 is that we cannot extend it to the infinite path. The next vertex to the right must receive color $$1$$, and the following one will not be able to receive any color. This is illustrated in Figure 10.
 
 <figure style="text-align:center;">
-  <img src="/assets/img/in-path-fail.svg" alt="Description of image" style="max-width: 70%; width: 700px;">
+  <img src="/assets/img/in-path-fail.svg" alt="The path coloring 2, 1, 3, 2, 1 followed by a crossed-out uncolorable vertex" style="max-width: 70%; width: 700px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 10: </b>
     <span style="font-size: 16px;"> The distance-coloring of \(P_4\) illustrated in Figure 9 cannot be extended to the infinite path.</span>
@@ -182,7 +182,7 @@ The problem with the distance-coloring in Figure 9 is that we cannot extend it t
 The question is therefore: how can find a distance-coloring of a finite path that can be extended to the infinite path, and hopefully in a periodic manner? The answer is: _toroidal edges_. The idea is that by connecting the endpoints of a finite path, and transforming it into a cycle, we will capture the property of the distance-coloring being periodically extendable; from a distance-coloring of $$C_4$$ we can obtain a distance-coloring of $$C_8$$, and thus for $$C_{16}$$, and so on. This is illustrated next in Figure 11.
 
 <figure style="text-align:center;">
-  <img src="/assets/img/path-unroll.svg" alt="Description of image" style="max-width: 70%; width: 700px;">
+  <img src="/assets/img/path-unroll.svg" alt="Four-vertex cycle labeled 1, 3, 1, 2 unrolled into an eight-vertex periodic path" style="max-width: 70%; width: 700px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 11: </b>
     <span style="font-size: 16px;"> A distance-coloring of \(C_4\) induces a distance-coloring of \(\mathbb{Z}^1\) by <i>unrolling</i> the cycle. Toroidal edges are shown in dashed dark red.</span>
@@ -216,7 +216,7 @@ Using this direct encoding over a $$72 \times 72$$ subgrid with toroidal edges, 
 
 
 <figure style="text-align:center;">
-  <img src="/assets/img/72-15.svg" alt="Description of image" style="max-width: 70%; width: 800px;">
+  <img src="/assets/img/72-15.svg" alt="A 72-by-72 periodic square-grid packing coloring using 15 colors" style="max-width: 70%; width: 800px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 12: </b>
     <span style="font-size: 16px;"> A periodic coloring for \(\mathbb{Z}^2\) with \(15\) colors, showing that \(\chi_d(\mathbb{Z}^2) \leq 15.\)</span>
@@ -235,7 +235,7 @@ A couple of months later we knew that 15 colors were enough and that one needed 
 But the terminology was bothering me. I was calling these *“distance-colorings”*, but I knew (as a quick Google search revealed), that people were using *“distance-colorings”* to refer to something else, and therefore I wanted a new term. I started doing an actual proper literary review (i.e., beyond a Google search) by reading surveys on different coloring problems, to see what was the nearest neighbor of our problem and figure out a related name. At some point during this literature review I stumbled upon this:
 
 <figure style="text-align:center;">
-  <img src="/assets/img/pack-def.png" alt="Description of image" style="max-width: 70%; width: 700px;">
+  <img src="/assets/img/pack-def.png" alt="Paper excerpt defining the packing chromatic number using distance-separated color classes" style="max-width: 70%; width: 700px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 13: </b>
     <span style="font-size: 16px;"> An innocent-looking definition of a weird kind of graph coloring...</span>
@@ -243,7 +243,7 @@ But the terminology was bothering me. I was calling these *“distance-colorings
 </figure>
 
 <figure style="text-align:center;">
-  <img src="/assets/img/scream.jpeg" alt="Description of image" style="max-width: 70%; width: 500px;">
+  <img src="/assets/img/scream.jpeg" alt="Edvard Munch's The Scream, illustrating the author's reaction to recognizing the definition" style="max-width: 70%; width: 500px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 14: </b>
     <span style="font-size: 16px;"> A schematic representation of my reaction to Figure 13.</span>
@@ -258,7 +258,7 @@ I was horrified. I had basically been working for several months on a problem wi
 So Marijn and I started pushing to improve the $$13 \leq \chi_\rho(\mathbb{Z}^2) \leq 15$$ gap (note that our notation has changed from $$\chi_d(\cdot)$$ to $$\chi_\rho(\cdot)$$!), and in a few months, after several optimizations and discussions and dozens of experiments, we managed to prove the answer was not 13. At this point the title of the paper we wrote about it is not hard to guess: *[“The Packing Chromatic Number of the Infinite Square Grid is At Least 14”](https://www.cs.cmu.edu/~mheule/publications/SAT22-gridcolor.pdf).* It got accepted at SAT’2022 🙂.
 
 <figure style="text-align:center;">
-  <img src="/assets/img/ack.png" alt="Description of image" style="max-width: 70%; width: 700px;">
+  <img src="/assets/img/ack.png" alt="Paper acknowledgments thanking the Pittsburgh Supercomputing Center and Dylan Pizzo" style="max-width: 70%; width: 700px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 15: </b>
     <span style="font-size: 16px;"> Acknowledgment section of the SAT'2022 paper.</span>
@@ -269,8 +269,8 @@ So Marijn and I started pushing to improve the $$13 \leq \chi_\rho(\mathbb{Z}^2)
 One of the simplest optimizations we used, for example, is _symmetry breaking_. The idea of symmetry breaking is that CDCL SAT solvers can be understood as programs that try the different Boolean assignments in a way that's more clever than simply iterating over the $$2^{\# {\rm vars}}$$ possibilities, and they do this by learning things from the partial assignments they try. As the following figure shows, many of these partial assignments can be symmetric, which means that exploring them separately is a waste of time.
 
 <figure style="text-align:center;">
-  <img src="/assets/img/cube1.svg" alt="Description of image" style="max-width: 70%; width: 350px; margin-right:20px;">
-  <img src="/assets/img/cube2.svg" alt="Description of image" style="max-width: 70%; width: 350px; margin-left: 20px;">
+  <img src="/assets/img/cube1.svg" alt="First of two symmetric partial color assignments on a diamond grid" style="max-width: 70%; width: 350px; margin-right:20px;">
+  <img src="/assets/img/cube2.svg" alt="Mirror-symmetric counterpart of the preceding partial color assignment" style="max-width: 70%; width: 350px; margin-left: 20px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 16: </b>
     <span style="font-size: 16px;"> Example of symmetric partial assignments.</span>
@@ -280,7 +280,7 @@ One of the simplest optimizations we used, for example, is _symmetry breaking_. 
 A way to avoid this waste of time is by _breaking the symmetry_, meaning that by incorporating additional restrictions the instance is no longer symmetric. In the case of a _diamond_ subgraph, we can add the following constraint: _"the occurrence of the largest color that appears the closest to the center must appear in the north-north-east octant_", thus gaining a factor of 8 in runtime.
 
 <figure style="text-align:center;">
-  <img src="/assets/img/symmetry.svg" alt="Description of image" style="max-width: 70%; width: 500px;">
+  <img src="/assets/img/symmetry.svg" alt="Diamond grid divided into eight symmetric octants, with one octant highlighted light blue" style="max-width: 70%; width: 500px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 17: </b>
     <span style="font-size: 16px;"> Illustration of an x8 symmetry breaking constraint, that distinguishes a main octant (in light blue).</span>
@@ -293,7 +293,7 @@ But Marijn had faith in us solving the problem, so we kept working on it. We sta
 
 
 <figure style="text-align:center;">
-  <img src="/assets/img/ss-placing-4.png" alt="Description of image" style="max-width: 70%; width: 700px;">
+  <img src="/assets/img/ss-placing-4.png" alt="Interactive Encoder interface showing a partially colored diamond grid and SAT encoding controls" style="max-width: 70%; width: 700px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 18: </b>
     <span style="font-size: 16px;">A screenshot of <i>Interactive Encoder</i>, one of the many small tools I built for working on this project.</span>
@@ -310,7 +310,7 @@ In fact, we quickly managed to prove that assuming the  _chessboard conjecture_ 
 After more optimizations, it turned out the _chessboard conjecture_ was false, and our optimized techniques allowed us to find the smallest counterexample! 
 
 <figure style="text-align:center;">
-  <img src="/assets/img/chessboard.svg" alt="Description of image" style="max-width: 70%; width: 700px;">
+  <img src="/assets/img/chessboard.svg" alt="Radius-14 diamond packing-coloring whose two misplaced color-1 cells break the chessboard pattern" style="max-width: 70%; width: 700px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 19: </b>
     <span style="font-size: 16px;">The smallest counterexample to the <i>chessboard conjecture</i>. The diamond of radius 14, and a 6 forced in the center, can be packing-colored with 14 colors only if the chessboard pattern is broken. In this case, two occurrences of color 1 in the north-west edge are out of the chessboard pattern, and this cannot be fixed.</span>
@@ -321,7 +321,7 @@ But this didn't stop us, we kept optimizing and after a couple more months we fi
 A summary of the historical progress on the problem is presented below:
 
 <figure style="text-align:center;">
-  <img src="/assets/img/table-crop.png" alt="Description of image" style="max-width: 70%; width: 700px;">
+  <img src="/assets/img/table-crop.png" alt="Table of published bounds for the infinite square grid's packing chromatic number from 2002 to 2022" style="max-width: 70%; width: 700px;">
   <figcaption>
     <b style="font-size: 18px;"> Figure 20: </b>
     <span style="font-size: 16px;">Summary of the progress on computing \(\chi_\rho(\mathbb{Z}^2).\)</span>
