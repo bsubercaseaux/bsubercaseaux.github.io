@@ -29,7 +29,7 @@ math: false
         <img class="portrait-main" src="{{ '/assets/img/prof_pic4.jpg' | relative_url }}" alt="Bernardo Subercaseaux in profile" width="852" height="1280">
         <img class="portrait-easter-egg" src="{{ '/assets/img/Curious_George.png' | relative_url }}" alt="" width="360" height="450" aria-hidden="true">
       </div>
-      <figcaption class="portrait-caption"><strong>Photographic evidence</strong><span>hover for surprise</span></figcaption>
+      <figcaption class="portrait-caption"><strong>Figure 1:</strong><span> me (hover for surprise).</span></figcaption>
     </figure>
   </header>
 
