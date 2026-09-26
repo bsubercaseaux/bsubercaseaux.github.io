@@ -2,7 +2,6 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Papers, preprints, abstracts, and links—organized by year.
 years: [2026, 2025, 2024, 2023, 2022, 2021, 2020, 2019, 2018, 2017, 2016]
 nav: true
 nav_order: 1
@@ -10,6 +9,14 @@ publication_previews: true
 ---
 
 <p class="publication-intro">My most up-to-date list of papers is usually on <a href="{{ site.data.citations.profile_url }}">Google Scholar</a>, but this page is my tidier, annotated list, with BibTeX, abstracts, and links whenever they are available.</p>
+
+## Papers
+<div class="publications">
+  {% for y in page.years %}
+    <h2 class="year" id="year-{{ y }}">{{ y }}</h2>
+    {% bibliography -f papers -q @*[year={{y}}]* %}
+  {% endfor %}
+</div>
 
 <div class="publication-overview">
   <section class="publication-datapoints" aria-labelledby="publication-datapoints-title">
@@ -25,13 +32,5 @@ publication_previews: true
   {% include citation_chart.html %}
 </div>
 
-
-## Papers
-<div class="publications">
-  {% for y in page.years %}
-    <h2 class="year" id="year-{{ y }}">{{ y }}</h2>
-    {% bibliography -f papers -q @*[year={{y}}]* %}
-  {% endfor %}
-</div>
 
 [^1]: This count might include a journal version of a conference paper separately, if there's a enough difference between the two.

@@ -2,7 +2,7 @@
 layout: post
 title: Subquadratic encodings for my favorite graph problems
 date: 2025-05-09 11:12:00-0400
-description: An observation allowing to encode several graph problems in $$o(|E|)$$ clauses.
+description: An observation allowing to encode several graph problems in \(o(|E|)\) clauses.
 tags: math
 categories: Math
 comments: true
@@ -29,8 +29,9 @@ While cardinality constraints are known to admit compact encodings with $$\mathc
  \sum_{i=1}^r |V(B_i)| \in \mathcal{O}(|V(G)|^2 / \lg (|V(G)|)).
  $$
  Furthermore, Mubayi and Turán proved that such a covering can be computed in polynomial time [[3]](https://arxiv.org/pdf/0905.2527), which allows therefore to construct the succinct encoding from an input graph in polynomial time. Naturally, without this runtime restriction the result of this note would be trivial, since one could first solve the independent set instance and then build a constant-size formula according to the answer.
- 
 
- ## Edit from a few months later:
+## Edit from a few months later:
 
- I have written more in depth about this result here: https://arxiv.org/abs/2506.14042. But more importantly, together with Andrew Krapivin, Benjamin Pzybocki, and Nicolás Sanhueza-Matamala, we have improved the best bounds on biclique partitions/coverings for graphs, optimally solved the hypergraph case as well, and significantly improved the algorithmic aspects of the problem since Mubayi and Turán's result. The paper is available here: https://www.arxiv.org/abs/2511.11855. 
+I have written more in depth about this result [here](https://arxiv.org/abs/2506.14042). But more importantly, together with Andrew Krapivin, Benjamin Przybocki, and Nicolás Sanhueza-Matamala, we have improved the best bounds on biclique partitions/coverings for graphs, optimally solved the hypergraph case as well, and significantly improved the algorithmic aspects of the problem since Mubayi and Turán's result. The paper is available [here](https://arxiv.org/abs/2511.11855).
+
+**Further update:** we have made substantial progress in understanding how Bounded Variable Addition, a successful technique incorporated in modern solvers, has been computing biclique partitions all along. See our [recent work](https://arxiv.org/abs/2603.27774).

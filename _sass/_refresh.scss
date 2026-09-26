@@ -499,9 +499,8 @@ blockquote {
 }
 
 .portrait-caption {
-  display: flex;
-  gap: 0.75rem;
-  justify-content: space-between;
+  display: block;
+  text-align: center;
   margin-top: 0.75rem;
   color: var(--muted);
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
@@ -510,12 +509,7 @@ blockquote {
 }
 
 .portrait-caption strong {
-  flex: 0 0 auto;
   color: var(--ink);
-}
-
-.portrait-caption span {
-  text-align: right;
 }
 
 .home-statement,
@@ -700,7 +694,7 @@ blockquote {
   grid-template-columns: minmax(0, 1fr) minmax(21rem, 26rem);
   gap: clamp(2rem, 5vw, 4rem);
   align-items: start;
-  margin-bottom: 2.75rem;
+  margin-top: 2.75rem;
 }
 
 .publication-datapoints > h2,
@@ -1115,30 +1109,12 @@ footer.fixed-bottom {
   }
 }
 
-@media (max-width: 767px) {
-  body {
-    background-attachment: scroll;
-    font-size: 20px;
-  }
-
+// Keep the expanded navigation, including Talks, from crowding tablet widths.
+@media (max-width: 991.98px) {
   .site-header .container {
     width: 100%;
     padding-right: 0.85rem;
     padding-left: 0.85rem;
-  }
-
-  .site-header .navbar,
-  .site-header .navbar .container {
-    min-height: 4rem;
-  }
-
-  .site-brand {
-    font-size: 1rem;
-  }
-
-  .site-mark {
-    width: 1.7rem;
-    height: 1.7rem;
   }
 
   .navbar-collapse {
@@ -1166,6 +1142,27 @@ footer.fixed-bottom {
     bottom: 0.35rem;
     left: 0;
     width: 1.7rem;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    background-attachment: scroll;
+    font-size: 20px;
+  }
+
+  .site-header .navbar,
+  .site-header .navbar .container {
+    min-height: 4rem;
+  }
+
+  .site-brand {
+    font-size: 1rem;
+  }
+
+  .site-mark {
+    width: 1.7rem;
+    height: 1.7rem;
   }
 
   .home-sheet {
@@ -1201,16 +1198,6 @@ footer.fixed-bottom {
   .hero-portrait-card {
     width: min(72%, 16rem);
     margin-left: 0.35rem;
-  }
-
-  .portrait-caption {
-    display: block;
-  }
-
-  .portrait-caption span {
-    display: block;
-    margin-top: 0.2rem;
-    text-align: left;
   }
 
   .home-statement,

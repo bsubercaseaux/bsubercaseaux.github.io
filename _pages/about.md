@@ -11,7 +11,6 @@ math: false
 
   <header class="home-intro">
     <div>
-      <p class="home-role">Computer Science PhD candidate at Carnegie Mellon University</p>
       <h1 class="home-title">Bernardo Subercaseaux</h1>
       <p class="home-lede">I am a PhD candidate at <a href="https://www.cs.cmu.edu/">CMU</a>, where I am advised by the amazing <a href="https://www.cs.cmu.edu/~mheule/">Marijn Heule</a>. I think mostly about using <a href="https://www.sat4math.com">SAT for mathematics</a>,  but to be honest, I just love computer science and discrete mathematics in their full diversity.</p>
 
@@ -29,7 +28,7 @@ math: false
         <img class="portrait-main" src="{{ '/assets/img/prof_pic4.jpg' | relative_url }}" alt="Bernardo Subercaseaux in profile" width="852" height="1280">
         <img class="portrait-easter-egg" src="{{ '/assets/img/Curious_George.png' | relative_url }}" alt="" width="360" height="450" aria-hidden="true">
       </div>
-      <figcaption class="portrait-caption"><strong>Figure 1:</strong> me (hover for surprise).</figcaption>
+      <figcaption class="portrait-caption"><strong>Figure 1:</strong> me.</figcaption>
     </figure>
   </header>
 
@@ -39,7 +38,7 @@ math: false
       <p>I am passionate about several topics in discrete mathematics and theoretical computer science. My current focus is the intersection between <em>automated reasoning</em> (especially SAT solving) and mathematics. I also have significant experience in theoretical explainability and interpretability in AI, online algorithms, and combinatorial games.</p>
 
       <ul class="research-threads">
-        <li><span class="thread-mark" aria-hidden="true"></span><span><strong>SAT encodings.</strong> What are limits and possibilities of CNF encodings? How do we design encodings that perform well on actual SAT solvers?</span></li>
+        <li><span class="thread-mark" aria-hidden="true"></span><span><strong>SAT encodings.</strong> How do we design encodings that perform well on actual SAT solvers? What are the theoretical limits and possibilities of CNF encodings?</span></li>
         <li><span class="thread-mark" aria-hidden="true"></span><span><strong>Computers doing mathematics.</strong>  The LLM avalanche is pressing us against the wall with questions about the future of mathematics, and I want to engage with them seriously. </span></li>
         <li><span class="thread-mark" aria-hidden="true"></span><span><strong>Good side quests.</strong> Wordle, Mastermind, explainable AI, online algorithms, geometric puzzles and others; I like working on problems that refuse to let me go.</span></li>
       </ul>

@@ -1,7 +1,6 @@
 {%- assign citations = site.data.citations -%}
 {%- assign citation_scale = citations.scale_max | default: 1 -%}
 {%- if citation_scale <= 0 -%}{%- assign citation_scale = 1 -%}{%- endif -%}
-{%- assign latest_citation = citations.years | last -%}
 <figure class="citation-history" aria-labelledby="citation-history-title" aria-describedby="citation-history-caption">
   <h2 id="citation-history-title">Citations by year</h2>
 
@@ -33,7 +32,6 @@
 
   <figcaption id="citation-history-caption">
     <a href="{{ citations.profile_url }}">Google Scholar</a>
-    · <time datetime="{{ citations.updated }}" aria-label="Updated {{ citations.updated | date: "%B %-d, %Y" }}">{{ citations.updated | date: "%b %Y" }}</time>{% if latest_citation.partial %}
-    ({{ latest_citation.year }} YTD){% endif %}
+    · <time datetime="{{ citations.updated }}" aria-label="Updated {{ citations.updated | date: "%B %-d, %Y" }}">{{ citations.updated | date: "%b %Y" }}</time>
   </figcaption>
 </figure>

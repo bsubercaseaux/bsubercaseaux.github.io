@@ -1,0 +1,319 @@
+# A growing archive, reconstructed from local decks, the CV, event programs,
+# and correspondence. Original presentation files are preserved unchanged.
+# Quote dates so Liquid sorts them consistently. For incomplete dates, use the
+# first day of the known month/year for sorting and set date_precision so the
+# page never presents that placeholder as an exact date.
+# Link actual presentation materials, not the paper associated with a talk.
+
+- id: theory-lunch-2026-cnf
+  title: "The CNF Encoding Complexity of Boolean Functions"
+  date: "2026-09-16"
+  venue: "Theory Lunch, Carnegie Mellon University"
+  location: "Pittsburgh"
+  slides: /assets/slides/2026-theory-lunch-cnf-complexity.pptx
+  slides_format: PPTX
+
+- id: leiden-2026
+  title: "Breaking down graphs into structured pieces, optimally and efficiently"
+  date: "2026-08-31"
+  venue: "LIACS, Leiden University"
+  location: "Online"
+  slides: /assets/slides/2026-leiden-biclique-decompositions.pdf
+  slides_format: PDF
+
+- id: mathfest-2026
+  title: "SAT Solving for the Discrete Mathematician's Toolbox"
+  date: "2026-08-07"
+  venue: "MAA MathFest — Computers and Combinatorics"
+  location: "Boston"
+  slides: /assets/slides/2026-mathfest-toolbox.pptx
+  slides_format: PPTX
+  event_url: https://maa.org/events/mathfest-program/invited-paper-sessions/
+
+- id: compbench-2026
+  title: "Coloring Queens with Thousands of Encodings"
+  date: "2026-07-25"
+  venue: "CompBench 2026, FLoC"
+  location: "Lisbon"
+  slides: /assets/slides/2026-compbench-queen-colorings.pptx
+  slides_format: PPTX
+  event_url: https://sites.google.com/view/compbench2026/
+
+- id: sat-2026-cardinality
+  title: "Near-Optimal Encodings of Cardinality Constraints"
+  date: "2026-07-20"
+  venue: "SAT 2026, FLoC"
+  location: "Lisbon"
+  event_url: https://program.floc26.org/SAT-2026-07-20
+
+- id: stoc-2026
+  title: "Optimal and Efficient Partite Decompositions of Hypergraphs"
+  date: "2026-06-24"
+  venue: "STOC 2026"
+  location: "Salt Lake City"
+  slides: /assets/slides/2026-stoc-hypergraph-decompositions.pdf
+  slides_format: PDF
+  event_url: https://acm-stoc.org/stoc2026/stoc26-program.html
+
+- id: dagstuhl-2026
+  title: "Compact CNF Encodings for Boolean Functions"
+  date: "2026-05-25"
+  date_precision: month
+  date_label: "May 25–29"
+  venue: "Dagstuhl Seminar 26221 — Knowledge Compilation in Artificial Intelligence, Databases, and Formal Methods"
+  location: "Dagstuhl"
+  slides: /assets/slides/2026-dagstuhl-cnf-complexity.pdf
+  slides_format: PDF
+  event_url: https://www.dagstuhl.de/26221
+
+- id: fun-2026-mastermind
+  title: "Price of Locality in Permutation Mastermind: Are TikTok Influencers Chaotic Enough?"
+  date: "2026-05-21"
+  venue: "FUN 2026"
+  location: "Porquerolles"
+  slides: /assets/slides/2026-fun-permutation-mastermind.pptx
+  slides_format: PPTX
+  event_url: https://fun2026.limos.fr/program/
+
+- id: uca-2026
+  title: "Breaking down graphs and hypergraphs into structured pieces, optimally and efficiently"
+  date: "2026-05-13"
+  venue: "Université Clermont-Auvergne"
+  location: "Clermont-Ferrand"
+  # The speaker supplied this full deck and indicated the talk used a subset.
+  slides: /assets/slides/2026-graph-hypergraph-decompositions.pdf
+  slides_format: PDF
+  slides_label: "Full deck"
+
+- id: theory-lunch-2026-decompositions
+  title: "Breaking down graphs and hypergraphs into structured pieces, optimally and efficiently"
+  date: "2026-04-15"
+  venue: "Theory Lunch, Carnegie Mellon University"
+  location: "Pittsburgh"
+  slides: /assets/slides/2026-graph-hypergraph-decompositions.pdf
+  slides_format: PDF
+
+- id: thesis-proposal-2026
+  title: "SAT Encodings: From Art to Science"
+  date: "2026-04-08"
+  venue: "Doctoral thesis proposal, Carnegie Mellon University"
+  location: "Pittsburgh"
+  event_url: https://www.csd.cs.cmu.edu/calendar/2026-04-08/doctoral-thesis-proposal-bernardo-subercaseaux
+
+- id: math-club-2026-mastermind
+  title: "Price of Locality in Permutation Mastermind: Are TikTok influencers chaotic enough?!"
+  date: "2026-02-11"
+  venue: "Math Club, Carnegie Mellon University"
+  location: "Pittsburgh"
+
+- id: aco-2026
+  title: "Breaking down graphs and hypergraphs into structured pieces, optimally and efficiently"
+  date: "2026-02-05"
+  venue: "ACO Seminar, Carnegie Mellon University"
+  location: "Pittsburgh"
+  event_url: https://www.csd.cs.cmu.edu/calendar/2026-02-05/aco-seminar-bernardo-subercaseaux
+
+- id: banff-2026
+  title: "Towards a Science of CNF Encodings"
+  date: "2026-01-16"
+  venue: "Banff International Research Station"
+  location: "Banff"
+  slides: /assets/slides/2026-banff-cnf-encodings.pptx
+  slides_format: PPTX
+
+- id: agco-2025
+  title: "Optimal d-Clique Decompositions for Hypergraphs"
+  date: "2025-11-05"
+  venue: "AGCO Seminar, Pontificia Universidad Católica de Chile"
+  location: "Santiago"
+  slides: /assets/slides/2025-agco-hypergraph-decompositions.pdf
+  slides_format: PDF
+  event_url: https://www.cmm.uchile.cl/wp-content/uploads/2025/11/Bernardo-Subercaseaux-05-11-25.pdf
+
+- id: cicm-2025
+  title: "Automated Symmetric Constructions in Discrete Geometry"
+  date: "2025-10-07"
+  venue: "CICM 2025"
+  location: "Brasília"
+  slides: /assets/slides/2025-cicm-symmetric-constructions.pdf
+  slides_format: PDF
+
+- id: modref-2025
+  title: "Asymptotically Smaller Encodings for Graph Problems and Scheduling"
+  date: "2025-08-11"
+  venue: "ModRef 2025, CP"
+  location: "Glasgow"
+  event_url: https://cp2025.a4cp.org/schedule.html
+
+- id: pods-2025
+  title: "Explaining k-Nearest Neighbors: Abductive and Counterfactual Explanations"
+  date: "2025-06-23"
+  venue: "PODS 2025"
+  location: "Berlin"
+  event_url: https://2025.sigmod.org/program_full_detail.shtml
+
+- id: simons-2025
+  title: "Computer-Assisted Intuition: SAT Solvers in Mathematical Discovery"
+  date: "2025-04-08"
+  venue: "Simons Institute / SLMath — AI for Mathematics and Theoretical Computer Science"
+  location: "Berkeley"
+  slides: /assets/slides/2025-simons-computer-assisted-intuition.pdf
+  slides_format: PDF
+  video: https://www.youtube.com/live/MlGcHr2Qh3o
+  event_url: https://live-simons-institute.pantheon.berkeley.edu/talks/bernardo-subercaseaux-cmu-2025-04-08
+
+- id: aaai-2025-linear-explanations
+  title: "Probabilistic Explanations for Linear Models"
+  date: "2025-02-27"
+  venue: "AAAI 2025"
+  location: "Philadelphia"
+  slides: /assets/slides/2025-aaai-probabilistic-linear-explanations.pdf
+  slides_format: PDF
+  event_url: https://underline.io/lecture/112342-probabilistic-explanations-for-linear-models
+
+- id: jmm-2025
+  title: "Automated Reasoning for the Discrete Mathematician"
+  date: "2025-01-08"
+  venue: "Joint Mathematics Meetings — 35th Anniversary of AI and Math"
+  location: "Seattle"
+  slides: /assets/slides/2025-jmm-automated-reasoning.pdf
+  slides_format: PDF
+
+- id: math-club-2024
+  title: "A Demi-god's Number for the Rubik's Cube"
+  date: "2024-10-09"
+  venue: "Math Club, Carnegie Mellon University"
+  location: "Pittsburgh"
+  slides: /assets/slides/2024-math-club-rubik.pdf
+  slides_format: PDF
+
+- id: cicm-2024
+  title: "Automated Mathematical Discovery and Verification: Minimizing Pentagons in the Plane"
+  date: "2024-08-06"
+  venue: "CICM 2024"
+  location: "Montréal"
+  slides: /assets/slides/2024-cicm-pentagons.pdf
+  slides_format: PDF
+  event_url: https://cicm-conference.org/2024/cicm.php?event=&menu=program
+
+- id: theory-lunch-2024
+  title: "SAT-Solving for the Packing Chromatic Number of the Infinite Grid"
+  date: "2024-04-10"
+  venue: "Theory Lunch, Carnegie Mellon University"
+  location: "Pittsburgh"
+  video: https://www.youtube.com/watch?v=Enm5yaqUpls
+
+- id: boston-computation-club-2023
+  title: "Packing Chromatic"
+  date: "2023-08-12"
+  venue: "Boston Computation Club"
+  location: "Boston"
+  video: https://youtu.be/ZJ5EMGxRXpQ
+  event_url: https://bstn.cc/
+
+- id: ats-2023
+  title: "Toward Optimal Radio Colorings of Hypercubes via SAT-Solving"
+  date: "2023-06-15"
+  venue: "ATS Science Reading Group"
+  slides: /assets/slides/2023-ats-radio-colorings.pdf
+  slides_format: PDF
+
+- id: tacas-2023
+  title: "The Packing Chromatic Number of the Infinite Square Grid is 15"
+  date: "2023-04-25"
+  venue: "TACAS 2023"
+  location: "Paris"
+  presentation_source: https://github.com/bsubercaseaux/TACAS-packing-manim
+
+- id: theory-lunch-2023
+  title: "Explaining Decision Trees is Harder Than You Would Think!"
+  date: "2023-03-29"
+  venue: "Theory Lunch, Carnegie Mellon University"
+  location: "Pittsburgh"
+  event_url: https://csd.cs.cmu.edu/calendar/seminar-series-theory-473
+
+- id: stanford-2022
+  title: "Power to computers, Power to the people: from computer-aided mathematics to formal explainability"
+  date: "2022-10-01"
+  date_precision: month
+  venue: "Invited talk, Stanford University"
+  location: "Stanford"
+
+- id: neurips-2022-predictions
+  title: "Augmenting Online Algorithms with ε-Accurate Predictions"
+  date: "2022-10-01"
+  date_precision: month
+  venue: "NeurIPS 2022 — recorded presentation"
+  video: https://neurips.cc/virtual/2022/poster/53185
+
+- id: neurips-2022-explanations
+  title: "On Computing Probabilistic Explanations for Decision Trees"
+  date: "2022-10-01"
+  date_precision: month
+  venue: "NeurIPS 2022 — recorded presentation"
+  video: https://neurips.cc/virtual/2022/poster/52966
+
+- id: sat-2022
+  title: "The Packing Chromatic Number of the Infinite Square Grid is at Least 14"
+  date: "2022-08-01"
+  date_precision: month
+  venue: "SAT 2022"
+  location: "Haifa"
+
+- id: agco-2022
+  title: "Augmenting Online Algorithms with ε-Accurate Predictions"
+  date: "2022-07-20"
+  venue: "AGCO Seminar, CMM, Universidad de Chile"
+  location: "Santiago"
+  event_url: https://www.cmm.uchile.cl/wp-content/uploads/2022/07/Bernardo-Subercaseaux-20-07-22.pdf
+
+- id: lmml-2022
+  title: "The Exciting Theory of Formal Explanations"
+  date: "2022-07-01"
+  date_precision: month
+  venue: "Invited talk, Logic-based Methods in Machine Learning (LMML), FLoC 2022"
+  location: "Haifa"
+
+- id: neurips-paris-2021
+  title: "Foundations of Symbolic Languages for Model Interpretability"
+  date: "2021-12-08"
+  venue: "NeurIPS’21 @ Paris — spotlight talk, Sorbonne Center on Artificial Intelligence"
+  location: "Paris"
+  slides: /assets/slides/2021-neurips-paris-interpretability.pdf
+  slides_format: PDF
+  event_url: https://neurips2021paris.github.io/
+
+- id: imfd-2021
+  title: "Interpretabilidad en Machine Learning con garantías formales"
+  date: "2021-11-16"
+  venue: "IV Escuela IMFD, Jornadas Chilenas de Computación"
+  location: "Online"
+  slides: https://docs.google.com/presentation/d/11ig3tY5aRxKsd42eIj88LVoYMypqN-KW2iVQ3RNtDIk/edit
+  slides_format: Google Slides
+
+- id: neurips-2021
+  title: "Foundations of Symbolic Languages for Model Interpretability"
+  date: "2021-10-01"
+  date_precision: month
+  venue: "NeurIPS 2021 — recorded spotlight presentation"
+  video: https://neurips.cc/virtual/2021/poster/26456
+
+- id: datalab-2021
+  title: "Árboles y diagramas de decisión: operaciones y equivalencias"
+  date: "2021-04-30"
+  venue: "Seminario sobre Manejo de Datos y Teoría de la Computación, DataLab UC"
+  location: "Online"
+  video: https://www.youtube.com/watch?v=vlp7qhs8Wbc
+
+- id: links-2021
+  title: "Foundations of Languages for Interpretability"
+  date: "2021-02-19"
+  venue: "LINKS Seminar, Inria / Université de Lille"
+  location: "Online"
+
+- id: neurips-2020
+  title: "Model Interpretability through the Lens of Computational Complexity"
+  date: "2020-10-01"
+  date_precision: month
+  venue: "NeurIPS 2020 — recorded presentation"
+  video: https://neurips.cc/virtual/2020/poster/18414
