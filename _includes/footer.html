@@ -1,9 +1,0 @@
-<footer class="{% if site.footer_fixed %}fixed-bottom{% else %}sticky-bottom{% endif %}">
-  <div class="container site-footer-inner">
-    <p class="footer-quote">{{ site.footer_text }}</p>
-    <p class="footer-meta">
-      &copy; {{ site.time | date: '%Y' }} {{ site.first_name }} {{ site.last_name }}
-      {% if site.last_updated %}<br>Updated {{ "now" | date: '%B %Y' }}{% endif %}
-    </p>
-  </div>
-</footer>

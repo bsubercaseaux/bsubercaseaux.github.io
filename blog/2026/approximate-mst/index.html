@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>        
+    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bernardo Subercaseaux | A simple approximation for MST in high-dimensional Hamming space</title>
+    <meta name="author" content="Bernardo Anibal Subercaseaux Roa" />
+    <meta name="description" content="Parity sketches and a lazy version of Prim's algorithm, motivated by delta compression and biclique partitions." />
+
+    <!-- OpenGraph -->
+    <meta property="og:site_name" content="Bernardo Subercaseaux" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bernardo Subercaseaux | A simple approximation for MST in high-dimensional Hamming space" />
+    <meta property="og:url" content="https://bsubercaseaux.github.io/blog/2026/approximate-mst/" />
+    <meta property="og:description" content="Parity sketches and a lazy version of Prim's algorithm, motivated by delta compression and biclique partitions." />
+    <meta property="og:image" content="https://bsubercaseaux.github.io/assets/img/prof_pic4.jpg" />
+    <meta property="og:locale" content="en" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="A simple approximation for MST in high-dimensional Hamming space" />
+    <meta name="twitter:description" content="Parity sketches and a lazy version of Prim's algorithm, motivated by delta compression and biclique partitions." />
+    <meta name="twitter:image" content="https://bsubercaseaux.github.io/assets/img/prof_pic4.jpg" />
+    <meta name="twitter:site" content="@b_subercaseaux" />
+    <meta name="twitter:creator" content="@b_subercaseaux" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "author":
+        {
+          "@type": "Person",
+          "name": "Bernardo Anibal Subercaseaux Roa"
+        },
+        "url": "https://bsubercaseaux.github.io/blog/2026/approximate-mst/",
+        "@type": "WebSite",
+        "description": "Parity sketches and a lazy version of Prim's algorithm, motivated by delta compression and biclique partitions.",
+        "headline": "A simple approximation for MST in high-dimensional Hamming space",
+        "sameAs": ["https://orcid.org/0000-0003-2295-1299", "https://scholar.google.com/citations?user=0EOonpYAAAAJ", "https://github.com/bsubercaseaux", "https://twitter.com/b_subercaseaux", "https://dblp.org/pid/242/3007.html"],
+        "name": "Bernardo Anibal Subercaseaux Roa",
+        "@context": "https://schema.org"
+      }
+    </script>
+
+
+   <!-- Bootstrap & MDB -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+  
+
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    <meta name="theme-color" content="#fffdf6">
+
+    <!-- Styles -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐒</text></svg>">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://bsubercaseaux.github.io/blog/2026/approximate-mst/">
+  </head>
+
+  <!-- Body -->
+  <body class="sticky-bottom-footer Site">
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Header --><header class="site-header">
+  <nav id="navbar" class="navbar navbar-light navbar-expand-lg" aria-label="Primary navigation">
+    <div class="container">
+      <a class="navbar-brand site-brand" href="/" aria-label="Bernardo Subercaseaux, home">
+        <span class="site-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Bernardo Subercaseaux</span>
+      </a>
+
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <li class="nav-item ">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+<li class="nav-item ">
+                <a class="nav-link" href="/publications/">Publications</a>
+              </li>
+<li class="nav-item ">
+                <a class="nav-link" href="/talks/">Talks</a>
+              </li>
+<li class="nav-item active">
+                <a class="nav-link" href="/blog/index.html" aria-current="page">Blog</a>
+              </li>
+<li class="nav-item ">
+                <a class="nav-link" href="/teaching/">Teaching</a>
+              </li>
+<li class="nav-item ">
+                <a class="nav-link" href="/bio/">Bio</a>
+              </li>
+<li class="nav-item ">
+                <a class="nav-link" href="/literature/">Literature</a>
+              </li>
+<li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="/media/">Media</a><a class="dropdown-item" href="/tutorials/">Tutorials</a><a class="dropdown-item" href="/websites/">Websites</a>
+</div>
+              </li>
+</ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+    <!-- Content -->
+    <main id="main-content" class="container mt-5 Site-content" tabindex="-1">
+      <!-- _layouts/post.html -->
+
+<div class="post center-rectangle">
+
+  <header class="post-header">
+    <h1 class="post-title">A simple approximation for MST in high-dimensional Hamming space</h1>
+<p class="post-meta">September 26, 2026</p>
+<p class="post-tags"><a href="/blog/2026"> <i class="fas fa-calendar fa-sm"></i> 2026 </a>  ·  <a href="/blog/tag/math">
+          <i class="fas fa-hashtag fa-sm"></i> math</a>  
+          <a href="/blog/tag/algorithms">
+          <i class="fas fa-hashtag fa-sm"></i> algorithms</a>  
+            ·  <a href="/blog/category/math">
+          <i class="fas fa-tag fa-sm"></i> Math</a>  
+          
+
+    </p></header>
+
+  <article class="post-content">
+    <p>Suppose we have a collection of binary vectors that we wish to store. If many of them are similar, storing each vector independently would be wasteful. Instead, we can use <em>delta compression</em>: store one vector explicitly, and represent each of the others by a pointer to another vector, together with the positions at which they differ. (Imagine the memory savings at Github by storing only the code diffs as opposed to each full version!)</p>
+
+<p>For example, consider these six vectors:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>x₁ = 1 0 0 1 0 1
+x₂ = 1 0 1 0 0 1
+x₃ = 1 0 0 1 1 1
+x₄ = 1 0 1 1 0 1
+x₅ = 1 1 0 1 0 1
+x₆ = 1 0 1 0 0 0
+</code></pre></div></div>
+
+<p>We could store \(x_1\) explicitly, and then store \(x_2\) by saying “take \(x_1\) and flip positions 3 and 4.” We could then describe \(x_3\) relative to \(x_2\), and so on. But the order matters! Describing each vector relative to the preceding one requires a total of 13 coordinate changes. If we choose the parents more carefully, we only need 5.</p>
+
+<figure style="text-align: center;">
+  <img src="/assets/img/blog/hamming-mst-trees.png" alt="Two parent trees for the six binary vectors. The minimum spanning tree has five edges of weight one; the sequential tree has edge weights two, three, two, two, and four." width="1000" height="540" style="display: block; width: 100%; max-width: 650px; height: auto; margin: 0 auto;">
+  <figcaption class="caption">The same vectors, with different choices of parents. Arrows point from a vector to its parent, and edge weights count the coordinates that differ.</figcaption>
+</figure>
+
+<p>Naturally, for vectors with only six coordinates, storing pointers and lists of indices is not actually a compression improvement. The point of the example is the choice of parents. For large, repetitive data, this choice can make a substantial difference.</p>
+
+<p>More precisely, given \(n\) vectors in \(\{0,1\}^d\), consider the complete graph whose edge weights are their <em>Hamming distances</em>, i.e., the number of coordinates at which they differ. A minimum spanning tree (MST) minimizes the total number of coordinate changes in this tree-based representation.</p>
+
+<p>The main obstacle, however, is computing that tree.</p>
+
+<h2 id="the-distances-are-not-a-given">The distances are not a given!</h2>
+
+<p>Prim’s algorithm computes an MST in \(O(n^2)\) time on a complete graph. But this assumes constant-time access to the edge weights. Here, we are given vectors, not distances, and comparing two vectors takes \(\Theta(\lceil d/w\rceil)\) word operations, where \(w\) is the machine word size. Computing all pairwise distances first therefore costs \(\Theta(n^2\lceil d/w\rceil)\).</p>
+
+<p>The goal of this note is to remove the dimension factor from the quadratic term, at the cost of an arbitrarily small multiplicative error. For any fixed \(\varepsilon&gt;0\), we can compute a tree whose weight is at most \(1+\varepsilon\) times the optimum in \(O(n^2+nd)\) time, with high probability.</p>
+
+<p>The more precise bound is \(O(\varepsilon^{-3}(n^2+nd))\), on a word-RAM with word size \(\Theta(\log(nd))\), for \(1/(nd)\leq\varepsilon\leq1\). This is still quadratic in the number of vectors; the improvement is that we no longer multiply that quadratic term by their dimension.</p>
+
+<p>In my case, the motivation came from the recent work of <a href="https://arxiv.org/abs/2606.09785" target="_blank" rel="noopener noreferrer">Cardinal, McCarty, and Yuditsky</a>. Roughly speaking, they showed that if the neighborhoods of a graph admit a succinct delta representation, then the graph also admits a succinct <em>biclique partition</em>: a representation of its edges as a disjoint union of complete bipartite graphs. Their result improved upon <a href="https://doi.org/10.1145/3798129.3800921" target="_blank" rel="noopener noreferrer">previous work I participated in</a>, but more importantly, it provides an algorithmic path toward constructing compact biclique representations of structured graphs. These can in turn be used to construct efficient SAT encodings, as discussed in <a href="/blog/2025/subquadratic/">my earlier post</a>.</p>
+
+<p>The bottleneck in their construction was an approximate MST in Hamming space. Improving that step lets us construct a biclique partition of the same quality in \(O(n^2)\) time instead of \(O(n^2\log n)\).</p>
+
+<h2 id="local-to-global-approximations">Local to global approximations</h2>
+
+<p>Let us first make a simple observation. Prim grows a tree on a set \(S\) by repeatedly choosing a lightest edge from \(S\) to a vertex outside it. Suppose that, instead, we always choose an edge that is at most \(\alpha\) times heavier than the lightest edge across that cut. Then the final tree is an \(\alpha\)-approximation of the MST. That is, a local \(\alpha\)-approximation translates into a global one.</p>
+
+<p>The proof is a short exchange argument (which I got from my friend <a href="https://amerino.cl/" target="_blank" rel="noopener noreferrer">Arturo Merino</a>). Start with an optimal MST, with all its edges colored red. Whenever our approximate Prim chooses an edge, we color it blue. The invariant is that, all blue edges lie inside the current set \(S\).
+Now, whenever the edge chosen by approximate Prim wasn’t colored before, it becomes part of a colored cycle, and hence we can remove a red edge crossing the same cut (we know the other edge crossing the cut is red by our invariant). The new edge costs at most \(\alpha\) times the red edge it replaces. If the chosen edge was already present, simply recolor it. At the end, every original edge has been replaced or recolored exactly once, increasing its cost by a factor at most \(\alpha\), so summing these inequalities gives the desired guarantee.</p>
+
+<h2 id="a-small-sketch-for-a-distance-question">A small sketch for a distance question</h2>
+
+<p>The distance tool comes from the parity sketches of <a href="https://doi.org/10.1137/S0097539798347177" target="_blank" rel="noopener noreferrer">Kushilevitz, Ostrovsky, and Rabani</a>. Fix a distance scale \(R&gt;1\). Select each coordinate independently with probability \(1/(2R)\), using the same selected coordinates for every vector. Record, for each vector, the parity of its selected bits. This gives a one-bit sketch.</p>
+
+<p>Now suppose that two vectors differ in exactly \(m\) coordinates. Their sketch bits differ precisely when an odd number of those coordinates were selected. A standard parity calculation gives</p>
+
+\[\begin{gathered}
+\Pr[\text{the sketch bits differ}]
+=\frac{1}{2}\left(1-\left(1-\frac{1}{R}\right)^m\right).
+\end{gathered}\]
+
+<p>To get some intuition, the right-hand side is approximately \(\frac12(1-e^{-m/R})\). When \(m\ll R\), it is close to zero, whereas for \(m\gg R\) it approaches \(1/2\). Repeating this experiment gives us a pretty good idea of whether the distance is below or above the scale we care about.</p>
+
+<p>Of course, distinguishing distances extremely close to \(R\) requires more care. We use scales \(\rho^j\), where \(\rho=1+\varepsilon/4\), and allow a small gap: a test at scale \(j\) accepts distances at most \(\rho^{j-1}\) and rejects distances at least \(\rho^j\). Inside that gap the test makes no promise.</p>
+
+<p>Choosing \(L:=O(\varepsilon^{-1}\log(2d))\) scales, and \(O(\varepsilon^{-2}\log(nL))\) repetitions per scale makes all tests reliable simultaneously, with high probability. Packing those bits into machine words makes one test cost \(O(\varepsilon^{-2})\) word operations, rather than a scan through the original vectors.</p>
+
+<h2 id="only-ask-whether-the-new-parent-is-sizably-better">Only ask whether the new parent is sizably better</h2>
+
+<p>We could now approximate every pairwise distance, but that would be doing more work than Prim needs. For each vertex \(u\) outside the current tree, we keep a candidate parent \(p(u)\in S\) and a level \(\ell(u)\). The value \(\rho^{\ell(u)}\) is an upper estimate for the distance to its parent.</p>
+
+<p>When a new vertex \(b\) enters the tree, we ask whether it would improve the current estimate for \(u\) by a whole scale. If the test at scale \(\ell(u)-1\) accepts, we make \(b\) the new parent, decrease \(\ell(u)\), and try again. We stop at the first failed test, or when the level reaches 1. To grow the tree, we choose an outside vertex with minimum level and add its parent edge.</p>
+
+<p>Why is this enough? After processing the current tree, we maintain two facts:</p>
+
+\[\begin{aligned}
+\Delta(p(u),u)&amp;&lt;\rho^{\ell(u)},\\
+\min_{a\in S}\Delta(a,u)&amp;&gt;\rho^{\ell(u)-2}.
+\end{aligned}\]
+
+<p>Here \(\Delta\) denotes Hamming distance. The first inequality says that the parent really witnesses our upper estimate. The second says that no vertex already in the tree is substantially closer. A failed test gives the second inequality for the newly inserted vertex, and lowering a level only makes it easier to satisfy for the old ones. At level 1, the lower bound follows because distinct vectors have distance at least 1. Duplicate vectors can be removed at the start and reattached by zero-weight edges at the end.</p>
+
+<p>The two estimates differ by only a factor \(\rho^2\leq1+\varepsilon\). Choosing a minimum-level vertex therefore gives an edge within that factor of the lightest edge across the cut. Our approximate-Prim observation does the rest.</p>
+
+<p>The nice part is the running-time accounting. We can have one failed test for each pair of vertices, giving \(O(n^2)\) failures. Every successful test decreases a level, and levels never go back up. Across the entire algorithm, there can therefore be only \(O(nL)\) successes.</p>
+
+<p>There is still some work hidden in constructing the sketches, since doing it naively could ruin our bound, but that part is essentially a technical annoyance.</p>
+
+<p>So the ingredients are quite classical: Prim, parity sketches, and a short amortized analysis. The useful observation is that we do not need to learn each distance accurately; we only need to know whether a new parent is substantially better.</p>
+
+  </article><hr style="margin-top: 50px; margin-bottom: 50px;"> 
+    
+    <h1 style="text-align:center;"> Comment Section </h1>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'https-bsubercaseaux-github-io';
+      var disqus_identifier = '/blog/2026/approximate-mst';
+      var disqus_title      = "A simple approximation for MST in high-dimensional Hamming space";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+
+</div>
+
+    </main>
+
+    <!-- Footer --><footer class="sticky-bottom">
+  <div class="container site-footer-inner">
+    <p class="footer-quote">“Man is but a reed, weakest in nature, but a reed which thinks.” — Blaise Pascal, <cite>Pensées</cite></p>
+    <p class="footer-meta">
+      © 2026 Bernardo Subercaseaux Roa
+      <br>Updated September 2026
+    </p>
+  </div>
+</footer>
+
+    <!-- jQuery -->
+
+<script defer src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+ <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+
+    
+    <!-- Load Common JS -->
+  <script defer src="/assets/js/common.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+
+    
+    <script>
+    
+    var elements = document.querySelectorAll('p');
+    Array.prototype.forEach.call(elements, function(el, i){
+        if(el.innerHTML=='[expand]') {
+            var parentcontent = el.parentNode.innerHTML.replace('<p>[expand]</p>','<div class="expand" style="display: none; height: 0; overflow: hidden;">').replace('<p>[/expand]</p>','</div>');
+            el.parentNode.innerHTML = parentcontent;
+        }
+    });
+
+    var elements = document.querySelectorAll('div.expand');
+    Array.prototype.forEach.call(elements, function(el, i){
+        el.previousElementSibling.innerHTML = el.previousElementSibling.innerHTML + '<span>..&nbsp; <a href="#" style="cursor: pointer;" onclick="this.parentNode.parentNode.nextElementSibling.style.display = \'block\'; this.parentNode.parentNode.nextElementSibling.style.height = \'auto\'; this.parentNode.style.display = \'none\';">read&nbsp;more&nbsp;&rarr;</a></span>';
+    });
+
+</script>
+
+  </body>
+</html>
+
