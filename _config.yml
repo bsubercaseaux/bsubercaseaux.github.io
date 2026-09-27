@@ -136,6 +136,14 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  # Retain these pieces as source without generating public pages.
+  - _literature/alice-en.md
+  - _literature/alice-sp.md
+  - _literature/scaroline-en.md
+  - _literature/scaroline-sp.md
+  - _literature/fragments.md
+  - _literature/topologia.md
+  - _literature/neither-kinky.md
 keep_files:
   - CNAME
   - .nojekyll
