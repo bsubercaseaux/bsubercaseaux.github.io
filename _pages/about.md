@@ -12,11 +12,11 @@ math: false
   <header class="home-intro">
     <div>
       <h1 class="home-title">Bernardo Subercaseaux</h1>
-      <p class="home-lede">I am a PhD candidate at <a href="https://www.cs.cmu.edu/">CMU</a>, where I am advised by the amazing <a href="https://www.cs.cmu.edu/~mheule/">Marijn Heule</a>. I think mostly about using <a href="https://www.sat4math.com">SAT for mathematics</a>,  but to be honest, I just love computer science and discrete mathematics in their full diversity.</p>
+      <p class="home-lede">I am a PhD candidate at <a href="https://www.cs.cmu.edu/">CMU</a> <strong>(in the academic job market!)</strong>, where I am advised by the amazing <a href="https://www.cs.cmu.edu/~mheule/">Marijn Heule</a>. I think mostly about using <a href="https://www.sat4math.com">SAT for mathematics</a>,  but to be honest, I just love computer science and discrete mathematics in their full diversity.</p>
 
       <ul class="home-links" aria-label="Contact and academic profiles">
         <li><a href="mailto:{{ site.email | encode_email }}">email</a></li>
-        <li><a href="{{ '/assets/pdf/CV-BernardoSubercaseaux.pdf' | relative_url }}">resume / CV</a></li>
+        <li><a href="{{ '/assets/pdf/CV-BernardoSubercaseaux.pdf' | relative_url }}?v=83b47dfc5b72">resume / CV</a></li>
         <li><a href="https://scholar.google.com/citations?user={{ site.scholar_userid }}">Google Scholar</a></li>
         <li><a href="https://github.com/{{ site.github_username }}">GitHub</a></li>
         <li><a href="https://orcid.org/{{ site.orcid_id }}">ORCID</a></li>
