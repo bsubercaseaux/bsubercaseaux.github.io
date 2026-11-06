@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>        
+    <!-- Metadata, OpenGraph and Schema.org -->
+    
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bernardo Subercaseaux | Subquadratic encodings for my favorite graph problems</title>
+    <meta name="author" content="Bernardo Anibal Subercaseaux Roa" />
+    <meta name="description" content="An observation allowing to encode several graph problems in \(o(|E|)\) clauses." />
+
+    <!-- OpenGraph -->
+    <meta property="og:site_name" content="Bernardo Subercaseaux" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bernardo Subercaseaux | Subquadratic encodings for my favorite graph problems" />
+    <meta property="og:url" content="https://bsubercaseaux.github.io/blog/2025/subquadratic/" />
+    <meta property="og:description" content="An observation allowing to encode several graph problems in \(o(|E|)\) clauses." />
+    <meta property="og:image" content="https://bsubercaseaux.github.io/assets/img/prof_pic4.jpg" />
+    <meta property="og:locale" content="en" />
+
+    <!-- Twitter card -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Subquadratic encodings for my favorite graph problems" />
+    <meta name="twitter:description" content="An observation allowing to encode several graph problems in \(o(|E|)\) clauses." />
+    <meta name="twitter:image" content="https://bsubercaseaux.github.io/assets/img/prof_pic4.jpg" />
+    <meta name="twitter:site" content="@b_subercaseaux" />
+    <meta name="twitter:creator" content="@b_subercaseaux" />
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+      {
+        "author":
+        {
+          "@type": "Person",
+          "name": "Bernardo Anibal Subercaseaux Roa"
+        },
+        "url": "https://bsubercaseaux.github.io/blog/2025/subquadratic/",
+        "@type": "WebSite",
+        "description": "An observation allowing to encode several graph problems in \\(o(|E|)\\) clauses.",
+        "headline": "Subquadratic encodings for my favorite graph problems",
+        "sameAs": ["https://orcid.org/0000-0003-2295-1299", "https://scholar.google.com/citations?user=0EOonpYAAAAJ", "https://github.com/bsubercaseaux", "https://twitter.com/b_subercaseaux", "https://dblp.org/pid/242/3007.html"],
+        "name": "Bernardo Anibal Subercaseaux Roa",
+        "@context": "https://schema.org"
+      }
+    </script>
+
+
+   <!-- Bootstrap & MDB -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.19.1/css/mdb.min.css" integrity="sha512-RO38pBRxYH3SoOprtPTD86JFOclM51/XTIdEPh5j8sj4tp8jmQIx26twG52UaLi//hQldfrh7e51WzP9wuP32Q==" crossorigin="anonymous" />
+  
+
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css" integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin="anonymous">
+    <meta name="theme-color" content="#fffdf6">
+
+    <!-- Styles -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐒</text></svg>">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://bsubercaseaux.github.io/blog/2025/subquadratic/">
+  </head>
+
+  <!-- Body -->
+  <body class="sticky-bottom-footer Site">
+
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
+    <!-- Header --><header class="site-header">
+  <nav id="navbar" class="navbar navbar-light navbar-expand-lg" aria-label="Primary navigation">
+    <div class="container">
+      <a class="navbar-brand site-brand" href="/" aria-label="Bernardo Subercaseaux, home">
+        <span class="site-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span>Bernardo Subercaseaux</span>
+      </a>
+
+      <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          <li class="nav-item ">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+<li class="nav-item ">
+                <a class="nav-link" href="/publications/">Publications</a>
+              </li>
+<li class="nav-item ">
+                <a class="nav-link" href="/talks/">Talks</a>
+              </li>
+<li class="nav-item active">
+                <a class="nav-link" href="/blog/index.html" aria-current="page">Blog</a>
+              </li>
+<li class="nav-item ">
+                <a class="nav-link" href="/teaching/">Teaching</a>
+              </li>
+<li class="nav-item ">
+                <a class="nav-link" href="/bio/">Bio</a>
+              </li>
+<li class="nav-item ">
+                <a class="nav-link" href="/literature/">Literature</a>
+              </li>
+<li class="nav-item dropdown ">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">More</a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+<a class="dropdown-item" href="/media/">Media</a><a class="dropdown-item" href="/tutorials/">Tutorials</a><a class="dropdown-item" href="/websites/">Websites</a>
+</div>
+              </li>
+</ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
+    <!-- Content -->
+    <main id="main-content" class="container mt-5 Site-content" tabindex="-1">
+      <!-- _layouts/post.html -->
+
+<div class="post center-rectangle">
+
+  <header class="post-header">
+    <h1 class="post-title">Subquadratic encodings for my favorite graph problems</h1>
+<p class="post-meta">May 9, 2025</p>
+<p class="post-tags"><a href="/blog/2025"> <i class="fas fa-calendar fa-sm"></i> 2025 </a>  ·  <a href="/blog/tag/math">
+          <i class="fas fa-hashtag fa-sm"></i> math</a>  
+            ·  <a href="/blog/category/math">
+          <i class="fas fa-tag fa-sm"></i> Math</a>  
+          
+
+    </p></header>
+
+  <article class="post-content">
+    <p>When reducing graph problems (e.g., vertex-cover, clique, independent-set, \(k\)-coloring) to SAT, standard encodings use \(\Omega(n^2)\) binary clauses in dense graphs. This brief note shows how a trivial combination of existing ideas yields encodings that use \(\mathcal{O}(n^2 / \lg n)\) many clauses.</p>
+
+<p>Let us first consider the independent set problem, since vertex-cover, clique, and many variants of graph coloring are essentially equivalent in terms of their logical structure. The input is a graph \(G = (V, E)\), together with an integer \(k\), and the goal is to find a set of <em>selected</em> vertices \(S \subseteq V\) such that \(\binom{S}{2} \cap E = \varnothing\) and \(|S| = k\). The standard encoding is thus to create, for each vertex \(v \in V\), a variable \(s_v\) representing whether \(v \in S\). Then, the constraints are simply:
+\begin{equation}
+    (\overline{s_{u}} \lor \overline{s_{v}}),  \forall {u, v} \in E,
+\end{equation}
+stating the independence property, and then the cardinality constraint
+\(\sum_{v \in V} s_v = k.\)
+While cardinality constraints are known to admit compact encodings with \(\mathcal{O}(n \lg ^2 n)\) clauses <a href="https://www.cs.upc.edu/~oliveras/constraints.pdf" target="_blank" rel="noopener noreferrer">[1]</a>, I could not find any references to an encoding of Equation 1 with \(o(n^2)\) many clauses. As I show next, all the required ideas are already present in the literature.</p>
+
+<p><strong>Independent Set in a Biclique.</strong> If \(G\) happens to be a biclique \(K_{a, b}\), then it is trivial to encode the independence property efficiently. Let \(A\) and \(B\) be the parts of \(K_{a, b}\). Then, introduce auxiliary variables \(s_A\) and \(s_B\), which intuitively represent whether some vertex of \(A\) (resp. \(B\)) belongs to \(S\). This is enforced by clauses \((\overline{s_v} \lor s_A)\) for every \(v \in A\), as well as a long clause \((\overline{s_A} \lor \bigvee_{v \in A} s_v)\), and analogous clauses for \(B\) are added as well. Finally, the clause \((\overline{s_A} \lor \overline{s_B})\) enforces the independent set property. We have used
+ \(\mathcal{O}(a + b) = \mathcal{O}(|V(K_{a, b})|)\)
+  many clauses, instead of the \(a \cdot b\) used by Equation 1. Moreover, equivalence can be seen directly by resolving over \(s_A\) and \(s_B\).</p>
+
+<p><strong>Biclique Coverings.</strong> Suppose now \(G\) is an arbitrary graph again, but we have a set of bicliques \(B_1, \ldots, B_r\), with \(V(B_i) \subseteq V(G)\) for each \(1 \leq i \leq r\), and such that \(\bigcup_{i=1}^r E(B_i) = E(G)\). Such a set of bicliques is said to be a <em>``biclique covering’‘</em> of \(G\). Then, for any set \(S \subseteq V(G)\), we trivially have that \(S\) is an independent set of \(G\) if and only if \(S \cap V(B_i)\) is an independent set of \(B_i\) for every \(1 \leq i \leq r\). Now, applying the method of the previous paragraph for each \(B_i\) yields an encoding using \(\mathcal{O}(\sum_{i=1}^r |V(B_i)|)\) many clauses. Fortunately, <a href="https://users.renyi.hu/~p_erdos/1983-20.pdf" target="_blank" rel="noopener noreferrer">a classic result of Chung, Erdős, and Spencer</a> says that for any \(G\) there is a biclique covering such that
+ \(\sum_{i=1}^r |V(B_i)| \in \mathcal{O}(|V(G)|^2 / \lg (|V(G)|)).\)
+ Furthermore, Mubayi and Turán proved that such a covering can be computed in polynomial time <a href="https://arxiv.org/pdf/0905.2527" target="_blank" rel="noopener noreferrer">[3]</a>, which allows therefore to construct the succinct encoding from an input graph in polynomial time. Naturally, without this runtime restriction the result of this note would be trivial, since one could first solve the independent set instance and then build a constant-size formula according to the answer.</p>
+
+<h2 id="edit-from-a-few-months-later">Edit from a few months later:</h2>
+
+<p>I have written more in depth about this result <a href="https://arxiv.org/abs/2506.14042" target="_blank" rel="noopener noreferrer">here</a>. But more importantly, together with Andrew Krapivin, Benjamin Przybocki, and Nicolás Sanhueza-Matamala, we have improved the best bounds on biclique partitions/coverings for graphs, optimally solved the hypergraph case as well, and significantly improved the algorithmic aspects of the problem since Mubayi and Turán’s result. The paper is available <a href="https://arxiv.org/abs/2511.11855" target="_blank" rel="noopener noreferrer">here</a>.</p>
+
+<p><strong>Further update:</strong> we have made substantial progress in understanding how Bounded Variable Addition, a successful technique incorporated in modern solvers, has been computing biclique partitions all along. See our <a href="https://arxiv.org/abs/2603.27774" target="_blank" rel="noopener noreferrer">recent work</a>.</p>
+
+  </article><hr style="margin-top: 50px; margin-bottom: 50px;"> 
+    
+    <h1 style="text-align:center;"> Comment Section </h1>
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'https-bsubercaseaux-github-io';
+      var disqus_identifier = '/blog/2025/subquadratic';
+      var disqus_title      = "Subquadratic encodings for my favorite graph problems";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+
+</div>
+
+    </main>
+
+    <!-- Footer --><footer class="sticky-bottom">
+  <div class="container site-footer-inner">
+    <p class="footer-quote">“Man is but a reed, weakest in nature, but a reed which thinks.” — Blaise Pascal, <cite>Pensées</cite></p>
+    <p class="footer-meta">
+      © 2026 Bernardo Subercaseaux Roa
+      <br>Updated November 2026
+    </p>
+  </div>
+</footer>
+
+    <!-- jQuery -->
+
+<script defer src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+ <script defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js" integrity="sha512-eUQ9hGdLjBjY3F41CScH3UX+4JDSI9zXeroz7hJ+RteoCaY+GP/LDoM8AO+Pt+DRFw3nXqsjh9Zsts8hnYv8/A==" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js" integrity="sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ==" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.19.1/js/mdb.min.js" integrity="sha512-Mug9KHKmroQFMLm93zGrjhibM2z2Obg9l6qFG2qKjXEXkMp/VDkI4uju9m4QKPjWSwQ6O2qzZEnJDEeCw0Blcw==" crossorigin="anonymous"></script>
+
+    
+    <!-- Load Common JS -->
+  <script defer src="/assets/js/common.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+
+    
+    <script>
+    
+    var elements = document.querySelectorAll('p');
+    Array.prototype.forEach.call(elements, function(el, i){
+        if(el.innerHTML=='[expand]') {
+            var parentcontent = el.parentNode.innerHTML.replace('<p>[expand]</p>','<div class="expand" style="display: none; height: 0; overflow: hidden;">').replace('<p>[/expand]</p>','</div>');
+            el.parentNode.innerHTML = parentcontent;
+        }
+    });
+
+    var elements = document.querySelectorAll('div.expand');
+    Array.prototype.forEach.call(elements, function(el, i){
+        el.previousElementSibling.innerHTML = el.previousElementSibling.innerHTML + '<span>..&nbsp; <a href="#" style="cursor: pointer;" onclick="this.parentNode.parentNode.nextElementSibling.style.display = \'block\'; this.parentNode.parentNode.nextElementSibling.style.height = \'auto\'; this.parentNode.style.display = \'none\';">read&nbsp;more&nbsp;&rarr;</a></span>';
+    });
+
+</script>
+
+  </body>
+</html>
+
