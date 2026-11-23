@@ -26,7 +26,7 @@ publication_previews: true
       <li><strong>Collaborators from:</strong> Austria, Chile, China, France, Germany, India, Japan, the Netherlands, Norway, Portugal, Russia, Slovakia, Spain, and the USA.</li>
       <li><strong>Most common conference:</strong> NeurIPS (five papers). Actively trying to change this 🙃.</li>
       <li><strong>Most fun conference:</strong> <a href="https://sites.google.com/view/fun2022/home?pli=1">FUN with Algorithms</a>.</li>
-      <li><strong>Distinctions:</strong> Best paper at CICM 2025 and LPAR 2023; distinguished paper at PODS 2025; runner-up for best paper at CICM 2024; best-paper nomination at TACAS 2023; spotlights at NeurIPS 2021 and AFCI@NeurIPS 2020; and first place in the IEEE LA-CCI Latin American master's thesis contest in AI.</li>
+      <li><strong>Distinctions:</strong> Best paper at LPAR 2026, CICM 2025, and LPAR 2023; distinguished paper at PODS 2025; runner-up for best paper at CICM 2024; best-paper nomination at TACAS 2023; spotlights at NeurIPS 2021 and AFCI@NeurIPS 2020; and first place in the IEEE LA-CCI Latin American master's thesis contest in AI.</li>
     </ol>
   </section>
   {% include citation_chart.html %}

@@ -399,4 +399,37 @@ wave_nodes = tree_pts3.map.with_index { |(x,y),i| rect(x-28,y-15,56,30,fill:[PAP
 query_path = path("M240 104 L145 153 L192 215",stroke:RED,sw:7)
 write_visual("wavelet-tree", sequence + wave_edges + wave_nodes + query_path, accent: YELLOW, secondary: BLUE)
 
+# The size-11 countermodel search is unsatisfiable. Size 12 is attainable.
+domains = [11, 12].map.with_index do |size, panel|
+  x = 129 + 222 * panel
+  dots = size.times.map do |i|
+    circle(x - 48 + (i % 4) * 32, 100 + (i / 4) * 33, 10,
+           fill: i == 11 ? YELLOW : BLUE, sw: 2)
+  end.join
+  label(x, 68, "#{size} elements") + dots
+end.join
+unsat = path("M78 211 l12 12 M90 211 l-12 12", stroke: RED, sw: 4) + label(139, 218, "UNSAT", fill: RED)
+sat = path("M312 217 l6 7 l12 -15", stroke: BLUE, sw: 4) + label(357, 218, "SAT", fill: BLUE)
+write_visual("tarski-countermodels", domains + unsat + sat, accent: YELLOW, secondary: RED)
+
+# A nonattacking placement is one color class in the five-color queen graph.
+colors = [RED, BLUE, YELLOW, INK, PAPER_DIM]
+queens = []
+coloring = []
+5.times do |row|
+  5.times do |col|
+    x = 24 + col * 36
+    y = 61 + row * 36
+    color = (row + 2 * col) % 5
+    queens << rect(x, y, 36, 36, fill: (row + col).even? ? PAPER : PAPER_DIM, sw: 2)
+    if color.zero?
+      crown = [[7, 12], [13, 16], [18, 7], [23, 16], [29, 12], [25, 24], [11, 24]]
+      queens << polygon(crown.map { |dx, dy| [x + dx, y + dy] }, fill: RED, sw: 2)
+      queens << line(x + 11, y + 28, x + 25, y + 28, sw: 2)
+    end
+    coloring << rect(x + 252, y, 36, 36, fill: colors[color], sw: 2)
+  end
+end
+write_visual("coloring-queens", queens.join + arrow(214, 151, 265, 151, color: RED) + coloring.join, accent: RED)
+
 puts "Generated #{Dir[File.join(OUT, '*.svg')].size} publication visuals in #{OUT}"

@@ -1,3 +1,13 @@
+subercaseaux2026tarski:
+  src: /assets/img/publications/tarski-countermodels.svg
+  kind: custom
+  alt: "A SAT search rules out an 11-element countermodel to Wilkie's identity and finds one with 12 elements."
+
+subercaseaux2026coloringQueens:
+  src: /assets/img/publications/coloring-queens.svg
+  kind: custom
+  alt: "Five nonattacking queens on a five-by-five chessboard, alongside a coloring that partitions all 25 squares into five such sets."
+
 bannai2026repetitiveness:
   src: /assets/img/publications/compact-encodings.svg
   kind: custom

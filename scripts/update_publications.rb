@@ -141,6 +141,8 @@ PUBLICATIONS = {
 # artifact rather than a paper). Listing them makes newly added DBLP records
 # detectable instead of silently dropping them.
 IGNORED_DBLP_KEYS = %w[
+  DBLP:journals/corr/abs-2608-08421
+  DBLP:journals/corr/abs-2609-27674
   DBLP:journals/corr/abs-2601-19161
   DBLP:journals/corr/abs-2603-27774
   DBLP:journals/corr/abs-2603-28954
@@ -166,6 +168,8 @@ IGNORED_DBLP_KEYS = %w[
 ].freeze
 
 LOCAL_ONLY_KEYS = %w[
+  subercaseaux2026tarski
+  subercaseaux2026coloringQueens
   subercaseauxHeuleNAW
   bps2020
   clps2016
